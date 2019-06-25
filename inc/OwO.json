@@ -1,0 +1,1227 @@
+{
+    "贴吧泡泡": {
+        "type": "image",
+        "container": [
+            {
+                "desc": "':hehe:'",
+                "icon": "/static/images/smilies/hehe.png",
+                "text": "呵呵"
+            },
+            {
+                "desc": "':haha:'",
+                "icon": "/static/images/smilies/haha.png",
+                "text": "哈哈"
+            },
+            {
+                "desc": "':tushe:'",
+                "icon": "/static/images/smilies/tushe.png",
+                "text": "吐舌"
+            },
+            {
+                "desc": "':a:'",
+                "icon": "/static/images/smilies/a.png",
+                "text": "啊"
+            },
+            {
+                "desc": "':ku:'",
+                "icon": "/static/images/smilies/ku.png",
+                "text": "酷"
+            },
+            {
+                "desc": "':nu:'",
+                "icon": "/static/images/smilies/nu.png",
+                "text": "怒"
+            },
+            {
+                "desc": "':kaixin:'",
+                "icon": "/static/images/smilies/kaixin.png",
+                "text": "开心"
+            },
+            {
+                "desc": "':han:'",
+                "icon": "/static/images/smilies/han.png",
+                "text": "汗"
+            },
+            {
+                "desc": "':lei:'",
+                "icon": "/static/images/smilies/lei.png",
+                "text": "泪"
+            },
+            {
+                "desc": "':heixian:'",
+                "icon": "/static/images/smilies/heixian.png",
+                "text": "黑线"
+            },
+            {
+                "desc": "':bishi:'",
+                "icon": "/static/images/smilies/bishi.png",
+                "text": "鄙视"
+            },
+            {
+                "desc": "':bugaoxing:'",
+                "icon": "/static/images/smilies/bugaoxing.png",
+                "text": "不高兴"
+            },
+            {
+                "desc": "':zhenbang:'",
+                "icon": "/static/images/smilies/zhenbang.png",
+                "text": "真棒"
+            },
+            {
+                "desc": "':qian:'",
+                "icon": "/static/images/smilies/qian.png",
+                "text": "钱"
+            },
+            {
+                "desc": "':yiwen:'",
+                "icon": "/static/images/smilies/yiwen.png",
+                "text": "疑问"
+            },
+            {
+                "desc": "':yinxian:'",
+                "icon": "/static/images/smilies/yinxian.png",
+                "text": "阴险"
+            },
+            {
+                "desc": "':tu:'",
+                "icon": "/static/images/smilies/tu.png",
+                "text": "吐"
+            },
+            {
+                "desc": "':yi:'",
+                "icon": "/static/images/smilies/yi.png",
+                "text": "咦"
+            },
+            {
+                "desc": "':weiqv:'",
+                "icon": "/static/images/smilies/weiqv.png",
+                "text": "委屈"
+            },
+            {
+                "desc": "':huaxin:'",
+                "icon": "/static/images/smilies/huaxin.png",
+                "text": "花心"
+            },
+            {
+                "desc": "':hu:'",
+                "icon": "/static/images/smilies/hu.png",
+                "text": "呼~~"
+            },
+            {
+                "desc": "':xiaoyan:'",
+                "icon": "/static/images/smilies/xiaoyan.png",
+                "text": "笑眼"
+            },
+            {
+                "desc": "':leng:'",
+                "icon": "/static/images/smilies/leng.png",
+                "text": "冷"
+            },
+            {
+                "desc": "':taikaixin:'",
+                "icon": "/static/images/smilies/taikaixin.png",
+                "text": "太开心"
+            },
+            {
+                "desc": "':huaji2:'",
+                "icon": "/static/images/smilies/huaji2.png",
+                "text": "右滑稽"
+            },
+            {
+                "desc": "':huaji:'",
+                "icon": "/static/images/smilies/huaji.png",
+                "text": "左滑稽"
+            },
+            {
+                "desc": "':mianqiang:'",
+                "icon": "/static/images/smilies/mianqiang.png",
+                "text": "勉强"
+            },
+            {
+                "desc": "':kuanghan:'",
+                "icon": "/static/images/smilies/kuanghan.png",
+                "text": "狂汗"
+            },
+            {
+                "desc": "':guai:'",
+                "icon": "/static/images/smilies/guai.png",
+                "text": "乖"
+            },
+            {
+                "desc": "':shuijiao:'",
+                "icon": "/static/images/smilies/shuijiao.png",
+                "text": "睡觉"
+            },
+            {
+                "desc": "':jingku:'",
+                "icon": "/static/images/smilies/jingku.png",
+                "text": "惊哭"
+            },
+            {
+                "desc": "':shengqi:'",
+                "icon": "/static/images/smilies/shengqi.png",
+                "text": "生气"
+            },
+            {
+                "desc": "':jingya:'",
+                "icon": "/static/images/smilies/jingya.png",
+                "text": "惊讶"
+            },
+            {
+                "desc": "':pen:'",
+                "icon": "/static/images/smilies/pen.png",
+                "text": "喷"
+            },
+            {
+                "desc": "':aixin:'",
+                "icon": "/static/images/smilies/aixin.png",
+                "text": "爱心"
+            },
+            {
+                "desc": "':xinsui:'",
+                "icon": "/static/images/smilies/xinsui.png",
+                "text": "心碎"
+            },
+            {
+                "desc": "':meigui:'",
+                "icon": "/static/images/smilies/meigui.png",
+                "text": "玫瑰"
+            },
+            {
+                "desc": "':liwu:'",
+                "icon": "/static/images/smilies/liwu.png",
+                "text": "礼物"
+            },
+            {
+                "desc": "':caihong:'",
+                "icon": "/static/images/smilies/caihong.png",
+                "text": "彩虹"
+            },
+            {
+                "desc": "':xxyl:'",
+                "icon": "/static/images/smilies/xxyl.png",
+                "text": "星星月亮"
+            },
+            {
+                "desc": "':sun:'",
+                "icon": "/static/images/smilies/sun.png",
+                "text": "太阳"
+            },
+            {
+                "desc": "':money:'",
+                "icon": "/static/images/smilies/money.png",
+                "text": "钱币"
+            },
+            {
+                "desc": "':bulb:'",
+                "icon": "/static/images/smilies/bulb.png",
+                "text": "灯泡"
+            },
+            {
+                "desc": "':cup:'",
+                "icon": "/static/images/smilies/cup.png",
+                "text": "茶杯"
+            },
+            {
+                "desc": "':cake:'",
+                "icon": "/static/images/smilies/cake.png",
+                "text": "蛋糕"
+            },
+            {
+                "desc": "':music:'",
+                "icon": "/static/images/smilies/music.png",
+                "text": "音乐"
+            },
+            {
+                "desc": "':haha2:'",
+                "icon": "/static/images/smilies/haha2.png",
+                "text": "haha"
+            },
+            {
+                "desc": "':win:'",
+                "icon": "/static/images/smilies/win.png",
+                "text": "胜利"
+            },
+            {
+                "desc": "':good:'",
+                "icon": "/static/images/smilies/good.png",
+                "text": "大拇指"
+            },
+            {
+                "desc": "':bad:'",
+                "icon": "/static/images/smilies/bad.png",
+                "text": "弱"
+            },
+            {
+                "desc": "':ok:'",
+                "icon": "/static/images/smilies/ok.png",
+                "text": "OK"
+            }
+        ]
+    },
+    "滑稽": {
+        "type": "image",
+        "container": [
+            {
+                "desc": "':huaji2:'",
+                "icon": "/static/images/smilies/huaji2.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji:'",
+                "icon": "/static/images/smilies/huaji.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji3:'",
+                "icon": "/static/images/smilies/huaji3.gif",
+                "text": ""
+            },
+            {
+                "desc": "':huaji4:'",
+                "icon": "/static/images/smilies/huaji4.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji5:'",
+                "icon": "/static/images/smilies/huaji5.gif",
+                "text": ""
+            },
+            {
+                "desc": "':huaji6:'",
+                "icon": "/static/images/smilies/huaji6.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji7:'",
+                "icon": "/static/images/smilies/huaji7.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji8:'",
+                "icon": "/static/images/smilies/huaji8.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji9:'",
+                "icon": "/static/images/smilies/huaji9.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji10:'",
+                "icon": "/static/images/smilies/huaji10.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji11:'",
+                "icon": "/static/images/smilies/huaji11.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji12:'",
+                "icon": "/static/images/smilies/huaji12.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji13:'",
+                "icon": "/static/images/smilies/huaji13.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji14:'",
+                "icon": "/static/images/smilies/huaji14.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji15:'",
+                "icon": "/static/images/smilies/huaji15.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji16:'",
+                "icon": "/static/images/smilies/huaji16.gif",
+                "text": ""
+            },
+            {
+                "desc": "':huaji17:'",
+                "icon": "/static/images/smilies/huaji17.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji18:'",
+                "icon": "/static/images/smilies/huaji18.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji19:'",
+                "icon": "/static/images/smilies/huaji19.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji20:'",
+                "icon": "/static/images/smilies/huaji20.gif",
+                "text": ""
+            },
+            {
+                "desc": "':huaji21:'",
+                "icon": "/static/images/smilies/huaji21.gif",
+                "text": ""
+            },
+            {
+                "desc": "':huaji22:'",
+                "icon": "/static/images/smilies/huaji22.png",
+                "text": ""
+            },
+            {
+                "desc": "':huaji23:'",
+                "icon": "/static/images/smilies/huaji23.png",
+                "text": ""
+            }
+        ]
+    },
+    "颜文字": {
+        "type": "emoticon",
+        "container": [
+            {
+                "desc": "'OωO'",
+                "icon": "OωO",
+                "text": "Author: DIYgod"
+            },
+            {
+                "desc": "'|´・ω・)ノ'",
+                "icon": "|´・ω・)ノ",
+                "text": "Hi"
+            },
+            {
+                "desc": "'ヾ(≧∇≦*)ゝ'",
+                "icon": "ヾ(≧∇≦*)ゝ",
+                "text": "开心"
+            },
+            {
+                "desc": "'(☆ω☆)'",
+                "icon": "(☆ω☆)",
+                "text": "星星眼"
+            },
+            {
+                "desc": "'（╯‵□′）╯︵┴─┴'",
+                "icon": "（╯‵□′）╯︵┴─┴",
+                "text": "掀桌"
+            },
+            {
+                "desc": "'￣﹃￣'",
+                "icon": "￣﹃￣",
+                "text": "流口水"
+            },
+            {
+                "desc": "'(/ω＼)'",
+                "icon": "(/ω＼)",
+                "text": "捂脸"
+            },
+            {
+                "desc": "'∠( ᐛ 」∠)＿'",
+                "icon": "∠( ᐛ 」∠)＿",
+                "text": "给跪"
+            },
+            {
+                "desc": "'(๑•̀ㅁ•́ฅ)'",
+                "icon": "(๑•̀ㅁ•́ฅ)",
+                "text": "Hi"
+            },
+            {
+                "desc": "'→_→'",
+                "icon": "→_→",
+                "text": "斜眼"
+            },
+            {
+                "desc": "'୧(๑•̀⌄•́๑)૭'",
+                "icon": "୧(๑•̀⌄•́๑)૭",
+                "text": "加油"
+            },
+            {
+                "desc": "'٩(ˊᗜˋ*)و'",
+                "icon": "٩(ˊᗜˋ*)و",
+                "text": "有木有WiFi"
+            },
+            {
+                "desc": "'(ノ°ο°)ノ'",
+                "icon": "(ノ°ο°)ノ",
+                "text": "前方高能预警"
+            },
+            {
+                "desc": "'(´இ皿இ｀)'",
+                "icon": "(´இ皿இ｀)",
+                "text": "我从未见过如此厚颜无耻之人"
+            },
+            {
+                "desc": "'⌇●﹏●⌇'",
+                "icon": "⌇●﹏●⌇",
+                "text": "吓死宝宝惹"
+            },
+            {
+                "desc": "'(ฅ´ω`ฅ)'",
+                "icon": "(ฅ´ω`ฅ)",
+                "text": "已阅留爪"
+            },
+            {
+                "desc": "'(╯°A°)╯︵○○○'",
+                "icon": "(╯°A°)╯︵○○○",
+                "text": "去吧大师球"
+            },
+            {
+                "desc": "'φ(￣∇￣o)'",
+                "icon": "φ(￣∇￣o)",
+                "text": "太萌惹"
+            },
+            {
+                "desc": "'ヾ(´･ ･｀｡)ノ'",
+                "icon": "ヾ(´･ ･｀｡)ノ",
+                "text": "咦咦咦"
+            },
+            {
+                "desc": "'( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃'",
+                "icon": "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃",
+                "text": "气呼呼"
+            },
+            {
+                "desc": "'(ó﹏ò｡)'",
+                "icon": "(ó﹏ò｡)",
+                "text": "我受到了惊吓"
+            },
+            {
+                "desc": "'Σ(っ °Д °;)っ'",
+                "icon": "Σ(っ °Д °;)っ",
+                "text": "什么鬼"
+            },
+            {
+                "desc": "'( ,,´･ω･)ﾉ(´っω･｀｡)'",
+                "icon": "( ,,´･ω･)ﾉ\"(´っω･｀｡)",
+                "text": "安慰"
+            },
+            {
+                "desc": "'╮(╯▽╰)╭'",
+                "icon": "╮(╯▽╰)╭",
+                "text": "无奈"
+            },
+            {
+                "desc": "'o(*////▽////*)q'",
+                "icon": "o(*////▽////*)q",
+                "text": "脸红"
+            },
+            {
+                "desc": "'＞﹏＜'",
+                "icon": "＞﹏＜",
+                "text": "难受"
+            },
+            {
+                "desc": "'( ๑´•ω•) ﾉ(ㆆᴗㆆ)'",
+                "icon": "( ๑´•ω•) ﾉ(ㆆᴗㆆ)",
+                "text": "摸摸头"
+            }
+        ]
+    },
+    "QQ表情": {
+        "type": "image",
+        "container": [
+          {
+            "desc": "':1 (1):'",
+            "icon": "/static/images/smilies/QQ/1 (1).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (2):'",
+            "icon": "/static/images/smilies/QQ/1 (2).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (3):'",
+            "icon": "/static/images/smilies/QQ/1 (3).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (4):'",
+            "icon": "/static/images/smilies/QQ/1 (4).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (5):'",
+            "icon": "/static/images/smilies/QQ/1 (5).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (6):'",
+            "icon": "/static/images/smilies/QQ/1 (6).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (7):'",
+            "icon": "/static/images/smilies/QQ/1 (7).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (8):'",
+            "icon": "/static/images/smilies/QQ/1 (8).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (9):'",
+            "icon": "/static/images/smilies/QQ/1 (9).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (10):'",
+            "icon": "/static/images/smilies/QQ/1 (10).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (11):'",
+            "icon": "/static/images/smilies/QQ/1 (11).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (12):'",
+            "icon": "/static/images/smilies/QQ/1 (12).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (13):'",
+            "icon": "/static/images/smilies/QQ/1 (13).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (14):'",
+            "icon": "/static/images/smilies/QQ/1 (14).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (15):'",
+            "icon": "/static/images/smilies/QQ/1 (15).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (16):'",
+            "icon": "/static/images/smilies/QQ/1 (16).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (17):'",
+            "icon": "/static/images/smilies/QQ/1 (17).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (18):'",
+            "icon": "/static/images/smilies/QQ/1 (18).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (19):'",
+            "icon": "/static/images/smilies/QQ/1 (19).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (20):'",
+            "icon": "/static/images/smilies/QQ/1 (20).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (21):'",
+            "icon": "/static/images/smilies/QQ/1 (21).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (22):'",
+            "icon": "/static/images/smilies/QQ/1 (22).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (23):'",
+            "icon": "/static/images/smilies/QQ/1 (23).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (24):'",
+            "icon": "/static/images/smilies/QQ/1 (24).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (25):'",
+            "icon": "/static/images/smilies/QQ/1 (25).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (26):'",
+            "icon": "/static/images/smilies/QQ/1 (26).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (27):'",
+            "icon": "/static/images/smilies/QQ/1 (27).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (28):'",
+            "icon": "/static/images/smilies/QQ/1 (28).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (29):'",
+            "icon": "/static/images/smilies/QQ/1 (29).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (30):'",
+            "icon": "/static/images/smilies/QQ/1 (30).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (31):'",
+            "icon": "/static/images/smilies/QQ/1 (31).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (32):'",
+            "icon": "/static/images/smilies/QQ/1 (32).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (33):'",
+            "icon": "/static/images/smilies/QQ/1 (33).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (34):'",
+            "icon": "/static/images/smilies/QQ/1 (34).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (35):'",
+            "icon": "/static/images/smilies/QQ/1 (35).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (36):'",
+            "icon": "/static/images/smilies/QQ/1 (36).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (37):'",
+            "icon": "/static/images/smilies/QQ/1 (37).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (38):'",
+            "icon": "/static/images/smilies/QQ/1 (38).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (39):'",
+            "icon": "/static/images/smilies/QQ/1 (39).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (40):'",
+            "icon": "/static/images/smilies/QQ/1 (40).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (41):'",
+            "icon": "/static/images/smilies/QQ/1 (41).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (42):'",
+            "icon": "/static/images/smilies/QQ/1 (42).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (43):'",
+            "icon": "/static/images/smilies/QQ/1 (43).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (44):'",
+            "icon": "/static/images/smilies/QQ/1 (44).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (45):'",
+            "icon": "/static/images/smilies/QQ/1 (45).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (46):'",
+            "icon": "/static/images/smilies/QQ/1 (46).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (47):'",
+            "icon": "/static/images/smilies/QQ/1 (47).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (48):'",
+            "icon": "/static/images/smilies/QQ/1 (48).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (49):'",
+            "icon": "/static/images/smilies/QQ/1 (49).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (50):'",
+            "icon": "/static/images/smilies/QQ/1 (50).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (51):'",
+            "icon": "/static/images/smilies/QQ/1 (51).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (52):'",
+            "icon": "/static/images/smilies/QQ/1 (52).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (53):'",
+            "icon": "/static/images/smilies/QQ/1 (53).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (54):'",
+            "icon": "/static/images/smilies/QQ/1 (54).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (55):'",
+            "icon": "/static/images/smilies/QQ/1 (55).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (56):'",
+            "icon": "/static/images/smilies/QQ/1 (56).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (57):'",
+            "icon": "/static/images/smilies/QQ/1 (57).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (58):'",
+            "icon": "/static/images/smilies/QQ/1 (58).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (59):'",
+            "icon": "/static/images/smilies/QQ/1 (59).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (60):'",
+            "icon": "/static/images/smilies/QQ/1 (60).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (61):'",
+            "icon": "/static/images/smilies/QQ/1 (61).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (62):'",
+            "icon": "/static/images/smilies/QQ/1 (62).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (63):'",
+            "icon": "/static/images/smilies/QQ/1 (63).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (64):'",
+            "icon": "/static/images/smilies/QQ/1 (64).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (65):'",
+            "icon": "/static/images/smilies/QQ/1 (65).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (66):'",
+            "icon": "/static/images/smilies/QQ/1 (66).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (67):'",
+            "icon": "/static/images/smilies/QQ/1 (67).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (68):'",
+            "icon": "/static/images/smilies/QQ/1 (68).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (69):'",
+            "icon": "/static/images/smilies/QQ/1 (69).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (70):'",
+            "icon": "/static/images/smilies/QQ/1 (70).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (71):'",
+            "icon": "/static/images/smilies/QQ/1 (71).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (72):'",
+            "icon": "/static/images/smilies/QQ/1 (72).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (73):'",
+            "icon": "/static/images/smilies/QQ/1 (73).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (74):'",
+            "icon": "/static/images/smilies/QQ/1 (74).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (75):'",
+            "icon": "/static/images/smilies/QQ/1 (75).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (76):'",
+            "icon": "/static/images/smilies/QQ/1 (76).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (77):'",
+            "icon": "/static/images/smilies/QQ/1 (77).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (78):'",
+            "icon": "/static/images/smilies/QQ/1 (78).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (79):'",
+            "icon": "/static/images/smilies/QQ/1 (79).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (80):'",
+            "icon": "/static/images/smilies/QQ/1 (80).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (81):'",
+            "icon": "/static/images/smilies/QQ/1 (81).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (82):'",
+            "icon": "/static/images/smilies/QQ/1 (82).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (83):'",
+            "icon": "/static/images/smilies/QQ/1 (83).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (84):'",
+            "icon": "/static/images/smilies/QQ/1 (84).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (85):'",
+            "icon": "/static/images/smilies/QQ/1 (85).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (86):'",
+            "icon": "/static/images/smilies/QQ/1 (86).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (87):'",
+            "icon": "/static/images/smilies/QQ/1 (87).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (88):'",
+            "icon": "/static/images/smilies/QQ/1 (88).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (89):'",
+            "icon": "/static/images/smilies/QQ/1 (89).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (90):'",
+            "icon": "/static/images/smilies/QQ/1 (90).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (91):'",
+            "icon": "/static/images/smilies/QQ/1 (91).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (92):'",
+            "icon": "/static/images/smilies/QQ/1 (92).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (93):'",
+            "icon": "/static/images/smilies/QQ/1 (93).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (94):'",
+            "icon": "/static/images/smilies/QQ/1 (94).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (95):'",
+            "icon": "/static/images/smilies/QQ/1 (95).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (96):'",
+            "icon": "/static/images/smilies/QQ/1 (96).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (97):'",
+            "icon": "/static/images/smilies/QQ/1 (97).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (98):'",
+            "icon": "/static/images/smilies/QQ/1 (98).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (99):'",
+            "icon": "/static/images/smilies/QQ/1 (99).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (100):'",
+            "icon": "/static/images/smilies/QQ/1 (100).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (101):'",
+            "icon": "/static/images/smilies/QQ/1 (101).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (102):'",
+            "icon": "/static/images/smilies/QQ/1 (102).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (103):'",
+            "icon": "/static/images/smilies/QQ/1 (103).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (104):'",
+            "icon": "/static/images/smilies/QQ/1 (104).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (105):'",
+            "icon": "/static/images/smilies/QQ/1 (105).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (106):'",
+            "icon": "/static/images/smilies/QQ/1 (106).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (107):'",
+            "icon": "/static/images/smilies/QQ/1 (107).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (108):'",
+            "icon": "/static/images/smilies/QQ/1 (108).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (109):'",
+            "icon": "/static/images/smilies/QQ/1 (109).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (110):'",
+            "icon": "/static/images/smilies/QQ/1 (110).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (111):'",
+            "icon": "/static/images/smilies/QQ/1 (111).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (112):'",
+            "icon": "/static/images/smilies/QQ/1 (112).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (113):'",
+            "icon": "/static/images/smilies/QQ/1 (113).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (114):'",
+            "icon": "/static/images/smilies/QQ/1 (114).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (115):'",
+            "icon": "/static/images/smilies/QQ/1 (115).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (116):'",
+            "icon": "/static/images/smilies/QQ/1 (116).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (117):'",
+            "icon": "/static/images/smilies/QQ/1 (117).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (118):'",
+            "icon": "/static/images/smilies/QQ/1 (118).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (119):'",
+            "icon": "/static/images/smilies/QQ/1 (119).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (120):'",
+            "icon": "/static/images/smilies/QQ/1 (120).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (121):'",
+            "icon": "/static/images/smilies/QQ/1 (121).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (122):'",
+            "icon": "/static/images/smilies/QQ/1 (122).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (123):'",
+            "icon": "/static/images/smilies/QQ/1 (123).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (124):'",
+            "icon": "/static/images/smilies/QQ/1 (124).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (125):'",
+            "icon": "/static/images/smilies/QQ/1 (125).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (126):'",
+            "icon": "/static/images/smilies/QQ/1 (126).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (127):'",
+            "icon": "/static/images/smilies/QQ/1 (127).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (128):'",
+            "icon": "/static/images/smilies/QQ/1 (128).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (129):'",
+            "icon": "/static/images/smilies/QQ/1 (129).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (130):'",
+            "icon": "/static/images/smilies/QQ/1 (130).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (131):'",
+            "icon": "/static/images/smilies/QQ/1 (131).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (132):'",
+            "icon": "/static/images/smilies/QQ/1 (132).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (133):'",
+            "icon": "/static/images/smilies/QQ/1 (133).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (134):'",
+            "icon": "/static/images/smilies/QQ/1 (134).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (135):'",
+            "icon": "/static/images/smilies/QQ/1 (135).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (136):'",
+            "icon": "/static/images/smilies/QQ/1 (136).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (137):'",
+            "icon": "/static/images/smilies/QQ/1 (137).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (138):'",
+            "icon": "/static/images/smilies/QQ/1 (138).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (139):'",
+            "icon": "/static/images/smilies/QQ/1 (139).gif",
+            "text": ""
+          },
+          {
+            "desc": "':1 (140):'",
+            "icon": "/static/images/smilies/QQ/1 (140).gif",
+            "text": ""
+          }
+        ]
+    }
+}
