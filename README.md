@@ -18,17 +18,20 @@
 
 3.评论表情更新
 
+
 ![](https://img.xiaoyou66.com/images/2019/07/19/UZT4.png)
 
 本次更新添加了知乎表情和哔哩哔哩表情，同时删除了QQ表情，后面我也会讲一下怎么添加表情。
 
 4.头像随机显示
+
 ![](https://img.xiaoyou66.com/images/2019/07/19/UUKT.png)
 
 
 对于没有头像的用户将会随机显示一个动漫头像，目前有59张动漫头像可以随机显示。
 
 5.主题集成了音乐播放器
+
 ![](https://img.xiaoyou66.com/images/2019/07/19/UwmE.png)
 
 
