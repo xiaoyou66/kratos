@@ -1,6 +1,6 @@
 <?php
 //把Qplayer集成到主题中
-include ("QPlayer/QPlayer.php");
+if(kratos_option('openmusicplug')) include ("QPlayer/QPlayer.php");");
 //字数统计
 function count_words ($text) {
     global $post;
