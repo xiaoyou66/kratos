@@ -13,11 +13,10 @@
     transform: translateY(0);
 }
 .waifu-tips {
-    opacity: 0;
-    /*margin: -20px 20px;*/
+    color:#000000;
     margin: -20px 20px;
     padding: 20px 20px;
-    border: 1px solid rgba(224, 186, 140, 0.62);
+    border: 2px solid rgba(224, 186, 140, 0.62);
     border-radius: 12px;
     background-color: rgba(236, 217, 188, 0.5);
     box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);

@@ -54,12 +54,12 @@ class bilibiliAnime
         curl_close($ch);//关闭连接
         return $info['data']['total'];
     }
-    public function __construct()
+    public function __construct($uid,$cookie)
     {
         $this->sum=$this->getpage();
         for($i=1;$i<=ceil($this->sum/15);$i++)
         {
-            $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=$i&ps=15&vmid=343147393";
+            $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=$i&ps=15&vmid=$uid";
             $ch = curl_init(); //初始化curl模块
             curl_setopt($ch, CURLOPT_URL, $url); //登录提交的地址
             curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
@@ -67,7 +67,7 @@ class bilibiliAnime
                 //发送请求头
                 "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36",
                 "Referer: https://www.bilibili.com/",
-                "Cookie: 你的cookie数据放这里",
+                "Cookie: $cookie",
             ));
             $info=json_decode(curl_exec($ch),true);
             curl_close($ch);//关闭连接

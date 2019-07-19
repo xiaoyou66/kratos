@@ -77,20 +77,17 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){
-    $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
     $url2 = get_bloginfo('template_directory');
-    if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
-    if(kratos_option('css_out')) $cssdir = $url1; else $cssdir = $url2;
-    if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
     if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/static/css/font-awesome.min.css';
     if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/static/js/jquery.min.js';
+
     if(!is_admin()){
         wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
-        wp_enqueue_style('kratos',$cssdir.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_style('kratos',$url2.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
-        wp_enqueue_script('theme',$jsdir.'/static/js/theme.min.js',array(),KRATOS_VERSION);
-        wp_enqueue_script('kratos',$jsdir.'/static/js/kratos.js',array(),KRATOS_VERSION);
-        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/static/js/pjax.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('theme',$url2.'/static/js/theme.min.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('kratos',$url2.'/static/js/kratos.js',array(),KRATOS_VERSION);
+        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$url2.'/static/js/pjax.js',array(),KRATOS_VERSION);
     }
 
     if(kratos_option('site_sa')&&!wp_is_mobile()){if(kratos_option('head_mode')=='pic') $site_sa_h = 61; else $site_sa_h = 103;}
@@ -102,7 +99,7 @@ function kratos_theme_scripts(){
           'copy'=> kratos_option('copy_notice'),
       'ajax_url'=> admin_url('admin-ajax.php'),
          'order'=> get_option('comment_order'),
-           'owo'=> $owodir,
+           'owo'=> $url2,
        'site_sh'=> $site_sa_h
     );
     wp_localize_script('kratos','xb',$d2kratos);
@@ -557,15 +554,10 @@ function comment_author_link_window(){
 }
 add_filter('get_comment_author_link','comment_author_link_window');
 //Notice ***PLEASE DO NOT EDIT THIS 请不要修改此内容***
-function kratos_admin_notice(){
-    global $noticeinfo;
-    $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
-    if(!is_wp_error($noticeinfo)&&$noticeinfo) $noticeinfo = '<style type="text/css">.about-description a{text-decoration:none}</style><div class="notice notice-info"><p class="about-description">'.$noticeinfo.'</p></div>';
-    if(kratos_option('kratos_notice')=='global'&&current_user_can('manage_options')) echo $noticeinfo;
-}
+
 function kratos_welcome_notice(){
     global $noticeinfo;
     if(current_user_can('manage_options')) echo $noticeinfo;
 }
-add_action('admin_notices','kratos_admin_notice');
+
 if(kratos_option('kratos_notice')=="welcome") add_action('welcome_panel','kratos_welcome_notice');

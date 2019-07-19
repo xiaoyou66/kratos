@@ -4,15 +4,12 @@ template name: bilibili追番模板
 */
 get_header(); ?>
 
-
-<!--<body style="background: url(bilibili/images/01.png);background-size: cover;background-attachment:fixed;background-position-x: center;">-->
-
 <div id="container" class="container" >
     <div class="page-header">
         <h1>我的追番
          <?php
              require_once ("bilibili/bilibiliAnime.php");
-             $bili=new bilibiliAnime();
+             $bili=new bilibiliAnime(kratos_option('bilibili_uid'),kratos_option('bilibili_cookie'));
             echo "<small>当前已追".$bili->sum."部，继续加油！</small></h1></div><div class=\"bilibili\">";
             function precentage($str1,$str2)
             {

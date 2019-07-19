@@ -51,6 +51,13 @@
             </aside>
             <?php } ?>
         </div>
+        <script src="<?php echo  bloginfo('template_url').'/static/js/weixinAudio.js';?>"></script>
+        <!--音乐播放器-->
+        <script type="text/javascript">
+            $('.weixinAudio').weixinAudio({
+            });
+        </script>
     </div>
 </div>
+
 <?php get_footer(); ?>

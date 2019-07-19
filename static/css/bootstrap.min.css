@@ -654,7 +654,7 @@ select.input-lg{height:46px;line-height:46px}
 select[multiple].input-lg,textarea.input-lg{height:auto}
 .has-feedback{position:relative}
 .has-feedback .form-control{padding-right:42.5px}
-.form-control-feedback{position:absolute;top:47px;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}
+.form-control-feedback{position:absolute;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}
 .input-lg+.form-control-feedback{width:46px;height:46px;line-height:46px}
 .input-sm+.form-control-feedback{width:30px;height:30px;line-height:30px}
 .has-success .checkbox,.has-success .checkbox-inline,.has-success .control-label,.has-success .help-block,.has-success .radio,.has-success .radio-inline{color:#3c763d}

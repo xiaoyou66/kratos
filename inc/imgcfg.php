@@ -77,9 +77,9 @@ function kratos_blog_thumbnail_new(){
 //        if(!empty($img_val)&&!post_password_required()){
 //            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" alt="'.$title.'"></a>';
 //        }else if(!kratos_option('default_image')){
-            $random = mt_rand(1,20);
+            $random = mt_rand(1,75);
 //            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg" alt="'.$title.'"></a>';
-        return get_bloginfo('template_url')."/static/images/thumb/thumb_".$random.".jpg";
+        return get_bloginfo('template_url')."/static/images/thumb/".$random.".jpg";
 //        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" alt="'.$title.'"></a>';
     }
 }

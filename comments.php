@@ -22,7 +22,7 @@
         'fields'=>$fields,
         'class_submit'=>'btn btn-primary',
         'comment_notes_before' => '<p class="comment-notes">'.__('电子邮件地址不会被公开。必填项已用 * 标注','moedog').'</p>',
-        'comment_field'=>'<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control" id="comment" placeholder="'.__('|´・ω・)ノ还不快点说点什么呀poi~','moedog').'" name="comment" rows="5" aria-required="true" required  onkeydown="if(event.ctrlKey){if(event.keyCode==13){document.getElementById(\'submit\').click();return false}};"></textarea></div><div class="OwO"></div></div>',
+        'comment_field'=>'<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control" id="comment" placeholder="'.__('期待大佬的精彩发言~φ(>ω<*) ','moedog').'" name="comment" rows="5" aria-required="true" required  onkeydown="if(event.ctrlKey){if(event.keyCode==13){document.getElementById(\'submit\').click();return false}};"></textarea></div><div class="OwO"></div></div>',
     );
     comment_form($args); ?>
 </div>

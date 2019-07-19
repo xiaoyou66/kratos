@@ -382,8 +382,7 @@ jQuery(document).ready(function(jQuery) {
         }
     }
 });
-//highlight
-hljs.initHighlightingOnLoad();
+
 //time
 var now = new Date();
 function createtime(){
@@ -402,22 +401,9 @@ setInterval('createtime()',250);
 //copy
 if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
 //console
-window.onload = function(){
-    var now = new Date().getTime();
-    var page_load_time = now-performance.timing.navigationStart;
- 
-    console.log('项目托管:https://github.com/xb2016/kratos-pjax');
-    console.log('%cwww.fczbl.vip','font-size:2em');
-    console.log('%c页面加载完毕消耗了'+Math.round(performance.now()*100)/100+'ms','background:#fff;color:#333;text-shadow:0 0 2px #eee,0 0 3px #eee,0 0 3px #eee,0 0 2px #eee,0 0 3px #eee;');
-};
 
 
-// //给按钮单独设置点击事件
-// var button=document.getElementsByClassName("js-kratos-nav-toggle");
-// var body=document.getElementById("kratos-wrapper");
-// button[0].onclick(){
-//     body.style.left=0;
-// }
+
 
 
 
