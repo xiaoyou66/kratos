@@ -38,9 +38,9 @@ class bilibiliAnime
             }
         }
     }
-    private function getpage()
+    private function getpage($uid)
     {
-        $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=1&ps=15&vmid=343147393";
+        $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=1&ps=15&vmid=$uid";
         $ch = curl_init(); //初始化curl模块
         curl_setopt($ch, CURLOPT_URL, $url); //登录提交的地址
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
@@ -56,7 +56,7 @@ class bilibiliAnime
     }
     public function __construct($uid,$cookie)
     {
-        $this->sum=$this->getpage();
+        $this->sum=$this->getpage($uid);
         for($i=1;$i<=ceil($this->sum/15);$i++)
         {
             $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=$i&ps=15&vmid=$uid";
