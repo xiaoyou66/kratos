@@ -18,7 +18,9 @@
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
+      <?php if(kratos_option('title_change')){?>
       <script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='<?php echo  kratos_option('title_change'); ?>';}else{document.title=normal_title;}});</script>
+      <?php }?>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/bootstrap.min.css';?>"/>
     <title><?php wp_title('-',true,'right'); ?></title>
@@ -38,6 +40,8 @@
     </style>
       <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
       <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+
+
   </head>
     <?php flush(); ?>
     <body>

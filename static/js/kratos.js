@@ -25,10 +25,10 @@
     var toSearch = function(){
         $('.search-box').on('click',function(e){
             $('#searchform').animate({width:'200px'},200),
-            $('#searchform input').css('display','block');
+                $('#searchform input').css('display','block');
             $(document).one('click', function(){
                 $('#searchform').animate({width:'0'},100),
-                $('#searchform input').hide();
+                    $('#searchform input').hide();
             });
             e.stopPropagation();
         });
@@ -85,8 +85,8 @@
     }
     var showPhotos = function(){
         layer.photos({
-          photos:'.kratos-post-content p,.kratos-status-post p',
-          anim: 0
+            photos:'.kratos-post-content p,.kratos-status-post p',
+            anim: 0
         });
     }
     var offcanvas = function(){
@@ -219,7 +219,7 @@
                     music:eval(e)
                 });
                 window.aplayers || (window.aplayers = []),
-                window.aplayers.push(a)
+                    window.aplayers.push(a)
             }
         })
     }
@@ -305,8 +305,8 @@ $('body').on('click','.comment-reply-link',function(){
 });
 jQuery(document).ready(function(jQuery) {
     var __cancel = jQuery('#cancel-comment-reply-link'),
-    __cancel_text = __cancel.text(),
-    __list = 'comment-list';
+        __cancel_text = __cancel.text(),
+        __list = 'comment-list';
     jQuery(document).on('submit','#commentform',function(){
         jQuery.ajax({
             url:xb.ajax_url,
@@ -400,7 +400,10 @@ function createtime(){
 setInterval('createtime()',250);
 //copy
 if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
-//console
+
+
+/*夜间模式*/
+
 
 
 

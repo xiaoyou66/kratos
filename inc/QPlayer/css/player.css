@@ -44,10 +44,27 @@
 	border-radius:99%;
 	cursor:pointer;
 }
+
+.liebiao.icon {
+	left: 187px;
+	top: 36px;
+}
+
+.upvolume{
+	top: -2px;position: relative;font-size: 15px;left: 144px;cursor: pointer;margin-left: 3px;
+}
+.upvolume:hover,.downvolume:hover {
+	color: #C9C9C9;
+}
+.downvolume{
+	top: -2px;position: relative;font-size: 15px;left: 145px;cursor: pointer;
+}
+
 .contr {
 	text-align:center;
 	margin-top:2px;
-	position:relative;
+	position: relative;
+	left: -29px;
 }
 #player .ctrl {
 	margin-left:60px;
@@ -123,7 +140,7 @@
 	background-position:-36px -63px !important;
 	width:14px;
 	height:18px;
-	position:absolute;
+	/*position:absolute;*/
 	left:92px;
 }
 .fastforward {

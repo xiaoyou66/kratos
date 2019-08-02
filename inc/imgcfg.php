@@ -63,24 +63,13 @@ function kratos_blog_thumbnail_new(){
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
-    $title = get_the_title();
     if(has_post_thumbnail()){
-//        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" alt="'.$title.'"></a>';
-        return $img_url;
+       return $img_url;
     }else{
-        $content = $post->post_content;
-        $img_preg = "/<img(.*?)src=\"(.+?)\".*?>/";
-        preg_match($img_preg,$content,$img_src);
-        $img_count=count($img_src)-1;
-        if(isset($img_src[$img_count]))
-        $img_val = $img_src[$img_count];
-//        if(!empty($img_val)&&!post_password_required()){
-//            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" alt="'.$title.'"></a>';
-//        }else if(!kratos_option('default_image')){
-            $random = mt_rand(1,75);
-//            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg" alt="'.$title.'"></a>';
-        return get_bloginfo('template_url')."/static/images/thumb/".$random.".jpg";
-//        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" alt="'.$title.'"></a>';
+        //直接获取所有图片然后存到一个列表里面
+        $imgs=getfilecouts(dirname(dirname(__FILE__)).'/static/images/thumb/*');
+        $random = mt_rand(0,count($imgs)-1);
+        return get_bloginfo('template_url')."/static/images/thumb/".substr($imgs[$random],strripos($imgs[$random],'/')+1);
     }
 }
 //Share the thumbnail fetching

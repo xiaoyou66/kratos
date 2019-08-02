@@ -8,6 +8,7 @@
 		autoShowTimer,
 		isFirstPlay = localStorage.qplayer == undefined? true: false,
 		isShuffle = localStorage.qplayer == undefined? false: localStorage.qplayer === 'true'? true: false;
+    var volume=1;
 
 	// Load playlist
 	for (var i = 0; i < playlist.length; i++){
@@ -48,6 +49,7 @@
 
 	var play = function(){
 		audio.play();
+		audio.volume=volume;
 		if (isRotate) {
 			$("#player .cover img").css("animation","9.8s linear 0s normal none infinite rotate");
 		    $("#player .cover img").css("animation-play-state","running");
@@ -209,6 +211,22 @@
 			}
 			switchTrack(i);
 		});
+	});
+
+	//添加音量
+    $('.upvolume').on('click', function(){
+        volume=audio.volume;
+        if(volume<1)
+		{
+            audio.volume+=0.2;
+		}
+	});
+    $('.downvolume').on('click', function(){
+        volume=audio.volume;
+        if(volume>0.2)
+        {
+            audio.volume-=0.2;
+        }
 	});
 
 	$('#QPlayer .liebiao,#QPlayer .liebiao').on('click', function(){

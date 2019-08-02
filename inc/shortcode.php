@@ -115,11 +115,32 @@ function highlight($atts,$content=null,$code=""){
     $return = '<pre class="line-numbers"><code class="language-';
     $return .= $lanaguage;
     $return .= '">';
-    $return .= do_shortcode($content);
+    //处理预格式化的内容
+    $replace=array('<pre>','</pre>','<code>','</code>');
+    $content=str_replace($replace,'',$content);
+    //处理<和>无法显示的问题
+    $content=str_replace('<','&lt;',$content);
+    $content=str_replace('>','&gt;',$content);
+    $return .=trim($content);
     $return .= '</code></pre>';
     return $return;
 }
 add_shortcode('highlight','highlight');
+
+
+function block($atts,$content=null,$code=""){
+    $return = '<pre><code>';
+    //处理预格式化的内容
+    $replace=array('<pre>','</pre>','<code>','</code>');
+    $content=str_replace($replace,'',$content);
+    //处理<和>无法显示的问题
+    $content=str_replace('<','&lt;',$content);
+    $content=str_replace('>','&gt;',$content);
+    $return .=trim($content);
+    $return .= '</code></pre>';
+    return $return;
+}
+add_shortcode('block','block');
 
 
 
@@ -183,6 +204,7 @@ function more_button_b(){
 function register_button($buttons){
     array_push($buttons," ","title");
     array_push($buttons," ","highlight");
+    array_push($buttons," ","block");
     array_push($buttons," ","accordion");
     array_push($buttons," ","hide");
     array_push($buttons," ","striped");
@@ -204,6 +226,7 @@ function register_button_b($buttons){
 function add_plugin($plugin_array){
     $plugin_array['title'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['highlight'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['block'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['accordion'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['hide'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['striped'] = get_bloginfo('template_url').'/inc/buttons/more.js';
@@ -230,16 +253,19 @@ function add_more_buttons($buttons){
     return $buttons;
 }
 add_filter("mce_buttons_2","add_more_buttons");
+
+//显示表情
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
+    if(kratos_option('owo_out')) $owodir = bloginfo('template_url'); else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $alt => $src_path){
-        $traimgna = substr($alt,1,-1);
-        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.$owodir.'/static/images/smilies/'.$traimgna.'.png"></a>';
+        $src_path=$owodir.'/static/images/smilies/'.$src_path;
+        $output .= '<a class="add-smily" data-smilies="<img src=\''. $src_path.'\'>"><img src="'.$src_path.'"></a>';
     }
     return $output;
 }
+//添加表情
 add_action('media_buttons_context','fa_smilies_custom_button');
 function fa_smilies_custom_button($context){
     $context .= '<style>.smilies-wrap{background:#fff;border: 1px solid #ccc;box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);padding: 10px;position: absolute;top: 60px;width: 380px;display:none}.smilies-wrap img{height:24px;width:24px;cursor:pointer;margin-bottom:5px} .is-active.smilies-wrap{display:block}</style><a id="REPLACE-media-button" style="position:relative" class="button REPLACE-smilies add_smilies" title="'.__('添加表情','moedog').'" data-editor="content" href="javascript:;">'.__('添加表情','moedog').'</a><div class="smilies-wrap">'. fa_get_wpsmiliestrans() .'</div><script>jQuery(document).ready(function(){jQuery(document).on("click", ".REPLACE-smilies",function() { if(jQuery(".smilies-wrap").hasClass("is-active")){jQuery(".smilies-wrap").removeClass("is-active");}else{jQuery(".smilies-wrap").addClass("is-active");}});jQuery(document).on("click", ".add-smily",function() { send_to_editor(" " + jQuery(this).data("smilies") + " ");jQuery(".smilies-wrap").removeClass("is-active");return false;});});</script>';

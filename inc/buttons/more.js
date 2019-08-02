@@ -108,10 +108,10 @@
     tinymce.create('tinymce.plugins.highlight', {
         init : function(ed, url) {
             ed.addButton('highlight', {
-                title : '代码高亮',
+                title : '代码美化',
                 image : url+'/images/highlight.png',
                 onclick : function() {
-                     ed.selection.setContent('[highlight lanaguage="语言"]' + ed.selection.getContent() + '[/highlight]');
+                     ed.selection.setContent('[highlight lanaguage="语言"]<pre><br>' + ed.selection.getContent() + '</pre>[/highlight]');
                 }
             });
         },
@@ -120,6 +120,24 @@
         },
     });
     tinymce.PluginManager.add('highlight', tinymce.plugins.highlight);
+
+    tinymce.create('tinymce.plugins.block', {
+        init : function(ed, url) {
+            ed.addButton('block', {
+                title : '代码块',
+                image : url+'/images/codeblock.png',
+                onclick : function() {
+                    ed.selection.setContent('[block]<pre><br>' + ed.selection.getContent() + '</pre>[/block]');
+                }
+            });
+        },
+        createControl : function(n, cm) {
+            return null;
+        },
+    });
+    tinymce.PluginManager.add('block', tinymce.plugins.block);
+
+
 
     tinymce.create('tinymce.plugins.accordion', {
         init : function(ed, url) {
@@ -214,6 +232,7 @@
     tinymce.PluginManager.add('wxmusic', tinymce.plugins.wxmusic);
     tinymce.create('tinymce.plugins.bilibili', {
         init : function(ed, url) {
+ 
             ed.addButton('bilibili', {
                 title : '哔哩哔哩',
                 image : url+'/images/bilibili.png',
@@ -227,5 +246,11 @@
         },
     });
     tinymce.PluginManager.add('bilibili', tinymce.plugins.bilibili);
+
+
+
+
+
+
 
 })();

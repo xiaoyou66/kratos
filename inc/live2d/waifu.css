@@ -18,7 +18,7 @@
     padding: 20px 20px;
     border: 2px solid rgba(224, 186, 140, 0.62);
     border-radius: 12px;
-    background-color: rgba(236, 217, 188, 0.5);
+    background-color: rgba(236, 217, 188, 0.9);
     box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);
     text-overflow: ellipsis;
     overflow: hidden;
@@ -252,41 +252,4 @@
     0%, 100% {
         transform: translate(0, 0) rotate(0);
     }
-}
-@font-face {
-  font-family: 'Flat-UI-Icons';
-  src: url('flat-ui-icons-regular.eot');
-  src: url('flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), url('flat-ui-icons-regular.woff') format('woff'), url('flat-ui-icons-regular.ttf') format('truetype'), url('flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
-}
-[class^="fui-"],
-[class*="fui-"] {
-  font-family: 'Flat-UI-Icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.fui-cross:before {
-  content: "\e609";
-}
-.fui-info-circle:before {
-  content: "\e60f";
-}
-.fui-photo:before {
-  content: "\e62a";
-}
-.fui-eye:before {
-  content: "\e62c";
-}
-.fui-chat:before {
-  content: "\e62d";
-}
-.fui-home:before {
-  content: "\e62e";
-}
-.fui-user:before {
-  content: "\e631";
 }

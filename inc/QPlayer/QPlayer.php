@@ -14,7 +14,7 @@ define('QPlayer_VER', '1.3.4.2');
 require dirname(__FILE__) . '/option.php';
 
 
-add_action( 'init', 'QPlayer_add_jquery' );
+add_action( 'init', 'QPlayer_add_jquery');
 add_action('admin_menu', 'QPlayer_menu');
 add_action('wp_footer', 'footer');
 add_filter('plugin_action_links', 'QPlayer_plugin_setting', 10, 2);
@@ -57,6 +57,10 @@ function footer(){
 						</div>
 						<div class="right">
 							<div class="liebiao icon"></div>
+							<span class="downvolume fa fa-volume-down">                             
+                            </span>
+                            <span  class="upvolume fa fa-volume-up">
+                            </span>
 						</div>
 					</div>
 				</div>

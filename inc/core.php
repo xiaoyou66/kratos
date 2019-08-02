@@ -560,4 +560,3 @@ function kratos_welcome_notice(){
     if(current_user_can('manage_options')) echo $noticeinfo;
 }
 
-if(kratos_option('kratos_notice')=="welcome") add_action('welcome_panel','kratos_welcome_notice');

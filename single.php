@@ -1,5 +1,17 @@
 <?php get_header(); ?>
     <div id="container" class="container">
+        <style><?php
+            $style=kratos_option('wifuside');
+            $position=substr($style,0,strripos($style,':'));
+            $value=substr($style,strripos($style,':')+1);
+            if(kratos_option('wifuchange'))
+            {
+                if($position='left') $position='right';
+                else $position='left';
+            }
+            echo '.waifu {' . $position . ':' . $value . 'px;}';
+
+            ?></style>
         <script src="<?php echo  bloginfo('template_url').'/static/js/prism.js';?>"></script>
         <div class="row">
         <?php get_template_part('/inc/single-templates/single',get_post_format()); ?>
@@ -12,6 +24,10 @@
     </script>
 <!-- 文章目录移动-->
     <script>
+        //点击关闭后目录消失
+        $('#category-close').click(function () {
+            $('#article-index').remove();
+        });
         var dragJob=false;
         $(document).on("mousedown", '#article-index-move', function (e) {
             dragJob = true;
