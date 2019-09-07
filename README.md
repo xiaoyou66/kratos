@@ -1,90 +1,67 @@
 # kratos
 一款二次元wordpress主题
 
->目前这个主题还只是个半成品，目前不想改了，以后有时间会进行改动
+主题更新的地方
+本次主题相比上次有了很大的变化，下面只说几个改动大的，其他细微的地方请大家自己探索。
+
+1.后台添加了可以设置的界面
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UmFz.png)
+
+上次修改比较仓促，这次把以前需要改动源码的地方都转移到设置里面，尽量不麻烦大家修改源码。至于其中一些设置我会在后面详细说明。
+
+2.修改了文章背景图片
+
+![](https://img.xiaoyou66.com/images/2019/07/19/U9x3.png)
+
+文章背景图片全部换成非常清晰的图片，同时网页背景和主页的背景都改成了我现在的背景，如果需要修改文章背景的可以看后面我的详细介绍。
+
+3.评论表情更新
 
 
-这个版本的一些亮点：
+![](https://img.xiaoyou66.com/images/2019/07/19/UZT4.png)
 
-1.添加了可爱的看板娘，不仅支持多个人物切换，而且还可以更换衣服
+本次更新添加了知乎表情和哔哩哔哩表情，同时删除了QQ表情，后面我也会讲一下怎么添加表情。
 
-![](https://img.xiaoyou66.com/images/2019/06/25/EVg3.png)
+4.头像随机显示
 
-2.添加了代码美化插件，可以美化你的代码
-
-
-![](https://img.xiaoyou66.com/images/2019/06/25/Eu44.png)
-
-3.主页文章展示有动画效果
-
-![](https://img.xiaoyou66.com/images/2019/06/25/E4ET.gif)
-
-4.状态展示优化，可以用来显示日记
-
-![](https://img.xiaoyou66.com/images/2019/06/25/E8GE.png)
-
-5.文章归档界面优化，不同颜色随机显示，更加美观
-
-![](https://img.xiaoyou66.com/images/2019/06/25/EFPK.png)
+![](https://img.xiaoyou66.com/images/2019/07/19/UUKT.png)
 
 
-6.添加了仿微信的音乐播放器，可以用在状态里面播放音乐。
+对于没有头像的用户将会随机显示一个动漫头像，目前有59张动漫头像可以随机显示。
 
-![](https://img.xiaoyou66.com/images/2019/06/25/EWQR.png)
+5.主题集成了音乐播放器
 
-注：目前如果需要使用这个播放器的，需要自己添加以下HTML代码
-```
-<p class="weixinAudio">
-<audio src="https://xiaoyou66.com/music/26.mp3" id="media" width="1" height="1" preload=""></audio>
-<span id="audio_area" class="db audio_area">
-<span class="audio_wrp db">
-<span class="audio_play_area">
-<i class="icon_audio_default"></i>
-<i class="icon_audio_playing"></i>
-</span>
-<span id="audio_length" class="audio_length tips_global">3:07</span>
-<span class="db audio_info_area">
-<strong class="db audio_title">雨だれの歌</strong>
-<span class="audio_source tips_global">久保ユリカ</span>
-</span>
-<span id="audio_progress" class="progress_bar" style="width: 0%;"></span>
-</span>
-</span>
-</p>
-```
-自己改一下网址和标题和作者就可以了
-
-7.首页添加文章过滤功能，可以过滤自己不想在首页显示的分类文章，比如自己的日记
-
-注意
-这个东西需要自己修改php文件，具体的目录在下面
-
-![](https://img.xiaoyou66.com/images/2019/06/25/Ekyi.png)
-
-8.添加了追番的页面，可以显示自己的哔哩哔哩看动漫的进度（该功能需要你自己的B站登录的cooki数据。）
-
-![](https://img.xiaoyou66.com/images/2019/06/25/ElNo.gif)
-
-使用方法（cookie数据怎么获取可以自己通过谷歌浏览器的开发者工具进行获取，这里我不多说）：
-
-![](https://img.xiaoyou66.com/images/2019/06/25/EvbA.png)
+![](https://img.xiaoyou66.com/images/2019/07/19/UwmE.png)
 
 
-![](https://img.xiaoyou66.com/images/2019/06/25/Ecl2.png)
+无需安装插件，安装主题即可自带音乐播放器，同时改插件被我修改，目前可以完美的支持网易云音乐解析，这里可以添加自己的歌单，同时默认开始pjax加载，切换界面时音乐可以继续播放，只要不刷新音乐播放器就不会重置。
 
-![](https://img.xiaoyou66.com/images/2019/06/25/EAgX.png)
+6.添加了N个看板娘模型
 
-9.手机版侧边栏进行了美化，下面是美化后的效果
+![](https://img.xiaoyou66.com/images/2019/07/19/UxrK.png)
 
-![](https://img.xiaoyou66.com/images/2019/06/25/EQ41.png)
+添加了初音未来.雪，初音未来，33娘全身板，茵蒂克丝，尤（少女终末旅行），凉风青叶（new game），小埋，蕾姆，紫罗兰永恒花园女主，樱花庄（加了一几个角色），德莉沙等人物（因为人物过多所以需要自建api服务器，后面会教大家怎么自建）
 
-里面的头像和文字都需要自己修改php文件（这里我是没有时间加到主题设置里面。。）
+7.文章编辑页面按钮精简
 
-![](https://img.xiaoyou66.com/images/2019/06/25/EiG5.png)
-
-10.评论区添加了QQ表情，这里的发的表情大小被固定了，建议不要发送大的表情包
-
-![](https://img.xiaoyou66.com/images/2019/06/25/EmPD.png)
+![](https://img.xiaoyou66.com/images/2019/07/19/U3eR.png)
 
 
-11.更多细节我这里就不在一一举例了，这里我只是说了几个改动比较大的地方
+去掉很多对我来说没用的按钮，添加了代码高亮按钮和本地音乐播放器按钮，这里推荐大家配合TinyMCE Advanced食用
+
+使用该插件后效果如下：
+
+
+![](https://img.xiaoyou66.com/images/2019/07/19/Ubso.png)
+
+
+
+8.添加了文章目录模块
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UDvi.png)
+
+
+如果你的文章有H2-H4的标签均会显示目录，同时文章目录模块可以拖动，这里推荐大家使用H2作为主目录，H3作为主目录的分支。
+
+

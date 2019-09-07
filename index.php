@@ -1,5 +1,12 @@
 <?php get_header(); ?>
     <div id="container" class="container">
+<!-- 实现看板娘的灵活切换-->
+        <style><?php
+            $style=kratos_option('wifuside');
+            $position=substr($style,0,strripos($style,':'));
+            $value=substr($style,strripos($style,':')+1);
+            echo '.waifu {'.$position.':'.$value.'px;}';
+        ?></style>
         <div class="row">
             <?php if(kratos_option('home_side_bar')=='left_side'){ ?>
                 <aside class="col-md-4 hidden-xs hidden-sm scrollspy">
@@ -51,6 +58,13 @@
             </aside>
             <?php } ?>
         </div>
+        <script src="<?php echo  bloginfo('template_url').'/static/js/weixinAudio.js';?>"></script>
+        <!--音乐播放器-->
+        <script type="text/javascript">
+            $('.weixinAudio').weixinAudio({
+            });
+        </script>
     </div>
 </div>
+
 <?php get_footer(); ?>

@@ -1,11 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-     ____ _  __ __  __ __ __ ____
-    /  _// |/ // / / // //_// __ \
-   _/ / /    // /_/ // ,<  / /_/ /
-  /___//_/|_/ \____//_/|_| \____/
-
--->
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -25,6 +18,9 @@
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
+      <?php if(kratos_option('title_change')){?>
+      <script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='<?php echo  kratos_option('title_change'); ?>';}else{document.title=normal_title;}});</script>
+      <?php }?>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/bootstrap.min.css';?>"/>
     <title><?php wp_title('-',true,'right'); ?></title>
@@ -37,35 +33,36 @@
             if(kratos_option('mobi_mode')=='side') echo '@media(max-width:768px){#kratos-header-section{display:none}nav#offcanvas-menu{top:0;padding-top:190px;}.kratos-cover .desc.desc2{margin-top:-55px}}';
         }
 //        背景图片
-        if(kratos_option('background_mode')=='image') echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.8)}.kratos-hentry,.navigation div,.comments-area .comment-list li,#kratos-widget-area .widget,.comment-respond{background-color:rgba(253,253,253,.85)!important}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}body.custom-background{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
-        if(kratos_option('add_css')) echo kratos_option('add_css'); ?>
-         Marku
+        if(kratos_option('background_mode')=='image') echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.9)}.kratos-hentry,.navigation div,.comments-area .comment-list li,#kratos-widget-area .widget,.comment-respond{background-color:rgba(255,255,255,.9)!important}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}.theme-bg{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
+        if(kratos_option('openphoneimg')) echo'@media(max-width:768px){.theme-bg{background-image:url('.kratos_option('phone_img').');background-position: center center;top:0;}}';
+        if(kratos_option('add_css')) echo kratos_option('add_css');
+        ?>
     </style>
       <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
+      <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
+
 
   </head>
     <?php flush(); ?>
-    <body <?php if(kratos_option('background_mode')=='image') echo 'class="custom-background"'; ?>>
+    <body>
+    <div class="theme-bg" <?php if(kratos_option('background_mode')=='image') echo 'class="custom-background"'; ?>></div>
     <div id="kratos-wrapper">
             <div id="kratos-page">
                 <div id="sider-bar">
-
-<!--                    这个是头像部分-->
-
                     <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
                         <div class="dropdown wrapper">
                             <div ui-nav="">
-                                <a href="https://xiaoyou66.com/about/">
+                                <a href="<?php echo kratos_option('person_link'); ?>">
                                     <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                                        <img src="https://xiaoyou66.com/wp-content/uploads/2019/03/temp2-150x150.jpg" class="img-full">
+                                        <img src="<?php echo kratos_option('phone_sideer_image'); ?>" class="img-full">
                                     </span>
                                 </a>
                             </div>
                             <span class="clear">
                               <span class="block m-t-sm">
-                                <strong class="font-bold text-lt">小游</strong>
+                                <strong class="font-bold text-lt"><?php echo kratos_option('person_nickname'); ?></strong>
                               </span><br>
-                              <span class="text-muted text-xs block">二次元技术宅！</span>
+                              <span class="text-muted text-xs block"><?php echo kratos_option('person_sign'); ?></span>
                             </span>
                         </div>
                         <div class="line dk hidden-folded"></div>

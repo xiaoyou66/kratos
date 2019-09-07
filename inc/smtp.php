@@ -12,9 +12,9 @@ function mail_smtp($phpmailer){
         $phpmailer->FromName = $mail_name?$mail_name:'Moe-dog Services Team'; 
         $phpmailer->Host = $mail_host?$mail_host:'smtp.office365.com';
         $phpmailer->Port = $mail_port?$mail_port:'587';
-        $phpmailer->Username = $mail_username?$mail_username:'no_reply@fczbl.vip';
+        $phpmailer->Username = $mail_username?$mail_username:'no_reply@xiaoyou66.com';
         $phpmailer->Password = $mail_passwd?$mail_passwd:'123456789';
-        $phpmailer->From = $mail_username?$mail_username:'no_reply@fczbl.vip';
+        $phpmailer->From = $mail_username?$mail_username:'no_reply@xiaoyou66.com';
         $phpmailer->SMTPAuth = kratos_option('mail_smtpauth')==1?true:false ;
         $phpmailer->SMTPSecure = $mail_smtpsecure?$mail_smtpsecure:'STARTTLS';
         $phpmailer->IsSMTP();

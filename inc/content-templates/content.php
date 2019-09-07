@@ -22,7 +22,8 @@
         </div>
     </header>
     <div class="kratos-entry-content clearfix">
-    <p><?php echo wp_trim_words(get_the_excerpt(),kratos_option('w_num')); ?></p>
+    <p><?php if(has_excerpt()) echo the_excerpt();
+                else echo showSummary(get_the_content()) ?> </p>
     </div>
 </div>
 <?php }else{ ?>
@@ -30,11 +31,6 @@
 <div class="kratos-entry-border-new clearfix">
 <!--    这个是置顶文章-->
     <?php if(is_sticky()) echo '<img class="stickyimg" src="'.get_bloginfo('template_directory').'/static/images/sticky.png"/>'; ?>
-<!--   这一段是图片区域-->
-<!--    <div class="kratos-entry-thumb-new">-->
-<!--        --><?php //kratos_blog_thumbnail_new() ?>
-<!--    </div>-->
-
     <?php
     echo '<div class="kratos-post-inner-new" style="background-image:url(\''.kratos_blog_thumbnail_new().'\');">';
     ?>
@@ -43,7 +39,8 @@
                 <?php $category=get_the_category();if($category) echo '<a class="label" href="'.get_category_link($category[0]->term_id).'">'.$category[0]->cat_name.'</a>'; ?>
                 <h2 class="kratos-entry-title-new"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
             </header>
-            <p><?php echo wp_trim_words(get_the_excerpt(),kratos_option('w_num')); ?></p>
+            <p><?php if(has_excerpt()) echo the_excerpt();
+                else echo showSummary(get_the_content()) ?></p>
         </div>
     </div>
     <div class="kratos-post-meta-new">
