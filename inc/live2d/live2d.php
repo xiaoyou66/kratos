@@ -121,7 +121,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['donman']) {
                 //批量删除图片
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/thumb.zip',$imgpath)
+                downloadimg('http://cdn.xiaoyou66.com/image/thumb.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -129,7 +129,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['bilibili']) {
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/bilibili.zip',$imgpath);
+                downloadimg('http://cdn.xiaoyou66.com/image/bilibili.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载哔哩哔哩图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -156,7 +156,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['man']) {
                 //批量删除图片
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/avatarman.zip',$imgpath)
+                downloadimg('http://cdn.xiaoyou66.com/image/avatarman.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫男生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -164,7 +164,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['woman']) {
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/avatarwoman.zip',$imgpath);
+                downloadimg('http://cdn.xiaoyou66.com/image/avatarwoman.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫女生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -173,7 +173,7 @@ function live2d_option_page() {
             }
         }
         if($_POST['downlive2d']) {
-            downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
+            downloadimg('http://cdn.xiaoyou66.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
             ?>
             <div id="message" class="updated">
                 <p><strong>已下载live2d资源，不保证绝对成功，请自行检查</strong></p>
