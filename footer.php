@@ -14,7 +14,6 @@
                         echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
                        if(kratos_option('show_rss')){ bloginfo('url');
-<<<<<<< HEAD
                         echo '/feed"><i class="fa fa-rss"></i></a>';}
                         //B站logo
                         if(kratos_option('social_bilibili'))
@@ -24,9 +23,6 @@
                             echo '/static/images/ua/bilibili.png"></a>';
                         }?>
 
-=======
-                        echo '/feed"><i class="fa fa-rss"></i></a>';}?>
->>>>>>> 98bd1ceadd2761ae94cbe6d8e5497f9070ed2828
                     </p>
                     <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br>本站已萌萌哒(✪ω✪)运行<span id="span_dt_dt">Loading...</span><br>Theme <a href="https://xiaoyou66.com/%e6%9c%ac%e7%ab%99%e4%b8%bb%e9%a2%98%e6%ad%a3%e5%bc%8f%e5%bc%80%e6%ba%90%ef%bc%81/" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">moedog</a> Modified by <a href="https://xiaoyou66.com" target="_blank" rel="nofollow">XiaoYou</a><?php if(kratos_option('sitemap')) echo ' <br><a href="'.get_option('home').'/sitemap.html" target="_blank">Sitemap</a>'; ?>
                         <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
@@ -67,6 +63,7 @@
 </footer>
 </div>
 </div>
+
 <?php
 if (! wp_is_mobile() && kratos_option('openlive2d')) {
     echo '<div class="waifu" >
