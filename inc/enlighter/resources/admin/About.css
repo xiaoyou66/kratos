@@ -1,0 +1,107 @@
+/* About Page Badge
+-------------------------------- */
+#EnlighterBadge{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    background-image: url(badge150.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+#enlighter-about hr{
+    margin-top: 50px;
+}
+
+#enlighter-about .headline-title{
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 1.25em 0 0.6em;
+    text-align: center;
+}
+
+#enlighter-about .featured-image img, #enlighter-about .news-image img{
+    -webkit-box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.39);
+    box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.39);
+    border: solid 1px #c0c0c0;
+}
+
+
+
+
+
+/* Changelog Tab
+-------------------------------- */
+#EnlighterTabChangelog li{
+    list-style: disc outside;
+    margin-left: 2em;
+}
+
+#EnlighterTabChangelog .changelog-more{
+    font-size: 0.8em;
+    margin-top: 2em;
+}
+
+
+/* News Tab
+-------------------------------- */
+#EnlighterTabNews .headline{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+#EnlighterTabNews p{
+    font-size: 1em;
+}
+#EnlighterTabNews .introduction{
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+/* Column Layout */
+#enlighter-about .col-md-2{
+    min-width: 350px;
+    width: 49%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#enlighter-about .news-section{
+    padding: 10px 10px 20px 10px;
+}
+
+#enlighter-about .news-section p{
+    text-align: center;
+}
+
+#enlighter-about .news-section h4{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#enlighter-about .news-image{
+    display: block;
+    width: auto;
+}
+
+#enlighter-about .news-image img{
+    display: block;
+    margin: auto;
+}
+
+/* Tab Nav
+-------------------------------- */
+#EnlighterTabNav{
+    display: none;
+    position: relative !important;
+}
+#EnlighterTabNav a{
+    cursor: pointer;
+}

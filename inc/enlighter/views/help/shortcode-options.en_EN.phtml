@@ -1,0 +1,28 @@
+<p><strong>Language-Shortcode-Syntax: </strong><code>[js theme="" group="" tab="" highlight="" offset="" linenumbers=""]
+        YOUR CODE [/js]</code></p>
+
+<p><strong>Legacy-Syntax: </strong><code>[enlighter language="" theme="" group="" tab="" highlight="" offset=""
+        linenumbers=""] YOUR CODE [/js]</code></p>
+
+<p><strong>Attributes</strong></p>
+<p>
+<ul style="padding-left: 10px">
+    <li><strong>language</strong> (optional) - the language used to highlight the code - only required for legacy
+        shortcode - will overwrite the settings-page values
+    </li>
+    <li><strong>theme</strong> (optional) - defines the theme that should used, will overwrite the settings-page values
+    </li>
+    <li><strong>group</strong> (optional) - the group identifier if code-grouping is used (elements with matching
+        identifiers will be grouped together) <br/>
+        Note: when using [codegroup] tags this attribute will be generated automaically - you don`t have to set it!
+    </li>
+    <li><strong>tab</strong> (optional) - set the name of the tab-pane, if not defined the language will be used as
+        title
+    </li>
+    <li><strong>highlight</strong> (optional) - defines a set of lines which are pointed out (ranges are supported).
+        <br/>
+        e.g. <code>highlight="1,2-4,20"</code> to highlight lines 1,2,3,4,20
+    </li>
+    <li><strong>offset</strong> (optional) - set the line-numbering offset (starts at 1 by default)</li>
+    <li><strong>linenumbers</strong> (optional) - show/hide linenumbers (true/false)</li>
+</ul></p>

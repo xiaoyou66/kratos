@@ -1,0 +1,108 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<div class="wrap about-wrap" id="enlighter-about">
+
+    <!-- News Title !-->
+    <h1>Welcome to Enlighter <?php echo ENLIGHTER_VERSION ?></h1>
+
+    <!-- News Subtext !-->
+    <div class="about-text">
+        Thanks for upgrading! Many new features and improvements are available that you will enjoy.
+    </div>
+
+    <!-- Logo on the right !-->
+    <div id="EnlighterBadge"></div>
+
+    <!-- Settings Tabs -->
+    <h2 class="nav-tab-wrapper" id="EnlighterTabNav">
+        <a data-tab="EnlighterTabNews" class="nav-tab"><?php _e('What&#8217;s New', 'enlighter'); ?></a>
+        <a data-tab="EnlighterTabChangelog" class="nav-tab"><?php _e('Changelog', 'enlighter'); ?></a>
+    </h2>
+
+    <!-- Latest News !-->
+    <div id="EnlighterTabNews">
+        <div class="headline">
+            <h3 class="headline-title">Gutenberg Editor Support</h3>
+
+            <div class="featured-image">
+                <img
+                    src="<?php echo Enlighter\ResourceManager::getResourceUrl('about/enlighter_gutenberg.gif'); ?>"
+                    alt="Gutenberg Editor Support">
+            </div>
+
+            <p class="introduction">EnlighterJS Gutenberg Editor Plugin.</p>
+
+            <p>This <strong>beta feature</strong> can be enabled via <code>Enlighter - Visual Editor - Gutenberg Editor Plugin</code></p>
+
+        </div>
+
+        <hr />
+
+        <div class="column-layout-2">
+
+            <div class="col-md-2">
+                <div class="news-section">
+                    <h4>Announcement: EnlighterJS 3 is coming</h4>
+
+                    <div class="news-image">
+                        <img
+                            src="<?php echo Enlighter\ResourceManager::getResourceUrl('about/enlighterjs3.png'); ?>"
+                            alt="EnlighterJS 3">
+                    </div>
+
+                    <p>And everything will change. New Themes. New Languages. New Highlighting Engine.
+                    <strong>Unfortunately no backward compatibility.</strong></p>
+                    <p>All custom modifications will be lost by upgrading to the <strong>next major release</strong> <code>Enlighter v4.0</code></p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="news-section">
+                    <h4>Keyboard Shortcut</h4>
+
+                    <div class="news-image">
+                        <img
+                            src="<?php echo Enlighter\ResourceManager::getResourceUrl('about/enlighter_kbd_shortcut.gif'); ?>"
+                            alt="Keyboard Shortcut">
+                    </div>
+
+                    <p>You can use the keyboard shortcut <kbd>alt + shift + x</kbd> to highlight selected text as inline code. Goto <code>Enlighter - Visual Editor - Tweaks</code> to enable it!</p>
+
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+    </div>
+
+    <!-- Changelog Tab !-->
+    <div id="EnlighterTabChangelog">
+        <h3 class="changelog-title">What have been changed in <?php echo ENLIGHTER_VERSION ?></h3>
+
+        <?php include(ENLIGHTER_PLUGIN_PATH.'/views/admin/Changes.html'); ?>
+
+        <p class="changelog-more">Need more ? View the <a href="https://github.com/EnlighterJS/Plugin.WordPress/blob/master/CHANGES.md">full history on GitHub</a></p>
+
+    </div>
+
+    <hr />
+
+    <!-- Footer NAV !-->
+    <p class="related"><strong>Related:</strong>
+        <a href="https://twitter.com/andidittrich/">@AndiDittrich</a> &bullet;
+        <a href="https:/andidittrich.de">Author's Page</a> &bullet;
+        <a href="https://enlighterjs.org">EnlighterJS</a>
+    </p>
+    <p class="related"><strong>GitHub:</strong>
+        <a href="https://github.com/EnlighterJS/Plugin.WordPress">Development</a> &bullet;
+        <a href="https://github.com/EnlighterJS/Plugin.WordPress/issues">Report Bugs</a> &bullet;
+        <a href="https://github.com/EnlighterJS/Plugin.WordPress/commits/master">Commits</a> &bullet;
+        <a href="https://github.com/EnlighterJS/Plugin.WordPress/blob/master/CHANGES.md">Changelog</a> &bullet;
+        <a href="https://github.com/EnlighterJS/Plugin.WordPress/releases">Releases</a>
+    </p>
+
+</div>

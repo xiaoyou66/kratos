@@ -1,4 +1,4 @@
-#QPlayer {
+	#QPlayer {
 	position:fixed;
 	overflow:hidden;
 	bottom:118px;
@@ -47,7 +47,7 @@
 
 .liebiao.icon {
 	left: 187px;
-	top: 36px;
+	top: 38px;
 }
 
 .upvolume{
@@ -77,6 +77,7 @@
 #player .ctrl .musicTag {
 	cursor: ew-resize;
 	user-select: none;
+
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -283,7 +284,10 @@ to {
 }
 
 .marquee {
-  overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
 }
 
 #player .ctrl .icon,#playlist li,#playlist li:hover:before, #playlist li:hover:after {

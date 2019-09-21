@@ -1,0 +1,1337 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Enlighter  3.9.0\n"
+"Report-Msgid-Bugs-To: andi DOT dittrich AT a3non DOT org\n"
+"POT-Creation-Date: 2019-01-13 16:44:28+00:00\n"
+"PO-Revision-Date: 2019-02-03 00:14+0800\n"
+"Last-Translator: XFY9326 <1069665464@qq.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: class/ContextualHelp.php:34
+msgid "Tutorials"
+msgstr "教程"
+
+#: class/ContextualHelp.php:40
+msgid "General Usage"
+msgstr "通用"
+
+#: views/admin/TextEditing.phtml:50
+msgid "Markdown"
+msgstr "Markdown"
+
+#: views/admin/TextEditing.phtml:5
+msgid "Shortcodes"
+msgstr "短代码"
+
+#: class/ContextualHelp.php:57
+msgid "Shortcode-Options"
+msgstr "短代码选项"
+
+#: class/ContextualHelp.php:62
+msgid "Generic-Shortcode"
+msgstr "通用-短代码"
+
+#: class/ContextualHelp.php:67
+msgid "Codegroups"
+msgstr "代码分组"
+
+#: views/admin/Options.phtml:19
+msgid "External Themes"
+msgstr "外部主题"
+
+#: views/admin/SettingsPage.phtml:39
+msgid "Enlighter - Customizable Syntax Highlighter"
+msgstr "Enlighter——可自定义的语法高亮显示插件"
+
+#: class/Enlighter.php:279
+msgid "News & Updates"
+msgstr "新闻与更新"
+
+#: class/Enlighter.php:280
+msgid "EnlighterJS Website"
+msgstr "EnlighterJS 网页"
+
+#: class/Enlighter.php:290
+msgid "Settings"
+msgstr "设置"
+
+#: class/Enlighter.php:291
+msgid "About"
+msgstr "关于"
+
+#: class/EnvironmentCheck.php:37 class/EnvironmentCheck.php:44
+msgid "view help"
+msgstr "查看帮助"
+
+#: class/EnvironmentCheck.php:58
+msgid ""
+"Option <code>use_balanceTags</code> is enabled - this option is "
+"<strong>DEPRECATED</strong>. Might cause a weired behaviour by inserting "
+"random closing html tags into your code."
+msgstr ""
+"选项<code>use_balanceTags</code>被启用了——这个选项是<strong>已弃用</strong>"
+"的。在代码中插入随机关闭html标记可能会导致奇怪的行为。"
+
+#: class/EnvironmentCheck.php:63
+msgid ""
+"Option <code>use_smilies</code> is enabled. Legacy smiley sequences like :) "
+"are replaced by images which also affects posted sourcecode."
+msgstr ""
+"选项<code>use_smilies</code>被启用了。传统的笑脸如: )将会被图像取代，这些图像"
+"也会影响发布文章的源代码。"
+
+#: class/EnvironmentCheck.php:68
+msgid ""
+"Plugin \"Crayon Syntax Highlighter\" is enabled - it may take over the "
+"Enlighter pre elements - highlighting will not work!"
+msgstr ""
+"插件\"Crayon Syntax Highlighter\"已启用——它可能会接管Enlighter预处理的元素并"
+"且语法高亮显示将会失效！"
+
+#: class/EnvironmentCheck.php:77
+msgid ""
+"Autoset Permissions failed - Please change the directory permission (chmod "
+"<code>0644</code> or <code>0777</code>) manually!"
+msgstr ""
+"自动设置权限失败——请手动更改目录权限 (chmod <code>0644</code> or <code>0777</"
+"code>) ！"
+
+#: class/EnvironmentCheck.php:83
+msgid ""
+"The plugin is located within an invalid path - the <code>enlighter/</code> "
+"directory name is <strong>mandatory</strong>"
+msgstr ""
+"该插件位于一个无效的路径内——您<strong>必须</strong>使用<code>enlighter/</"
+"code>目录名"
+
+#: class/TinyMCE.php:131
+msgid "Enlighter Codeblocks"
+msgstr "Enlighter代码块"
+
+#: class/TinyMCE.php:155
+msgid "Enlighter Inline"
+msgstr "Enlighter内嵌"
+
+#: views/admin/About.phtml:18
+msgid "What&#8217;s New"
+msgstr "最新消息"
+
+#: views/admin/About.phtml:19
+msgid "Changelog"
+msgstr "更新日志"
+
+#: views/admin/SettingsPage.phtml:27
+msgid "Appearance"
+msgstr "外观"
+
+#: views/admin/Appearance.phtml:9
+msgid ""
+"You can specify the default language and theme as well as the some output "
+"styles. If you want to customize themes, choose the default theme option "
+"\"custom\""
+msgstr ""
+"您可以指定默认语言和主题以及某些输出样式。 如果您想自定义主题，选择默认主题选"
+"项\"自定义\""
+
+#: views/admin/Appearance.phtml:10
+msgid ""
+"The indent-option will replace each tab at the beginning of a line with a "
+"selectable number of space-characters"
+msgstr "缩进选项将使用可选数量的空格字符替换行首的每个制表符"
+
+#: views/admin/Appearance.phtml:12
+msgid "Global Settings"
+msgstr "通用设置"
+
+#: views/admin/Appearance.phtml:15
+msgid "Theme"
+msgstr "主题"
+
+#: views/admin/Appearance.phtml:18
+msgid "Default Language"
+msgstr "默认语言"
+
+#: views/admin/Appearance.phtml:21
+msgid "Code-Indent"
+msgstr "代码缩进"
+
+#: views/admin/Appearance.phtml:21
+msgid "No modification (keep tabs)"
+msgstr "不做修改 (保持制表符)"
+
+#: views/admin/Appearance.phtml:21
+msgid "1 Space"
+msgstr "单个空格"
+
+#: views/admin/Appearance.phtml:21
+msgid "Spaces"
+msgstr "空格"
+
+#: views/admin/Appearance.phtml:24
+msgid "Show Linenumbers"
+msgstr "显示行号"
+
+#: views/admin/Appearance.phtml:27
+msgid "Mouseover on codelines"
+msgstr "鼠标可以悬停在代码行上"
+
+#: views/admin/Appearance.phtml:30
+msgid "RawCode on dbclick"
+msgstr "双击切换成纯代码"
+
+#: views/admin/Appearance.phtml:32
+msgid "Button Toolbar"
+msgstr "按钮工具栏"
+
+#: views/admin/Appearance.phtml:33
+msgid "Enable/Disable specific toolbar buttons."
+msgstr "启用/禁用 特定的工具栏按钮。"
+
+#: views/admin/Appearance.phtml:36
+msgid "Raw-Codebutton"
+msgstr "原始代码的按钮"
+
+#: views/admin/Appearance.phtml:39
+msgid "Window-button (new Window)"
+msgstr "窗口按钮(新建窗口)"
+
+#: views/admin/Appearance.phtml:42
+msgid "Info-button"
+msgstr "信息按钮"
+
+#: views/admin/Beta.phtml:5
+msgid "BETA Features"
+msgstr "测试版特性"
+
+#: views/admin/Beta.phtml:8
+msgid ""
+"Warning: These options are for advanced users only and subjected to change!"
+msgstr "警告: 这些选项仅适用于高级用户并且可能会有改动！"
+
+#: views/admin/Beta.phtml:11
+msgid "Dynamic Resource Invocation (DRI)"
+msgstr "动态资源调用(DRI)"
+
+#: views/admin/Beta.phtml:12
+msgid ""
+"To optimize your website load-time it`s possible to load the EnlighterJS "
+"script dependencies only if they are required (requires script-position: "
+"footer)."
+msgstr ""
+"为了优化您的网站加载时间，只有在需要时才加载EnlighterJS脚本依赖项(脚本必须处"
+"于页脚)。"
+
+#: views/admin/Beta.phtml:13
+msgid ""
+"In case it`s enable, the plugin will observer it`s invocation (visual "
+"editor, shortcodes, markdown)."
+msgstr "如果它启用，插件将观察它的调用(可视编辑器，短代码，Markdown)。"
+
+#: views/admin/Beta.phtml:15
+msgid "Enable DRI"
+msgstr "启用DRI"
+
+#: views/admin/Compatibility.phtml:5
+msgid "Compatibility Mode / 3rd Party Migration"
+msgstr "兼容模式/第三方迁移"
+
+#: views/admin/SettingsPage.phtml:33
+msgid "Compatibility"
+msgstr "兼容性"
+
+#: views/admin/Compatibility.phtml:10
+msgid ""
+"Do you use plugins which did not support Enlighter directly? In this case "
+"the compatibility mode converts the legacy code (desgined for other syntax "
+"highlighting plugins) into Enlighter codeblocks on the fly."
+msgstr ""
+"您要直接使用不支持 Enlighter 的插件吗？ 在这种情况下，兼容模式会将传统代码(针"
+"对其他语法突出显示插件设置)转换为动态代码块。"
+
+#: views/admin/Compatibility.phtml:11
+msgid ""
+"This feature allows you to migrate to Enlighter without altering your old "
+"posts."
+msgstr "此功能允许您在不更改旧文章的情况下迁移到Enlighter。"
+
+#: views/admin/Compatibility.phtml:16
+msgid "Defaults"
+msgstr "缺省选项"
+
+#: views/admin/Compatibility.phtml:17
+msgid "Codeblocks with missing language identifier should highlighted as:"
+msgstr "缺少语言标识符的代码块应突出显示为:"
+
+#: views/admin/TextEditing.phtml:56
+msgid "Generic Code Blocks"
+msgstr "通用代码块"
+
+#: views/admin/TextEditing.phtml:56
+msgid "Generic Highlighting"
+msgstr "通用语法高亮"
+
+#: views/admin/TextEditing.phtml:56
+msgid "No Highlighting (RAW)"
+msgstr "无语法高亮(纯文本)"
+
+#: views/admin/TextEditing.phtml:58
+msgid "Filter Targets"
+msgstr "对目标进行筛选"
+
+#: views/admin/Compatibility.phtml:22
+msgid ""
+"Choose the content-sections to which the compatibility filter should be "
+"applied."
+msgstr "选择要应用兼容性过滤器的内容部分。"
+
+#: views/admin/TextEditing.phtml:19 views/admin/TextEditing.phtml:62
+msgid "Enable the_content"
+msgstr "启用内容"
+
+#: views/admin/TextEditing.phtml:22 views/admin/TextEditing.phtml:65
+msgid "Enable the_excerpt"
+msgstr "启用摘要"
+
+#: views/admin/TextEditing.phtml:25 views/admin/TextEditing.phtml:68
+msgid "Enable comments"
+msgstr "启用评论"
+
+#: views/admin/TextEditing.phtml:28 views/admin/TextEditing.phtml:71
+msgid "Enable comments-excerpt"
+msgstr "启用评论摘要"
+
+#: views/admin/TextEditing.phtml:31 views/admin/TextEditing.phtml:74
+msgid "Enable widget-text"
+msgstr "启用小部件文本"
+
+#: views/admin/Extensions.phtml:5
+msgid "Dynamic Content"
+msgstr "动态内容"
+
+#: views/admin/Extensions.phtml:8
+msgid ""
+"Support for \"load more\" buttons. It is required to highlight code sections "
+"which are dynamically added to your page via AJAX/XHR!"
+msgstr ""
+"支持\"加载更多\"按钮。通过Ajax/XHR动态添加到页面的代码部分需要突出显示！"
+
+#: views/admin/Extensions.phtml:10
+msgid "Jetpack"
+msgstr "Jetpack"
+
+#: views/admin/Extensions.phtml:13
+msgid ""
+"If you use the <a href=\"https://jetpack.me/support/infinite-scroll/"
+"\">InfiniteScroll Module</a>, enable this option to load the Enlighter."
+"InfniteScroll extension. It is required to highlight code sections which are "
+"dynamically added to your page!"
+msgstr ""
+"如果您使用<a href=\"https://jetpack.me/support/infinite-scroll/"
+"\">InfiniteScroll模块</a>，请启用此选项以加载Enlighter.InfniteScroll扩展名。 "
+"动态添加到页面的代码部分需要突出显示！"
+
+#: views/admin/Extensions.phtml:14
+msgid "Infinite Scroll"
+msgstr "无限滚动"
+
+#: views/admin/Extensions.phtml:17
+msgid "jQuery AJAX"
+msgstr "jQuery AJAX"
+
+#: views/admin/Extensions.phtml:20
+msgid ""
+"This options adds a trigger to the <code>ajaxComplete</code> event used by "
+"jQuery."
+msgstr "此选项是使用jQuery的<code>ajaxComplete</code>事件添加的触发器。"
+
+#: views/admin/Extensions.phtml:21
+msgid "Dynamic Ajax Content"
+msgstr "动态Ajax内容"
+
+#: views/admin/Extensions.phtml:29
+msgid "bbPress Forums Plugin"
+msgstr "bbPress 论坛插件"
+
+#: views/admin/Extensions.phtml:32
+msgid ""
+"These options are related to the popular <a href=\"https://wordpress.org/"
+"plugins/bbpress/\" target=\"_blank\">bbPress Forums Plugin</a>."
+msgstr ""
+"这些选项与受备受欢迎的<a href=\"https://wordpress.org/plugins/bbpress/\" "
+"target=\"_blank\">bbPress论坛插件</a>相关。"
+
+#: views/admin/Extensions.phtml:33
+msgid ""
+"<strong>Note: </strong> Backtick style code-elements of bbPress will be "
+"disabled when enabling one of the extensions to avoid conflicts!"
+msgstr ""
+"<strong>注意: </strong>启用其中一个扩展程序时，bbPress的反引号样式代码元素将"
+"被禁用以避免冲突！"
+
+#: views/admin/Extensions.phtml:36
+msgid "bbPress"
+msgstr "bbPress"
+
+#: views/admin/Extensions.phtml:39
+msgid "Enable Shortcode support within bbPress topics and replies."
+msgstr "在bbPress主题和回复中启用短代码支持。"
+
+#: views/admin/Extensions.phtml:40
+msgid "Enlighter Shortcodes"
+msgstr "Enlighter 短代码"
+
+#: views/admin/Extensions.phtml:43
+msgid ""
+"Enable Markdown style fenced code blocks within bbPress topics and replies."
+msgstr "在bbPress主题和回复中启用Markdown样式的代码块。"
+
+#: views/admin/Extensions.phtml:44
+msgid "Markdown Code-Blocks"
+msgstr "Markdown 代码块"
+
+#: views/admin/Extensions.phtml:51
+msgid "Cryptex E-Mail Obfuscation Plugin"
+msgstr "Cryptex电子邮件混淆插件"
+
+#: views/admin/Extensions.phtml:54
+msgid ""
+"These options are related to the <a href=\"https://wordpress.org/plugins/"
+"cryptex/\" target=\"_blank\">Cryptex E-Mail Address Obfuscation plugin</a>. "
+"It can protect E-Mail Addresses within your highlighted sourcecode."
+msgstr ""
+"这些选项与<a href=\"https://wordpress.org/plugins/cryptex/\" target=\"_blank"
+"\">Cryptex电子邮件地址混淆插件</a>相关。它可以保护突出显示的源代码中的电子邮"
+"件地址。"
+
+#: views/admin/Extensions.phtml:55
+msgid "Requires Cryptex 5.0 with enabled hyperlinks."
+msgstr "需要具有启用超链接的Cryptex 5.0。"
+
+#: views/admin/Extensions.phtml:58
+msgid "Cryptex"
+msgstr "Cryptex"
+
+#: views/admin/Extensions.phtml:61
+msgid "Enable Cryptex Support"
+msgstr "启用Cryptex支持"
+
+#: views/admin/Extensions.phtml:64
+msgid ""
+"The default Email address which will be shown if the hyperlinks are disabled "
+"into the cryptex plugin "
+msgstr "如果在cryptex插件中超链接被禁用，将显示默认的电子邮件地址 "
+
+#: views/admin/Extensions.phtml:65
+msgid "Fallback EMail Address"
+msgstr "后备电子邮件地址"
+
+#: views/admin/Extensions.phtml:65
+msgid "can be any kind of text"
+msgstr "可以是任意种类的文本"
+
+#: views/admin/Options.phtml:5
+msgid "Resources &amp; CDN (Content Delivery Network)"
+msgstr "资源与CDN (内容分发网络)"
+
+#: views/admin/Options.phtml:8
+msgid ""
+"These options might be required when using a Content-Delivery-Network (CDN) "
+"or another server/location which outsources your CSS+Javascript files."
+msgstr ""
+"当使用CDN(内容分发网络)或外置在服务器或其他位置的CSS + javascript文件时，可能"
+"需要这些选项。"
+
+#: views/admin/Options.phtml:9
+msgid ""
+"In this case you have to manually include EnlighterJS.js, EnlighterJS.css "
+"and the MooTools Framework into your page!"
+msgstr ""
+"在这种情况下，您必须手动将enlighterjs.js、enlighterjs.css和mootools框架包含到"
+"您的页面中！"
+
+#: views/admin/Options.phtml:10
+msgid "Custom styles, generated with the ThemeCustomizer are"
+msgstr "使用ThemeCustomizer生成的自定义样式"
+
+#: views/admin/Options.phtml:10
+msgid "available here"
+msgstr "在此处可用"
+
+#: views/admin/Options.phtml:13
+msgid "Include Enlighter-CSS"
+msgstr "包含 Enlighter-CSS"
+
+#: views/admin/Options.phtml:16
+msgid "Include Enlighter-Javascript"
+msgstr "包含 Enlighter-Javascript"
+
+#: views/admin/Options.phtml:20
+msgid ""
+"Custom/external themes located into your themes directory can be "
+"automatically loaded."
+msgstr "可以自动加载位于主题目录中的自定义或外部的主题。"
+
+#: views/admin/Options.phtml:21
+msgid "Include External Themes"
+msgstr "包含外置主题"
+
+#: views/admin/Options.phtml:24 views/admin/Options.phtml:26
+msgid "MooTools Framework Source"
+msgstr "MooTools框架资源"
+
+#: views/admin/Options.phtml:25
+msgid ""
+"The required MooTools-Framework can be hosted by a public CDN provider or by "
+"your own."
+msgstr "所需的MooTools框架可以由公共CDN提供商托管，也可以由您自己托管。"
+
+#: views/admin/Options.phtml:26
+msgid "Your WordPress Site"
+msgstr "您的WordPress网页"
+
+#: views/admin/Options.phtml:26
+msgid "Google CDN"
+msgstr "谷歌CDN"
+
+#: views/admin/Options.phtml:26
+msgid "CDNJS (Cloudfare)"
+msgstr "CDNJS (Cloudfare)"
+
+#: views/admin/Options.phtml:26
+msgid "JSDELIVR"
+msgstr "JSDELIVR"
+
+#: views/admin/Options.phtml:26 views/admin/Options.phtml:31
+msgid "Not include"
+msgstr "不包含在以上选项中"
+
+#: views/admin/Options.phtml:29
+msgid "Initialization"
+msgstr "初始化"
+
+#: views/admin/Options.phtml:30
+msgid "Select the source/location of Enlighter`s initialization script."
+msgstr "选择Enlighter初始化脚本的源/位置。"
+
+#: views/admin/Options.phtml:31
+msgid "Enlighter Config"
+msgstr "Enlighter 配置"
+
+#: views/admin/Options.phtml:31
+msgid "Inline within header/footer"
+msgstr "内嵌在页眉/页脚中"
+
+#: views/admin/Options.phtml:31
+msgid "External File using <script src=\"\"...>"
+msgstr "使用<script src=\"…>导入外部文件"
+
+#: views/admin/Options.phtml:34 views/admin/Options.phtml:36
+msgid "Javascript Position"
+msgstr "Javascript 位置"
+
+#: views/admin/Options.phtml:35
+msgid ""
+"Related Javascript files/inline scripts can be added to the footer "
+"(wp_footer) or header (wp_head)."
+msgstr ""
+"相关的javascript文件或内嵌脚本可以添加到页脚(wp_footer)或页眉(wp_head)中。"
+
+#: views/admin/Options.phtml:36
+msgid "Header within wp_head"
+msgstr "内置在页眉(wp_head)中"
+
+#: views/admin/Options.phtml:36
+msgid "Footer within wp_footer"
+msgstr "内置在页脚(wp_head)中"
+
+#: views/admin/Options.phtml:38
+msgid "CDN Location Info"
+msgstr "CDN位置信息"
+
+#: views/admin/Options.phtml:39
+msgid "List of available CDN locations used by Enlighter."
+msgstr "Enlighter可用的CDN列表。"
+
+#: views/admin/Options.phtml:53
+msgid "Advanced Options"
+msgstr "高级选项"
+
+#: views/admin/Options.phtml:56
+msgid "Warning: These options are for advanced users only!"
+msgstr "警告: 这些选项仅供高级用户使用！"
+
+#: views/admin/Options.phtml:59
+msgid "\"WpAutoP\" Filter Priority"
+msgstr "\"WpAutoP\" 筛选器优先级"
+
+#: views/admin/Options.phtml:60
+msgid ""
+"<strong>Deprecated:</strong> This feature will be removed in the future, "
+"because the new LowLevel Shortcode Handler will avoid wpautop rendering "
+"issues!"
+msgstr ""
+"<strong>已弃用:</strong> 这个功能将来会被删除，因为新的 LowLevel 短代码处理程"
+"序将避免 wpautop 渲染问题！"
+
+#: views/admin/Options.phtml:61
+msgid ""
+"The processing priority of the wpautop filter. Normally the filter will be "
+"applied before shortcode is handled and will maybe crash your code-"
+"appearance by adding linebreaks and p/br tags."
+msgstr ""
+"过滤器wpautop的处理优先级。</br>通常情况下过滤器将在处理短代码之前应用，并且"
+"可能会通过添加换行符和 p 或 br 标记来破坏代码外观。"
+
+#: views/admin/Options.phtml:62
+msgid ""
+"The Enlighter-Plugin <strong>does not</strong> change the priority of the "
+"filter by default.<strong>It may can influence other plugins.</strong>"
+msgstr ""
+"Enlighter-Plugin 默认<strong>不会</strong>更改过滤器的优先级。 <strong>它可能"
+"会影响其他插件。</strong>"
+
+#: views/admin/Options.phtml:64
+msgid "Filter-Priority"
+msgstr "筛选器优先级"
+
+#: views/admin/Options.phtml:64
+msgid "Default (no changes)"
+msgstr "默认(不进行任何更改)"
+
+#: views/admin/Options.phtml:64
+msgid "Priority 12 (after shortcode)"
+msgstr "优先级 12 (位于短代码后)"
+
+#: views/admin/Options.phtml:67
+msgid "CSS Selector"
+msgstr "CSS 选择器"
+
+#: views/admin/Options.phtml:68
+msgid ""
+"The selectors are used to match all generated tags. Normally pre."
+"EnlighterJSRAW/code.EnlighterJSRAW should be perfect (all tags which are "
+"generated by the plugin will be highlighted)"
+msgstr ""
+"用于匹配所有生成标签的选择器。 通常pre.EnlighterJSRAW / code.EnlighterJSRAW应"
+"该是没有问题的(插件生成的所有标签都会突出显示)"
+
+#: views/admin/Options.phtml:69
+msgid "<strong>Default: </strong>pre.EnlighterJSRAW"
+msgstr "<strong>默认: </strong>pre.EnlighterJSRAW"
+
+#: views/admin/Options.phtml:70
+msgid "Block CSS Selector"
+msgstr "阻止CSS选择器"
+
+#: views/admin/Options.phtml:70
+msgid "The CSS selector used to match generated block code"
+msgstr "用于匹配生成的块代码的CSS选择器"
+
+#: views/admin/Options.phtml:72
+msgid "<strong>Default: </strong>code.EnlighterJSRAW"
+msgstr "<strong>默认:</strong>code.EnlighterJSRAW"
+
+#: views/admin/Options.phtml:73
+msgid "Inline CSS Selector"
+msgstr "内嵌 CSS 选择器"
+
+#: views/admin/Options.phtml:73
+msgid "The CSS selector used to match generated inline code"
+msgstr "用于匹配生成的内嵌代码的CSS选择器"
+
+#: views/admin/Options.phtml:76
+msgid "I18n (Internationalization)"
+msgstr "国际化"
+
+#: views/admin/Options.phtml:77
+msgid ""
+"Should the plugin load language files (if available) to translate the "
+"settings page ?"
+msgstr "插件是否应加载语言文件(如果可用)来翻译设置页面？"
+
+#: views/admin/Options.phtml:78
+msgid "Enable I18n"
+msgstr "允许多国语言翻译"
+
+#: views/admin/Related.phtml:4
+msgid "Enlighter Related"
+msgstr "Enlighter相关"
+
+#: views/admin/Related.phtml:7
+msgid "Got a problem ? Need support or want to request a new feature ?"
+msgstr "请问您有什么问题吗？ 需要支持还是想添加新功能？"
+
+#: views/admin/ThemeCustomizer.phtml:5
+msgid "Theme Customizer"
+msgstr "主题自定义工具"
+
+#: views/admin/SettingsPage.phtml:29
+msgid "Visual Editor"
+msgstr "可视化编辑器"
+
+#: views/admin/SettingsPage.phtml:30
+msgid "Text Editor"
+msgstr "文本编辑器"
+
+#: views/admin/SettingsPage.phtml:31
+msgid "Webfonts"
+msgstr "在线字体"
+
+#: views/admin/SettingsPage.phtml:32
+msgid "Extensions"
+msgstr "扩展"
+
+#: views/admin/SettingsPage.phtml:34
+msgid "Options"
+msgstr "选项"
+
+#: views/admin/SettingsPage.phtml:35
+msgid "BETA"
+msgstr "测试版"
+
+#: views/admin/SettingsPage.phtml:40
+msgid ""
+"Select the content you want to highlight and Enlighter takes care of the "
+"rest."
+msgstr "选择要突出显示的内容，Enlighter会处理好其它的事。"
+
+#: views/admin/SettingsPage.phtml:112
+msgid "is developed by"
+msgstr "的开发者是"
+
+#: views/admin/SettingsPage.phtml:113
+msgid "It`s released under the terms of the %s. "
+msgstr "本插件遵守 %s "
+
+#: views/admin/SettingsPage.phtml:113
+msgid "MIT X11 License"
+msgstr "MIT X11 协议"
+
+#: views/admin/SystemInfo.phtml:4
+msgid "System Info"
+msgstr "系统信息"
+
+#: views/admin/SystemInfo.phtml:11
+msgid "PHP Version:"
+msgstr "PHP 版本:"
+
+#: views/admin/SystemInfo.phtml:15 views/admin/SystemInfo.phtml:17
+msgid "PHP JSON Extension"
+msgstr "PHP JSON 扩展"
+
+#: views/admin/SystemInfo.phtml:15
+msgid "available"
+msgstr "可用"
+
+#: views/admin/SystemInfo.phtml:17
+msgid "not installed"
+msgstr "未安装"
+
+#: views/admin/SystemInfo.phtml:21
+msgid "Server Software:"
+msgstr "服务器软件:"
+
+#: views/admin/SystemInfo.phtml:32
+msgid "Enlighter Plugin Version:"
+msgstr "Enlighter 插件版本:"
+
+#: views/admin/SystemInfo.phtml:35
+msgid "EnlighterJS Version:"
+msgstr "EnlighterJS 版本:"
+
+#: views/admin/SystemInfo.phtml:38
+msgid "TinyMCE Extension:"
+msgstr "TinyMCE 扩展:"
+
+#: views/admin/SystemInfo.phtml:41
+msgid "Gutenberg Extension:"
+msgstr "Gutenberg 扩展:"
+
+#: views/admin/SystemInfo.phtml:53 views/admin/SystemInfo.phtml:55
+msgid "Cache writeable"
+msgstr "缓存可写"
+
+#: views/admin/SystemInfo.phtml:53
+msgid "true"
+msgstr "是"
+
+#: views/admin/SystemInfo.phtml:55
+msgid "false"
+msgstr "否"
+
+#: views/admin/SystemInfo.phtml:61 views/admin/SystemInfo.phtml:63
+#: views/admin/SystemInfo.phtml:65
+msgid "Shortcode Processor"
+msgstr "短代码处理器"
+
+#: views/admin/SystemInfo.phtml:61
+msgid "disabled"
+msgstr "未启用"
+
+#: views/admin/SystemInfo.phtml:63
+msgid "WordPress internal"
+msgstr "WordPress内部的"
+
+#: views/admin/SystemInfo.phtml:65
+msgid "Enlighter low-level"
+msgstr "Enlighter Low-Level"
+
+#: views/admin/TextEditing.phtml:8
+msgid "Shortcode Processing"
+msgstr "短代码处理"
+
+#: views/admin/TextEditing.phtml:9
+msgid ""
+"WordPress provides a build-in Shortcode-API to process shortcodes used by "
+"third-party plugins. This function may can cause issues when using it in "
+"Text-Editor-Mode with unescaped html characters - especially when posting "
+"source-code!"
+msgstr ""
+"WordPress提供了一个内置的短代码API来处理第三方插件使用的短代码。</br>此函数在"
+"文本编辑器模式下使用时可能会导致问题，尤其是在发布源代码时！"
+
+#: views/admin/TextEditing.phtml:10
+msgid ""
+"To avoid such issues, Enlighter provides its own, fault tolerant, Shortcode "
+"processor (only affects Enlighter shortcodes!)."
+msgstr ""
+"</br>为了避免此类问题，Enlighter提供了自己的容错短代码处理器(仅影响Enlighter"
+"短代码！)。"
+
+#: views/admin/TextEditing.phtml:11
+msgid ""
+"If you do not need shortcodes (use the Visual-Editor-Integration instead) it "
+"is possible to disable the shortcode processing for performance reasons."
+msgstr ""
+"如果不需要短代码(使用可视化编辑器集成)，则可以出于性能原因禁用短代码处理。"
+
+#: views/admin/TextEditing.phtml:12
+msgid ""
+"<strong>Notice</strong>: the LowLevel Shortcode Processor is <strong>not "
+"invoked</strong> by the <a href=\"https://developer.wordpress.org/reference/"
+"functions/do_shortcode/\">do_shortcode</a> function! If you need shortcode "
+"processing in other content section, you should consider to use the legacy "
+"version or add custom filters!"
+msgstr ""
+"<strong>注意</strong>: LowLevel 短代码处理器<strong>未调用</strong><a href="
+"\"https://developer.wordpress.org/reference/functions/do_shortcode/"
+"\">do_shortcode</strong></a>功能！ 如果您需要在其他内容部分中进行短代码处理，"
+"则应考虑使用旧版本或添加自定义过滤器！"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Processor"
+msgstr "处理器"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Enlighter Low-Level (default)"
+msgstr "Enlighter Low-Level(默认)"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Legacy (WordPress based)"
+msgstr "传统(基于WordPress)"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Disable Shortcodes"
+msgstr "禁用短代码"
+
+#: views/admin/TextEditing.phtml:16
+msgid "Filter Targets - LowLevel Shortcode Processor"
+msgstr "过滤目标——LowLevel短代码处理器"
+
+#: views/admin/TextEditing.phtml:17
+msgid ""
+"Choose the content-sections to which the shortcode processor should be "
+"applied."
+msgstr "选择应使用短代码处理器的内容部分。"
+
+#: views/admin/TextEditing.phtml:35
+msgid "Language Shortcodes"
+msgstr "短代码语言"
+
+#: views/admin/TextEditing.phtml:36
+msgid ""
+"Do you want to use language shortcodes like [js] ? Disable it when your "
+"using other plugins which uses such shortcodes!"
+msgstr ""
+"您想使用像 <strong>js</strong> 这样语言的短代码吗？ 当您使用其他使用此类短代"
+"码的插件时禁用它！"
+
+#: views/admin/TextEditing.phtml:37
+msgid "Enable Language Shortcodes"
+msgstr "启用短代码语言"
+
+#: views/admin/TextEditing.phtml:40
+msgid "Inline Syntax Highlighting"
+msgstr "内嵌的语法突出显示"
+
+#: views/admin/TextEditing.phtml:41
+msgid "Should shortcodes without linebreaks insinde handled as inline-code ?"
+msgstr "要将没有换行符的短代码作为内嵌的代码处理吗？"
+
+#: views/admin/TextEditing.phtml:42
+msgid "Enable Inline Syntax Highlighting"
+msgstr "允许内嵌的语法高亮"
+
+#: views/admin/TextEditing.phtml:53
+msgid "Fenced Code Blocks"
+msgstr "受限的代码块"
+
+#: views/admin/TextEditing.phtml:54
+msgid ""
+"Markdown Fanatic ? Enlighter also supports <a href=\"https://help.github.com/"
+"articles/creating-and-highlighting-code-blocks/\">GFM style</a> fenced code "
+"blocks. In case no language identifier is given, choose the default "
+"behaviour."
+msgstr ""
+"喜欢使用Markdown吗？Enlighter还支持<a href=\"https://help.github.com/"
+"articles/creating and highlighting code blocks/\">GFM风格</a>的代码块。如果没"
+"有指定语言标识符，请选择默认行为。"
+
+#: views/admin/TextEditing.phtml:59
+msgid ""
+"Choose the content-sections to which the markdown processor should be "
+"applied."
+msgstr "选择以应用将被Markdown处理的内容部分。"
+
+#: views/admin/TextEditing.phtml:81
+msgid "Text/HTML Editor"
+msgstr "文本/HTML 编辑器"
+
+#: views/admin/TextEditing.phtml:84
+msgid "QuickTags"
+msgstr "QuickTags"
+
+#: views/admin/TextEditing.phtml:85
+msgid ""
+"QuickTags are used to simplify the editing process when working in text/html "
+"mode. A bunch of QuickTags (all registered languages) can be added to the "
+"Text/HTML Editor Toolbar."
+msgstr ""
+"QuickTags用于在文本/HTML模式下工作时简化编辑过程。可以将一组QuickTags(所有已"
+"注册的语言)添加到文本/HTML编辑器工具栏。"
+
+#: views/admin/VisualEditing.phtml:24
+msgid "Enable Backend Integration"
+msgstr "启用后端集成"
+
+#: views/admin/TextEditing.phtml:90
+msgid "Do you want to use the QuickTags extensions in your frontend (website)?"
+msgstr "是否要使用前端(网站)中的QuickTags扩展？"
+
+#: views/admin/VisualEditing.phtml:27
+msgid "Enable Frontend Integration"
+msgstr "启用前端集成"
+
+#: views/admin/TextEditing.phtml:93
+msgid "HTML Tags are fully compatible with the Visual Editor Mode."
+msgstr "HTML标记与可视编辑器模式完全兼容。"
+
+#: views/admin/TextEditing.phtml:94
+msgid "QuickTag Mode"
+msgstr "QuickTag 模式"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Print HTML Tags (default)"
+msgstr "输出HTML标签(默认)"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Print Shortcode Tags"
+msgstr "输出短代码标签"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Disable QuickTags"
+msgstr "关闭 QuickTags"
+
+#: views/admin/ThemeCustomizer.phtml:8
+msgid "Leave fields blank to force basic theme styles"
+msgstr "将字段留空以强制使用基本主题样式"
+
+#: views/admin/ThemeCustomizer.phtml:10
+msgid "Open Live Preview"
+msgstr "打开实时预览"
+
+#: views/admin/ThemeCustomizer.phtml:14
+msgid "Theme Base"
+msgstr "基础主题"
+
+#: views/admin/ThemeCustomizer.phtml:16
+msgid "Basic Theme (will be extended)"
+msgstr "基本主题(将被继承)"
+
+#: views/admin/ThemeCustomizer.phtml:26
+msgid "Load Theme styles"
+msgstr "加载主题风格"
+
+#: views/admin/ThemeCustomizer.phtml:33
+msgid "Font Styles"
+msgstr "字体风格"
+
+#: views/admin/VisualEditing.phtml:50
+msgid "Font-Family"
+msgstr "字体种类(Font-Family)"
+
+#: views/admin/ThemeCustomizer.phtml:36 views/admin/ThemeCustomizer.phtml:53
+#: views/admin/ThemeCustomizer.phtml:67
+msgid "e.g. Monaco, Courier, Monospace"
+msgstr "例如: Monaco, Courier, Monospace"
+
+#: views/admin/VisualEditing.phtml:53
+msgid "Font-Size"
+msgstr "字体大小"
+
+#: views/admin/ThemeCustomizer.phtml:39 views/admin/ThemeCustomizer.phtml:70
+msgid "e.g. 12px, 1.2em, 11pt"
+msgstr "例如: 12px, 1.2em, 11pt"
+
+#: views/admin/VisualEditing.phtml:56
+msgid "Line height"
+msgstr "行高"
+
+#: views/admin/ThemeCustomizer.phtml:42 views/admin/ThemeCustomizer.phtml:73
+msgid "e.g. 16px, 1.5em"
+msgstr "例如: 16px, 1.5em"
+
+#: views/admin/VisualEditing.phtml:59
+msgid "Font-Color"
+msgstr "字体颜色"
+
+#: views/admin/ThemeCustomizer.phtml:45 views/admin/ThemeCustomizer.phtml:59
+#: views/admin/ThemeCustomizer.phtml:76 views/admin/ThemeCustomizer.phtml:87
+msgid "e.g. #000000, #ff00c1"
+msgstr "例如: #000000, #ff00c1"
+
+#: views/admin/ThemeCustomizer.phtml:50
+msgid "Line Number Styles"
+msgstr "行号风格"
+
+#: views/admin/ThemeCustomizer.phtml:56
+msgid "e.g. 10px, 1.2em, 11pt"
+msgstr "例如: 10px, 1.2em, 11pt"
+
+#: views/admin/ThemeCustomizer.phtml:64
+msgid "RAW Font Styles"
+msgstr "原生字体风格"
+
+#: views/admin/VisualEditing.phtml:62
+msgid "Background-Color"
+msgstr "背景颜色"
+
+#: views/admin/ThemeCustomizer.phtml:79
+msgid "e.g. #ffffff"
+msgstr "例如: #ffffff"
+
+#: views/admin/ThemeCustomizer.phtml:84
+msgid "Special Styles"
+msgstr "特殊风格"
+
+#: views/admin/ThemeCustomizer.phtml:87
+msgid "Line highlighting Color"
+msgstr "高亮行颜色"
+
+#: views/admin/ThemeCustomizer.phtml:90
+msgid "Line hover Color"
+msgstr "悬停行颜色"
+
+#: views/admin/ThemeCustomizer.phtml:90
+msgid "e.g. #f0f0ff"
+msgstr "例如: #f0f0ff"
+
+#: views/admin/ThemeCustomizer.phtml:95
+msgid "Token Styles"
+msgstr "Token样式"
+
+#: views/admin/ThemeCustomizer.phtml:100
+msgid "Keyword(Type1)"
+msgstr "关键字(类型1)"
+
+#: views/admin/ThemeCustomizer.phtml:101
+msgid "Keyword(Type2)"
+msgstr "关键字(类型2)"
+
+#: views/admin/ThemeCustomizer.phtml:102
+msgid "Keyword(Type3)"
+msgstr "关键字(类型3)"
+
+#: views/admin/ThemeCustomizer.phtml:103
+msgid "Keyword(Type4)"
+msgstr "关键字(类型4)"
+
+#: views/admin/ThemeCustomizer.phtml:104
+msgid "Slash-StyleComments"
+msgstr "斜体样式的评论"
+
+#: views/admin/ThemeCustomizer.phtml:105
+msgid "Multiline-StyleComments"
+msgstr "多行样式的评论"
+
+#: views/admin/ThemeCustomizer.phtml:106
+msgid "Strings(Type1)"
+msgstr "字符串(类型1)"
+
+#: views/admin/ThemeCustomizer.phtml:107
+msgid "Strings(Type2)"
+msgstr "字符串(类型2)"
+
+#: views/admin/ThemeCustomizer.phtml:108
+msgid "Strings(Type3)"
+msgstr "字符串(类型3)"
+
+#: views/admin/ThemeCustomizer.phtml:109
+msgid "Number"
+msgstr "数组"
+
+#: views/admin/ThemeCustomizer.phtml:110
+msgid "Method(Type1)"
+msgstr "方法(类型1)"
+
+#: views/admin/ThemeCustomizer.phtml:111
+msgid "Method(Type2)"
+msgstr "方法(类型2)"
+
+#: views/admin/ThemeCustomizer.phtml:112
+msgid "Bracket"
+msgstr "托架"
+
+#: views/admin/ThemeCustomizer.phtml:113
+msgid "Symbol"
+msgstr "符号"
+
+#: views/admin/ThemeCustomizer.phtml:114
+msgid "EscapeSymbol"
+msgstr "删除符号"
+
+#: views/admin/ThemeCustomizer.phtml:115
+msgid "Regex"
+msgstr "正则表达式"
+
+#: views/admin/ThemeCustomizer.phtml:116
+msgid "StartDelimiter"
+msgstr "开头分隔符"
+
+#: views/admin/ThemeCustomizer.phtml:117
+msgid "StopDelimiter"
+msgstr "结尾分隔符"
+
+#: views/admin/ThemeCustomizer.phtml:121
+msgid "No Decoration"
+msgstr "无任何装饰"
+
+#: views/admin/ThemeCustomizer.phtml:122
+msgid "Underline"
+msgstr "下划线"
+
+#: views/admin/ThemeCustomizer.phtml:123
+msgid "Overline"
+msgstr "上划线"
+
+#: views/admin/ThemeCustomizer.phtml:124
+msgid "Line through"
+msgstr "横线"
+
+#: views/admin/ThemeCustomizer.phtml:128
+msgid "Normal Style"
+msgstr "常规风格"
+
+#: views/admin/ThemeCustomizer.phtml:129
+msgid "Bold Style"
+msgstr "粗体风格"
+
+#: views/admin/ThemeCustomizer.phtml:130
+msgid "Italic Style"
+msgstr "斜体风格"
+
+#: views/admin/ThemeCustomizer.phtml:131
+msgid "Bold+Italic Style"
+msgstr "粗体+斜体风格"
+
+#: views/admin/ThemeCustomizer.phtml:145
+msgid "Text:"
+msgstr "文本:"
+
+#: views/admin/ThemeCustomizer.phtml:149
+msgid "Background:"
+msgstr "背景:"
+
+#: views/admin/VisualEditing.phtml:5
+msgid "Gutenberg Editor"
+msgstr "Gutenberg编辑器"
+
+#: views/admin/VisualEditing.phtml:8
+msgid "Gutenberg Editor Plugin"
+msgstr "Gutenberg编辑器插件"
+
+#: views/admin/VisualEditing.phtml:9
+msgid ""
+"To use EnlighterJS within Gutenberg you can enable this feature. It loads "
+"the EnlighterJS Gutenberg.Plugin."
+msgstr ""
+"要在Gutenberg中使用EnlighterJS，您可以启用此功能。 它会加载EnlighterJS "
+"Gutenberg.Plugin。"
+
+#: views/admin/VisualEditing.phtml:10
+msgid ""
+"Warning: Please keep in mind that this version of Enlighter Plugin.Gutenberg "
+"is still BETA software and may have some serious bugs!"
+msgstr ""
+"警告: 请记住，这个版本的Enlighter Plugin.Gutenberg 仍然是测试版软件，可能有一"
+"些严重的错误！"
+
+#: views/admin/VisualEditing.phtml:12
+msgid "Enable"
+msgstr "启用"
+
+#: views/admin/VisualEditing.phtml:18
+msgid "Classic Editor (TinyMCE 4)"
+msgstr "经典的编辑器 (TinyMCE 4)"
+
+#: views/admin/VisualEditing.phtml:22
+msgid "Visual Editor Integration"
+msgstr "可视编辑器集成"
+
+#: views/admin/VisualEditing.phtml:23
+msgid ""
+"Enlighter provides a full Visual Editor integration. You can turn it off if "
+"you only want to use shortcodes."
+msgstr ""
+"Enlighter提供完整的可视化编辑器集成，如果您只想使用短代码可以将其关闭。"
+
+#: views/admin/VisualEditing.phtml:26
+msgid ""
+"Do you want to use the Visual Editor extensions in your frontend (website) ? "
+"May required for frontend editing plugins."
+msgstr "您想在前端(网站)中使用可视化编辑器扩展吗？ 可能需要前端编辑插件。"
+
+#: views/admin/VisualEditing.phtml:30
+msgid "Tweaks"
+msgstr "调整"
+
+#: views/admin/VisualEditing.phtml:31
+msgid ""
+"WordPress Limits the Editor-Width to ~600px. You can disable this limit - "
+"might be useful for posting source-code!"
+msgstr ""
+"WordPress将Editor-Width限制为~600px。 您可以禁用此限制，但着可能对发布源代码"
+"很有用！"
+
+#: views/admin/VisualEditing.phtml:32
+msgid "Automatic Width (max)"
+msgstr "自动设置宽度 (最大值)"
+
+#: views/admin/VisualEditing.phtml:34
+msgid ""
+"In addition to the code-insert button, Enlighter can add a set formats to "
+"the editor."
+msgstr "除了代码插入按钮，Enlighter还可以为编辑器添加设置的格式。"
+
+#: views/admin/VisualEditing.phtml:35
+msgid "Add Editor Formats"
+msgstr "添加编辑器格式"
+
+#: views/admin/VisualEditing.phtml:37
+msgid ""
+"The default keyboard shortcut (shift+alt+x) action can be modified to "
+"convert the current selection into an Enlighter codeblock."
+msgstr ""
+"可以修改默认键盘快捷键(shift + alt + x)动作，将当前选择的文本转换为Enlighter"
+"代码块。"
+
+#: views/admin/VisualEditing.phtml:38
+msgid "Enable Keyboard Shortcut"
+msgstr "启用键盘快捷键"
+
+#: views/admin/VisualEditing.phtml:40
+msgid ""
+"By default, the <kbd>tab</kbd> button does not add indentation to the "
+"content. Enlighter comes with its own editing plugin which allows you to use "
+"tabs within the Editor to align code."
+msgstr ""
+"默认情况下，<kbd>tab</kbd>按钮不会向内容添加缩进。 Enlighter带有自己的编辑插"
+"件，允许您使用编辑器中的选项卡来对齐代码。"
+
+#: views/admin/VisualEditing.phtml:41
+msgid ""
+"This option disables the <strong>tabfocus plugin</strong> and requires that "
+"the Enlighter <code>indent</code> option has been set to spaces!"
+msgstr ""
+"此选项会禁用<strong>tabfocus插件</strong>，并要求将Enlighter将<code>缩进</"
+"code>选项设置为空格！"
+
+#: views/admin/VisualEditing.phtml:42
+msgid "Enable Tab Indentation"
+msgstr "启用制表符缩进"
+
+#: views/admin/VisualEditing.phtml:45
+msgid "Code-Block Styles"
+msgstr "代码块风格"
+
+#: views/admin/VisualEditing.phtml:46
+msgid ""
+"It is also possible to influence the code-block styles of the Visual-Editor. "
+"Maybe you like another background color or font-family."
+msgstr ""
+"同样会影响可视化编辑器的代码块样式。 也许您喜欢另一种背景颜色或字体系列。"
+
+#: views/admin/VisualEditing.phtml:50
+msgid ""
+"e.g. \"Source Code Pro\", \"Liberation Mono\", \"Courier New\", Courier, "
+"monospace"
+msgstr ""
+"例如: \"Source Code Pro\", \"Liberation Mono\", \"Courier New\", Courier, "
+"monospace"
+
+#: views/admin/VisualEditing.phtml:53
+msgid "e.g. 0.7em"
+msgstr "例如: 0.7em"
+
+#: views/admin/VisualEditing.phtml:56
+msgid "e.g. 1.4em"
+msgstr "例如: 1.4em"
+
+#: views/admin/VisualEditing.phtml:59
+msgid "e.g. #565b60"
+msgstr "例如: #565b60"
+
+#: views/admin/VisualEditing.phtml:62
+msgid "e.g. #f7f7f7"
+msgstr "例如: #f7f7f7"
+
+#: views/admin/VisualEditing.phtml:65
+msgid "Restore defaults"
+msgstr "重置为默认设置"
+
+#: views/admin/Webfonts.phtml:5
+msgid "Webfonts Loader"
+msgstr "在线字体加载器"
+
+#: views/admin/Webfonts.phtml:9
+msgid ""
+"Some Enlighter Themes uses modern fonts which may not available for your "
+"users by default."
+msgstr "某些 Enlighter 主题使用了默认不可用的现代字体."
+
+#: views/admin/Webfonts.phtml:11
+msgid ""
+"To provide the best visual experience, it`s possible to load the missing "
+"fonts automatically using <a href=\"https://www.google.com/fonts\">Google "
+"Webfonts</a>."
+msgstr ""
+"为了提供最佳的视觉体验，可以使用<a href=\"https://www.google.com/fonts\"> "
+"Google Webfonts </a>自动加载丢失的字体。"
+
+#: views/admin/Webfonts.phtml:12
+msgid "The following fonts are used by Enlighter`s build-in themes:"
+msgstr "Enlighter的内置主题使用了以下字体:"
+
+#: views/admin/Webfonts.phtml:22
+msgid "Monospace Webfonts"
+msgstr "Monospace在线字体"
+
+#: views/admin/Webfonts.phtml:23
+msgid "Only regular, italic, bold, bold-italic variants are loaded!"
+msgstr "只有常规，斜体，粗体，粗体-斜体 变体被加载了！"

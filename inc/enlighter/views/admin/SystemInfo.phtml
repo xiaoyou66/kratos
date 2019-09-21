@@ -1,0 +1,73 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<div class="postbox">
+    <h3 class="hndle"><?php _e('System Info', 'enlighter'); ?></h3>
+    <div class="inside">
+        <!-- Metabox-Content -->
+        
+        <ul>
+            <li><strong>Server</strong></li>
+            <?php
+            echo '<li>', __('PHP Version:', 'enlighter'), ' <span class="EnlighterTRUE">', phpversion(), '</span></li>';
+
+            // json encoding available ?
+            if (function_exists('json_encode')) {
+                echo '<li>', __('PHP JSON Extension', 'enlighter'), ': <span class="EnlighterTRUE">', __('available', 'enlighter'), '</span></li>';
+            } else {
+                echo '<li>', __('PHP JSON Extension', 'enlighter'), ': <span class="EnlighterFALSE">', __('not installed', 'enlighter'), '</span></li>';
+            }
+
+            // server os
+            echo '<li>', __('Server Software:', 'enlighter'), ' <span class="EnlighterTRUE">', PHP_OS, '</span></li>';
+            ?>
+        </ul>
+
+        <hr />
+
+        <ul>
+            <li><strong>Components</strong></li>
+            <?php
+
+            // enlighter version
+            echo '<li>', __('Enlighter Plugin Version:', 'enlighter'), ' <span class="EnlighterTRUE">', ENLIGHTER_VERSION, '</span></li>';
+
+            // enlighterjs version
+            echo '<li>', __('EnlighterJS Version:', 'enlighter'), ' <span class="EnlighterTRUE">', self::getEnlighterJSVersion(), '</span></li>';
+
+            // enlighterjs.tinymce version
+            echo '<li>', __('TinyMCE Extension:', 'enlighter'), ' <span class="EnlighterTRUE">', self::getEnlighterJSTinyMCEVersion(), '</span></li>';
+
+             // enlighterjs.gutenberg version
+             echo '<li>', __('Gutenberg Extension:', 'enlighter'), ' <span class="EnlighterTRUE">', self::getEnlighterJSGutenbergVersion(), '</span></li>';
+            ?>
+
+        </ul>
+        
+        <hr />
+        
+        <ul>
+            <li><strong>Environment</strong></li>
+            <?php
+            // plugin cache path writeable ?
+            if ($this->_cacheManager->isCacheAccessible()) {
+                echo '<li>', __('Cache writeable', 'enlighter'), ': <span class="EnlighterTRUE">', __('true', 'enlighter'), '</span></li>';
+            } else {
+                echo '<li>', __('Cache writeable', 'enlighter'), ': <span class="EnlighterFALSE">', __('false', 'enlighter'), '</span></li>';
+            }
+
+            // shortcode processor type
+            $shortcodeProcessorType = $this->_settingsUtility->getOption('shortcodeMode');
+            if ($shortcodeProcessorType == 'disabled') {
+                echo '<li>', __('Shortcode Processor', 'enlighter'), ': <span class="EnlighterFALSE">', __('disabled', 'enlighter'), '</span></li>';
+            } else if ($shortcodeProcessorType == 'legacy') {
+                echo '<li>', __('Shortcode Processor', 'enlighter'), ': <span class="EnlighterTRUE">', __('WordPress internal', 'enlighter'), '</span></li>';
+            } else {
+                echo '<li>', __('Shortcode Processor', 'enlighter'), ': <span class="EnlighterTRUE">', __('Enlighter low-level', 'enlighter'), '</span></li>';
+            }
+
+            ?>
+        </ul>
+
+        <!-- // Metabox-Content -->
+    </div>
+</div>

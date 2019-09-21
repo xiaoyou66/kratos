@@ -1,0 +1,63 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper{
+    font-family: Monaco, Courier, monospace;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+	background-color: #e5e5e5;
+	font-size: 12px;
+	color: #000000;
+	border-radius: 0px;
+}
+.wpcustomEnlighterJSTabPane .controls .selected, .wpcustomEnlighterJSTabPane .controls .selected:hover{
+	background-color: #BBCCD5;
+}
+/* Inline Styles */
+span.wpcustomEnlighterJS{
+	background-color: #2D2522;
+	border: none;
+}
+.wpcustomEnlighterJS {
+	color: #f8f8f8;
+}
+ol.wpcustomEnlighterJS {
+	background-color: #BBCCD5;
+	list-style-type: decimal;
+}
+ul.wpcustomEnlighterJS {
+	background-color: #BBCCD5;
+}
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: none;
+	border-left: 2px solid #939393;
+	background-color: #2D2522;
+	color: #000000;
+}
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	background-color: #423F43;
+	border: none;
+	border-left: 2px solid #939393;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+	background-color: #423F43;
+}
+.wpcustomEnlighterJS span{
+	color: #f8f8f8;
+}
+/** Symbol Styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #2D2522;
+	font-size: 12px;
+	color: #e0e0e0;
+	line-height: 14px;
+	border-left: 2px solid #939393;
+}
+/* Tab Pane */
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+	opacity: 0.8;
+}
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a:hover{
+	opacity: 1.0;
+}

@@ -1,0 +1,78 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper, .wpcustomEnlighterJSTabPane{
+    font-family: "Inconsolata", "Consolas", "Source Code Pro", "Courier New", Courier, monospace;
+}
+/* Inline specific styles */
+span.wpcustomEnlighterJS{
+    background-color: #272b32;
+    padding: 3px 5px 3px 5px;
+}
+/* LIST specific styles (BLOCK) */
+ol.wpcustomEnlighterJS, ul.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+    font-size: 12px;
+    background-color: #272b33;
+}
+.wpcustomEnlighterJSWrapper pre{
+    font-size: 17px;
+    line-height: 22px;
+    color: #cfd5e0;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+    border: solid 0px #ffffff;
+    line-height: 19px;
+    color: #2b333a;
+    background-color: transparent;
+    padding: 0px 10px 0px 10px;
+}
+ol.wpcustomEnlighterJS li{
+    list-style: decimal inside;
+    color: #596174;
+    margin: 0px;
+}
+/* default symbol styles */
+.wpcustomEnlighterJS span{
+    font-size: 17px;
+    color: #cfd5e0;
+}
+/* Symbol Styles */
+/* Delimiter e.g. <?php ?> */
+/* Laanguage Kewords */
+/* Comments */
+/* Strings */
+/* Numbers */
+/* Brackets */
+/* Symbols */
+/* Escape Sequences */
+/* Regular Expression outside Strings */
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover {
+    background-color: #2e353e;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+    background-color: #392d3b;
+}
+/* Tab Pane */
+.wpcustomEnlighterJSTabPane .controls{
+    background-color: #121518;
+    padding: 5px 0px 0px 0px;
+}
+.wpcustomEnlighterJSTabPane .controls ul{
+    margin-left: 10px;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+    border-radius: 0px;
+    background-color: transparent;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f0f0f0;
+    border-radius: 5px 5px 0px 0px;
+    text-transform: lowercase;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover {
+}
+.wpcustomEnlighterJSTabPane .controls li.selected{
+    background-color: #272b33;
+}

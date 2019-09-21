@@ -1,0 +1,1413 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Enlighter  3.9.0\n"
+"Report-Msgid-Bugs-To: andi DOT dittrich AT a3non DOT org\n"
+"POT-Creation-Date: 2019-01-13 16:44:28+00:00\n"
+"PO-Revision-Date: 2019-01-30 16:18+0100\n"
+"Last-Translator: Régis Enguehard <regis@enguehard.info>\n"
+"Language-Team: Régis Enguehard\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: class/ContextualHelp.php:34
+msgid "Tutorials"
+msgstr "Tutoriels"
+
+#: class/ContextualHelp.php:40
+msgid "General Usage"
+msgstr "Utilisation générale"
+
+#: views/admin/TextEditing.phtml:50
+msgid "Markdown"
+msgstr "Markdown"
+
+#: views/admin/TextEditing.phtml:5
+msgid "Shortcodes"
+msgstr "Code court"
+
+#: class/ContextualHelp.php:57
+msgid "Shortcode-Options"
+msgstr "Options des codes courts"
+
+#: class/ContextualHelp.php:62
+msgid "Generic-Shortcode"
+msgstr "Réglages des codes courts"
+
+#: class/ContextualHelp.php:67
+msgid "Codegroups"
+msgstr "Codegroups"
+
+#: views/admin/Options.phtml:19
+msgid "External Themes"
+msgstr "Thèmes externes"
+
+#: views/admin/SettingsPage.phtml:39
+msgid "Enlighter - Customizable Syntax Highlighter"
+msgstr "Enlighter - Customizable Syntax Highlighter"
+
+#: class/Enlighter.php:279
+msgid "News & Updates"
+msgstr "Nouvelles & Mises à jour"
+
+#: class/Enlighter.php:280
+msgid "EnlighterJS Website"
+msgstr "Site Web EnlighterJS"
+
+#: class/Enlighter.php:290
+msgid "Settings"
+msgstr "Réglages"
+
+#: class/Enlighter.php:291
+msgid "About"
+msgstr "À propos"
+
+#: class/EnvironmentCheck.php:37 class/EnvironmentCheck.php:44
+msgid "view help"
+msgstr "voir l’aide"
+
+#: class/EnvironmentCheck.php:58
+msgid ""
+"Option <code>use_balanceTags</code> is enabled - this option is "
+"<strong>DEPRECATED</strong>. Might cause a weired behaviour by inserting "
+"random closing html tags into your code."
+msgstr ""
+"L'option <code>use_balanceTags</code> est activée ; cette option est "
+"<strong>DEPRECATED</strong>. Elle peut provoquer un comportement indésirable "
+"en insérant des balises HTML de fermeture aléatoire dans votre code."
+
+#: class/EnvironmentCheck.php:63
+msgid ""
+"Option <code>use_smilies</code> is enabled. Legacy smiley sequences like :) "
+"are replaced by images which also affects posted sourcecode."
+msgstr ""
+"L'option <code>use_smilies</code> est activée. Les séquences de smileys "
+"héritées telles que :) sont remplacées par des images, qui ont également une "
+"incidence sur le code source publié."
+
+#: class/EnvironmentCheck.php:68
+msgid ""
+"Plugin \"Crayon Syntax Highlighter\" is enabled - it may take over the "
+"Enlighter pre elements - highlighting will not work!"
+msgstr ""
+"L'extension \"Crayon Syntax Highlighter\" est activé - elle peut prendre en "
+"charge les éléments Enlighter - la surbrillance ne fonctionnera pas!"
+
+#: class/EnvironmentCheck.php:77
+msgid ""
+"Autoset Permissions failed - Please change the directory permission (chmod "
+"<code>0644</code> or <code>0777</code>) manually!"
+msgstr ""
+"Erreur lors du changement automatique des permissions - Veuillez modifier "
+"manuellement les permissions du dossier (chmod <code>0644</code> or "
+"<code>0777</code>) !"
+
+#: class/EnvironmentCheck.php:83
+msgid ""
+"The plugin is located within an invalid path - the <code>enlighter/</code> "
+"directory name is <strong>mandatory</strong>"
+msgstr ""
+"L'extension est situé dans un chemin non valide - le nom du répertoire "
+"<code>enlighter/</code> est <strong>obligatoire</strong>."
+
+#: class/TinyMCE.php:131
+msgid "Enlighter Codeblocks"
+msgstr "Enlighter en bloc"
+
+#: class/TinyMCE.php:155
+msgid "Enlighter Inline"
+msgstr "Enlighter en ligne"
+
+#: views/admin/About.phtml:18
+msgid "What&#8217;s New"
+msgstr "Nouveautés"
+
+#: views/admin/About.phtml:19
+msgid "Changelog"
+msgstr "Changelog"
+
+#: views/admin/SettingsPage.phtml:27
+msgid "Appearance"
+msgstr "Apparence"
+
+#: views/admin/Appearance.phtml:9
+msgid ""
+"You can specify the default language and theme as well as the some output "
+"styles. If you want to customize themes, choose the default theme option "
+"\"custom\""
+msgstr ""
+"Vous pouvez spécifier la langue et le thème par défaut, ainsi que certains "
+"styles. Si vous souhaitez personnaliser les thèmes, choisissez l’option de "
+"thème par défaut « personnalisé »."
+
+#: views/admin/Appearance.phtml:10
+msgid ""
+"The indent-option will replace each tab at the beginning of a line with a "
+"selectable number of space-characters"
+msgstr ""
+"L’option d’indentation remplacement chaque fabulation en début de ligne par "
+"un nombre sélectionnable de caractères espace"
+
+#: views/admin/Appearance.phtml:12
+msgid "Global Settings"
+msgstr "Réglages globaux"
+
+#: views/admin/Appearance.phtml:15
+msgid "Theme"
+msgstr "Thème"
+
+#: views/admin/Appearance.phtml:18
+msgid "Default Language"
+msgstr "Langage par défaut"
+
+#: views/admin/Appearance.phtml:21
+msgid "Code-Indent"
+msgstr "Indentation"
+
+#: views/admin/Appearance.phtml:21
+msgid "No modification (keep tabs)"
+msgstr "Aucune modification (laisse les tabulations)"
+
+#: views/admin/Appearance.phtml:21
+msgid "1 Space"
+msgstr "1 espace"
+
+#: views/admin/Appearance.phtml:21
+msgid "Spaces"
+msgstr "Espaces"
+
+#: views/admin/Appearance.phtml:24
+msgid "Show Linenumbers"
+msgstr "Voir les numéros de lignes"
+
+#: views/admin/Appearance.phtml:27
+msgid "Mouseover on codelines"
+msgstr "Mise en surbrillance lors du survol de la ligne"
+
+#: views/admin/Appearance.phtml:30
+msgid "RawCode on dbclick"
+msgstr "Affiche le code brut au double clic"
+
+#: views/admin/Appearance.phtml:32
+msgid "Button Toolbar"
+msgstr "Bouton de la barre d'outil"
+
+#: views/admin/Appearance.phtml:33
+msgid "Enable/Disable specific toolbar buttons."
+msgstr "Activé/Désactivé des boutons spécifiques de la barre d’outils."
+
+#: views/admin/Appearance.phtml:36
+msgid "Raw-Codebutton"
+msgstr "Bouton code source brut"
+
+#: views/admin/Appearance.phtml:39
+msgid "Window-button (new Window)"
+msgstr "Ouvre le code source dans une nouvelle fenêtre"
+
+#: views/admin/Appearance.phtml:42
+msgid "Info-button"
+msgstr "Bouton d’information"
+
+#: views/admin/Beta.phtml:5
+msgid "BETA Features"
+msgstr "Fonctionnalités BETA"
+
+#: views/admin/Beta.phtml:8
+msgid ""
+"Warning: These options are for advanced users only and subjected to change!"
+msgstr "Attention : ces options sont réservées aux utilisateurs avertis !"
+
+#: views/admin/Beta.phtml:11
+msgid "Dynamic Resource Invocation (DRI)"
+msgstr ""
+"Invocation de Ressources Dynamiques - Dynamic Resource Invocation (DRI)"
+
+#: views/admin/Beta.phtml:12
+msgid ""
+"To optimize your website load-time it`s possible to load the EnlighterJS "
+"script dependencies only if they are required (requires script-position: "
+"footer)."
+msgstr ""
+"Pour optimiser le temps de chargement de votre site Web, il est possible de "
+"charger les dépendances de script EnlighterJS uniquement si elles sont "
+"requises (requiert script-position: footer)."
+
+#: views/admin/Beta.phtml:13
+msgid ""
+"In case it`s enable, the plugin will observer it`s invocation (visual "
+"editor, shortcodes, markdown)."
+msgstr ""
+"Dans le cas où il est activé, le plugin conservera son implémentation "
+"(éditeur visuel, codes abrégés, markdown)."
+
+#: views/admin/Beta.phtml:15
+msgid "Enable DRI"
+msgstr "Activé la DRI"
+
+#: views/admin/Compatibility.phtml:5
+msgid "Compatibility Mode / 3rd Party Migration"
+msgstr "Mode de compatibilité / Migration avec une tierce partie"
+
+#: views/admin/SettingsPage.phtml:33
+msgid "Compatibility"
+msgstr "Compatibilité"
+
+#: views/admin/Compatibility.phtml:10
+msgid ""
+"Do you use plugins which did not support Enlighter directly? In this case "
+"the compatibility mode converts the legacy code (desgined for other syntax "
+"highlighting plugins) into Enlighter codeblocks on the fly."
+msgstr ""
+"Si vous utilisez des plugins qui ne supportent pas directement Enlighter ; "
+"le mode de compatibilité convertit le code existant (conçu pour d'autres "
+"extension de coloration syntaxique) en blocs de code Enlighter à la volée."
+
+#: views/admin/Compatibility.phtml:11
+msgid ""
+"This feature allows you to migrate to Enlighter without altering your old "
+"posts."
+msgstr ""
+"Cette fonctionnalité vous permet de migrer vers Enlighter sans modifier vos "
+"anciens messages."
+
+#: views/admin/Compatibility.phtml:16
+msgid "Defaults"
+msgstr "Défaut"
+
+#: views/admin/Compatibility.phtml:17
+msgid "Codeblocks with missing language identifier should highlighted as:"
+msgstr ""
+"Les blocs de code dont l'identification de langue sont manquant doivent être "
+"mis en évidence comme suit :"
+
+#: views/admin/TextEditing.phtml:56
+msgid "Generic Code Blocks"
+msgstr "Bloc de code génériques"
+
+#: views/admin/TextEditing.phtml:56
+msgid "Generic Highlighting"
+msgstr "Surlignage générique"
+
+#: views/admin/TextEditing.phtml:56
+msgid "No Highlighting (RAW)"
+msgstr "Pas de surlignage (RAW)"
+
+#: views/admin/TextEditing.phtml:58
+msgid "Filter Targets"
+msgstr "Filtrer les cibles"
+
+#: views/admin/Compatibility.phtml:22
+msgid ""
+"Choose the content-sections to which the compatibility filter should be "
+"applied."
+msgstr ""
+"Choisissez les sections de contenu auxquelles le filtre de compatibilité "
+"doit être appliqué."
+
+#: views/admin/TextEditing.phtml:19 views/admin/TextEditing.phtml:62
+msgid "Enable the_content"
+msgstr "Active the_content"
+
+#: views/admin/TextEditing.phtml:22 views/admin/TextEditing.phtml:65
+msgid "Enable the_excerpt"
+msgstr "Active the_excerpt"
+
+#: views/admin/TextEditing.phtml:25 views/admin/TextEditing.phtml:68
+msgid "Enable comments"
+msgstr "Active comments"
+
+#: views/admin/TextEditing.phtml:28 views/admin/TextEditing.phtml:71
+msgid "Enable comments-excerpt"
+msgstr "Active comments-excerpt"
+
+#: views/admin/TextEditing.phtml:31 views/admin/TextEditing.phtml:74
+msgid "Enable widget-text"
+msgstr "Active widget-text"
+
+#: views/admin/Extensions.phtml:5
+msgid "Dynamic Content"
+msgstr "Contenu dynamique"
+
+#: views/admin/Extensions.phtml:8
+msgid ""
+"Support for \"load more\" buttons. It is required to highlight code sections "
+"which are dynamically added to your page via AJAX/XHR!"
+msgstr ""
+"Prise en charge des boutons \"load more\". Il est nécessaire de mettre en "
+"évidence les sections de code qui sont ajoutées dynamiquement à votre page "
+"via AJAX/XHR !"
+
+#: views/admin/Extensions.phtml:10
+msgid "Jetpack"
+msgstr "Jetpack"
+
+#: views/admin/Extensions.phtml:13
+msgid ""
+"If you use the <a href=\"https://jetpack.me/support/infinite-scroll/"
+"\">InfiniteScroll Module</a>, enable this option to load the Enlighter."
+"InfniteScroll extension. It is required to highlight code sections which are "
+"dynamically added to your page!"
+msgstr ""
+"Si vous utilisez l'<a href=\"https://jetpack.me/support/infinite-scroll/"
+"\">extension InfiniteScroll </a>, activez cette option pour charger "
+"l'extension Enlighter.InfniteScroll. Il est nécessaire de mettre à jour les "
+"sections de code qui sont ajoutées dynamiquement à votre page !"
+
+#: views/admin/Extensions.phtml:14
+msgid "Infinite Scroll"
+msgstr "Scroll infini"
+
+#: views/admin/Extensions.phtml:17
+msgid "jQuery AJAX"
+msgstr "jQuery AJAX"
+
+#: views/admin/Extensions.phtml:20
+msgid ""
+"This options adds a trigger to the <code>ajaxComplete</code> event used by "
+"jQuery."
+msgstr ""
+"Cette option ajoute un déclencheur à l'événement <code>ajaxComplete</code> "
+"utilisé par jQuery."
+
+#: views/admin/Extensions.phtml:21
+msgid "Dynamic Ajax Content"
+msgstr "Contenu Dynamique AJAX"
+
+#: views/admin/Extensions.phtml:29
+msgid "bbPress Forums Plugin"
+msgstr "Plugin de forum bbPress"
+
+#: views/admin/Extensions.phtml:32
+msgid ""
+"These options are related to the popular <a href=\"https://wordpress.org/"
+"plugins/bbpress/\" target=\"_blank\">bbPress Forums Plugin</a>."
+msgstr ""
+"Ces options sont liées à la populaire<a href=\"https://wordpress.org/plugins/"
+"bbpress/\" target=\"_blank\"> extension de forum bbPress</a>."
+
+#: views/admin/Extensions.phtml:33
+msgid ""
+"<strong>Note: </strong> Backtick style code-elements of bbPress will be "
+"disabled when enabling one of the extensions to avoid conflicts!"
+msgstr ""
+"<strong>Attention : </ strong> les éléments de code de style Backtick de "
+"bbPress sont désactivés lors de l'activation de l'une des extensions pour "
+"éviter les conflits !"
+
+#: views/admin/Extensions.phtml:36
+msgid "bbPress"
+msgstr "bbPress"
+
+#: views/admin/Extensions.phtml:39
+msgid "Enable Shortcode support within bbPress topics and replies."
+msgstr ""
+"Active la prise en charge des codes courts dans les rubriques et les "
+"réponses de bbPress."
+
+#: views/admin/Extensions.phtml:40
+msgid "Enlighter Shortcodes"
+msgstr "Codes courts Enlighter"
+
+#: views/admin/Extensions.phtml:43
+msgid ""
+"Enable Markdown style fenced code blocks within bbPress topics and replies."
+msgstr ""
+"Active le marquage Markdown dans les rubriques et les réponses de bbPress."
+
+#: views/admin/Extensions.phtml:44
+msgid "Markdown Code-Blocks"
+msgstr "Marquage Markdown"
+
+#: views/admin/Extensions.phtml:51
+msgid "Cryptex E-Mail Obfuscation Plugin"
+msgstr "Extension d'offuscation d'email Cryptex"
+
+#: views/admin/Extensions.phtml:54
+msgid ""
+"These options are related to the <a href=\"https://wordpress.org/plugins/"
+"cryptex/\" target=\"_blank\">Cryptex E-Mail Address Obfuscation plugin</a>. "
+"It can protect E-Mail Addresses within your highlighted sourcecode."
+msgstr ""
+"Ces options sont relatives à <a href=\"https://wordpress.org/plugins/cryptex/"
+"\" target=\"_blank\">l'extension d'offuscation d'adresse e-mail Cryptex</a>. "
+"Il peut protéger les adresses e-mail au sein de votre code source mis en "
+"surbrillance."
+
+#: views/admin/Extensions.phtml:55
+msgid "Requires Cryptex 5.0 with enabled hyperlinks."
+msgstr "Requiert Cryptex 5.0 avec les liens hypertextes activés."
+
+#: views/admin/Extensions.phtml:58
+msgid "Cryptex"
+msgstr "Cryptex"
+
+#: views/admin/Extensions.phtml:61
+msgid "Enable Cryptex Support"
+msgstr "Active le support de Cryptex"
+
+#: views/admin/Extensions.phtml:64
+msgid ""
+"The default Email address which will be shown if the hyperlinks are disabled "
+"into the cryptex plugin "
+msgstr ""
+"Adresse email par défaut qui sera affichée si les liens hypertextes sont "
+"désactivés dans le plugin cryptex "
+
+#: views/admin/Extensions.phtml:65
+msgid "Fallback EMail Address"
+msgstr "Adresse email de secours"
+
+#: views/admin/Extensions.phtml:65
+msgid "can be any kind of text"
+msgstr "peut être n'importe quel type de texte"
+
+#: views/admin/Options.phtml:5
+msgid "Resources &amp; CDN (Content Delivery Network)"
+msgstr "Ressources &amp; CDN (Content Delivery Network)"
+
+#: views/admin/Options.phtml:8
+msgid ""
+"These options might be required when using a Content-Delivery-Network (CDN) "
+"or another server/location which outsources your CSS+Javascript files."
+msgstr ""
+"Ces options peuvent être nécessaires lors de l’utilisation d’un réseau CDN "
+"(Content-Delivery-Network) ou d’un autre serveur / emplacement externalisant "
+"vos fichiers CSS + Javascript."
+
+#: views/admin/Options.phtml:9
+msgid ""
+"In this case you have to manually include EnlighterJS.js, EnlighterJS.css "
+"and the MooTools Framework into your page!"
+msgstr ""
+"Dans ce cas, vous devez inclure manuellement EnlighterJS.js, EnlighterJS.css "
+"et le framework MooTools dans votre page !"
+
+#: views/admin/Options.phtml:10
+msgid "Custom styles, generated with the ThemeCustomizer are"
+msgstr "Les styles personnalisés générés avec ThemeCustomizer sont"
+
+#: views/admin/Options.phtml:10
+msgid "available here"
+msgstr "disponible ici"
+
+#: views/admin/Options.phtml:13
+msgid "Include Enlighter-CSS"
+msgstr "Inclure Enlighter-CSS"
+
+#: views/admin/Options.phtml:16
+msgid "Include Enlighter-Javascript"
+msgstr "Inclure Enlighter-Javascript"
+
+#: views/admin/Options.phtml:20
+msgid ""
+"Custom/external themes located into your themes directory can be "
+"automatically loaded."
+msgstr ""
+"Les thèmes personnalisés / externes situés dans votre répertoire de thèmes "
+"peuvent être chargés automatiquement."
+
+#: views/admin/Options.phtml:21
+msgid "Include External Themes"
+msgstr "Inclure les thèmes externe"
+
+#: views/admin/Options.phtml:24 views/admin/Options.phtml:26
+msgid "MooTools Framework Source"
+msgstr "Source du Framework Mootools"
+
+#: views/admin/Options.phtml:25
+msgid ""
+"The required MooTools-Framework can be hosted by a public CDN provider or by "
+"your own."
+msgstr ""
+"Le Framework obligatoire MooTools peut être hébergé sur un CDN public ou "
+"chez vous."
+
+#: views/admin/Options.phtml:26
+msgid "Your WordPress Site"
+msgstr "Votre site WordPress"
+
+#: views/admin/Options.phtml:26
+msgid "Google CDN"
+msgstr "CDN Google"
+
+#: views/admin/Options.phtml:26
+msgid "CDNJS (Cloudfare)"
+msgstr "CDNJS (Cloudfare)"
+
+#: views/admin/Options.phtml:26
+msgid "JSDELIVR"
+msgstr "JSDELIVR"
+
+#: views/admin/Options.phtml:26 views/admin/Options.phtml:31
+msgid "Not include"
+msgstr "Ne pas inclure"
+
+#: views/admin/Options.phtml:29
+msgid "Initialization"
+msgstr "Initialisation"
+
+#: views/admin/Options.phtml:30
+msgid "Select the source/location of Enlighter`s initialization script."
+msgstr "Sélectionner la localisation script d’initialisation de Enlighter."
+
+#: views/admin/Options.phtml:31
+msgid "Enlighter Config"
+msgstr "Configuration de Enlighter"
+
+#: views/admin/Options.phtml:31
+msgid "Inline within header/footer"
+msgstr "En-ligne dans header/footer"
+
+#: views/admin/Options.phtml:31
+msgid "External File using <script src=\"\"...>"
+msgstr "Utilise un fichier externe <script src=« … »>"
+
+#: views/admin/Options.phtml:34 views/admin/Options.phtml:36
+msgid "Javascript Position"
+msgstr "Position du Javascript"
+
+#: views/admin/Options.phtml:35
+msgid ""
+"Related Javascript files/inline scripts can be added to the footer "
+"(wp_footer) or header (wp_head)."
+msgstr ""
+"Les fichiers Javascript peuvent être inclus dans le pied de page (wp_footer) "
+"ou l’en-tête (wp-head)"
+
+#: views/admin/Options.phtml:36
+msgid "Header within wp_head"
+msgstr "Dans l’en-tête avec la fonction wp_head"
+
+#: views/admin/Options.phtml:36
+msgid "Footer within wp_footer"
+msgstr "Dans le pied de page avec la fonction wp_head"
+
+#: views/admin/Options.phtml:38
+msgid "CDN Location Info"
+msgstr "Localisation du CDN"
+
+#: views/admin/Options.phtml:39
+msgid "List of available CDN locations used by Enlighter."
+msgstr "Liste des CDN disponible utilisé par Enlighter."
+
+#: views/admin/Options.phtml:53
+msgid "Advanced Options"
+msgstr "Options avancées"
+
+#: views/admin/Options.phtml:56
+msgid "Warning: These options are for advanced users only!"
+msgstr "Attention : options réservés aux utilisateurs avancés !"
+
+#: views/admin/Options.phtml:59
+msgid "\"WpAutoP\" Filter Priority"
+msgstr "Filtre de priorité \"WpAutoP\""
+
+#: views/admin/Options.phtml:60
+msgid ""
+"<strong>Deprecated:</strong> This feature will be removed in the future, "
+"because the new LowLevel Shortcode Handler will avoid wpautop rendering "
+"issues!"
+msgstr ""
+"<strong>Deprecated :</strong> Cette fonctionnalité va être retiré dans une "
+"prochaine version !"
+
+#: views/admin/Options.phtml:61
+msgid ""
+"The processing priority of the wpautop filter. Normally the filter will be "
+"applied before shortcode is handled and will maybe crash your code-"
+"appearance by adding linebreaks and p/br tags."
+msgstr ""
+"Normalement la priorité de traitement du filtre wpautop est appliqué avant "
+"que le code court ne soit traité et modifierait peut-être l'apparence de "
+"votre code en ajoutant des sauts de ligne et des balises p/br."
+
+#: views/admin/Options.phtml:62
+msgid ""
+"The Enlighter-Plugin <strong>does not</strong> change the priority of the "
+"filter by default.<strong>It may can influence other plugins.</strong>"
+msgstr ""
+"Le plugin Enlighter <strong>ne</strong> modifie pas la priorité du filtre "
+"par défaut. <strong>Il peut y avoir une influence sur les autres plug-ins.</"
+"strong>"
+
+#: views/admin/Options.phtml:64
+msgid "Filter-Priority"
+msgstr "Priorité du filtre"
+
+#: views/admin/Options.phtml:64
+msgid "Default (no changes)"
+msgstr "Par défaut (aucun changement)"
+
+#: views/admin/Options.phtml:64
+msgid "Priority 12 (after shortcode)"
+msgstr "Priorité 12 (après les codes courts)"
+
+#: views/admin/Options.phtml:67
+msgid "CSS Selector"
+msgstr "Sélecteur CSS"
+
+#: views/admin/Options.phtml:68
+msgid ""
+"The selectors are used to match all generated tags. Normally pre."
+"EnlighterJSRAW/code.EnlighterJSRAW should be perfect (all tags which are "
+"generated by the plugin will be highlighted)"
+msgstr ""
+"Les sélecteurs sont utilisés pour faire correspondre toutes les balises "
+"générées. Normalement pre.EnlighterJSRAW / code.EnlighterJSRAW devrait être "
+"parfait (toutes les balises générées par le plugin seront mises en "
+"surbrillance)"
+
+#: views/admin/Options.phtml:69
+msgid "<strong>Default: </strong>pre.EnlighterJSRAW"
+msgstr "<strong>Défaut : </strong>pre.EnlighterJSRAW"
+
+#: views/admin/Options.phtml:70
+msgid "Block CSS Selector"
+msgstr "Sélecteur CSS de bloc"
+
+#: views/admin/Options.phtml:70
+msgid "The CSS selector used to match generated block code"
+msgstr ""
+"Le sélecteur CSS utilisé pour faire correspondre le style de bloc généré"
+
+#: views/admin/Options.phtml:72
+msgid "<strong>Default: </strong>code.EnlighterJSRAW"
+msgstr "<strong>Défaut : </strong>code.EnlighterJSRAW"
+
+#: views/admin/Options.phtml:73
+msgid "Inline CSS Selector"
+msgstr "Sélecteur CSS en-ligne"
+
+#: views/admin/Options.phtml:73
+msgid "The CSS selector used to match generated inline code"
+msgstr ""
+"Le sélecteur CSS utilisé pour faire correspondre le style en ligne généré"
+
+#: views/admin/Options.phtml:76
+msgid "I18n (Internationalization)"
+msgstr "I18n (Traduction)"
+
+#: views/admin/Options.phtml:77
+msgid ""
+"Should the plugin load language files (if available) to translate the "
+"settings page ?"
+msgstr ""
+"Est ce que le plugin charge le fichier de traductions (si disponible) pour "
+"traduire les pages des réglages ?"
+
+#: views/admin/Options.phtml:78
+msgid "Enable I18n"
+msgstr "I18n activé"
+
+#: views/admin/Related.phtml:4
+msgid "Enlighter Related"
+msgstr "En rapport avec Enlighter"
+
+#: views/admin/Related.phtml:7
+msgid "Got a problem ? Need support or want to request a new feature ?"
+msgstr ""
+"Vous avez un problème ? Besoin de support ou d’une nouvelle fonctionnalité ?"
+
+#: views/admin/ThemeCustomizer.phtml:5
+msgid "Theme Customizer"
+msgstr "Customisation du thème"
+
+#: views/admin/SettingsPage.phtml:29
+msgid "Visual Editor"
+msgstr "Éditeur visuel"
+
+#: views/admin/SettingsPage.phtml:30
+msgid "Text Editor"
+msgstr "Éditeur de texte"
+
+#: views/admin/SettingsPage.phtml:31
+msgid "Webfonts"
+msgstr "Polices Web"
+
+#: views/admin/SettingsPage.phtml:32
+msgid "Extensions"
+msgstr "Extensions"
+
+#: views/admin/SettingsPage.phtml:34
+msgid "Options"
+msgstr "Options"
+
+#: views/admin/SettingsPage.phtml:35
+msgid "BETA"
+msgstr "BETA"
+
+#: views/admin/SettingsPage.phtml:40
+msgid ""
+"Select the content you want to highlight and Enlighter takes care of the "
+"rest."
+msgstr ""
+"Sélectionnez le contenu que vous souhaitez mettre en surbrillance et "
+"Enlighter s’occupe du reste."
+
+#: views/admin/SettingsPage.phtml:112
+msgid "is developed by"
+msgstr "est développé par"
+
+#: views/admin/SettingsPage.phtml:113
+msgid "It`s released under the terms of the %s. "
+msgstr "Distribué sous les termes de la licences %s. "
+
+#: views/admin/SettingsPage.phtml:113
+msgid "MIT X11 License"
+msgstr "Licence MIT X11"
+
+#: views/admin/SystemInfo.phtml:4
+msgid "System Info"
+msgstr "Informations systèmes"
+
+#: views/admin/SystemInfo.phtml:11
+msgid "PHP Version:"
+msgstr "Version de PHP :"
+
+#: views/admin/SystemInfo.phtml:15 views/admin/SystemInfo.phtml:17
+msgid "PHP JSON Extension"
+msgstr "Extension PHP JSON"
+
+#: views/admin/SystemInfo.phtml:15
+msgid "available"
+msgstr "disponible"
+
+#: views/admin/SystemInfo.phtml:17
+msgid "not installed"
+msgstr "non installé"
+
+#: views/admin/SystemInfo.phtml:21
+msgid "Server Software:"
+msgstr "Logiciel serveur :"
+
+#: views/admin/SystemInfo.phtml:32
+msgid "Enlighter Plugin Version:"
+msgstr "Version de l’extension Enlighter :"
+
+#: views/admin/SystemInfo.phtml:35
+msgid "EnlighterJS Version:"
+msgstr "Version EnlighterJS :"
+
+#: views/admin/SystemInfo.phtml:38
+msgid "TinyMCE Extension:"
+msgstr "Extension TinyMCE :"
+
+#: views/admin/SystemInfo.phtml:41
+msgid "Gutenberg Extension:"
+msgstr "Extension Gutenberg :"
+
+#: views/admin/SystemInfo.phtml:53 views/admin/SystemInfo.phtml:55
+msgid "Cache writeable"
+msgstr "Cache d’écriture"
+
+#: views/admin/SystemInfo.phtml:53
+msgid "true"
+msgstr "oui"
+
+#: views/admin/SystemInfo.phtml:55
+msgid "false"
+msgstr "non"
+
+#: views/admin/SystemInfo.phtml:61 views/admin/SystemInfo.phtml:63
+#: views/admin/SystemInfo.phtml:65
+msgid "Shortcode Processor"
+msgstr "Processeur code court"
+
+#: views/admin/SystemInfo.phtml:61
+msgid "disabled"
+msgstr "désactivé"
+
+#: views/admin/SystemInfo.phtml:63
+msgid "WordPress internal"
+msgstr "WordPress interne"
+
+#: views/admin/SystemInfo.phtml:65
+msgid "Enlighter low-level"
+msgstr "Enlighter low-level"
+
+#: views/admin/TextEditing.phtml:8
+msgid "Shortcode Processing"
+msgstr "Shortcode Processing"
+
+#: views/admin/TextEditing.phtml:9
+msgid ""
+"WordPress provides a build-in Shortcode-API to process shortcodes used by "
+"third-party plugins. This function may can cause issues when using it in "
+"Text-Editor-Mode with unescaped html characters - especially when posting "
+"source-code!"
+msgstr ""
+"WordPress fournit une API Shortcode intégrée pour traiter les codes courts "
+"utilisés par les plugins tiers. Cette fonction peut entraîner des problèmes "
+"lors de son utilisation en mode éditeur de texte avec des caractères html "
+"non échappés, en particulier lors de la publication de code source !"
+
+#: views/admin/TextEditing.phtml:10
+msgid ""
+"To avoid such issues, Enlighter provides its own, fault tolerant, Shortcode "
+"processor (only affects Enlighter shortcodes!)."
+msgstr ""
+"Pour éviter de tels problèmes, Enlighter fournit son propre processeur "
+"Shortcode tolérant aux pannes (n'affecte que les shortcodes Enlighter !)."
+
+#: views/admin/TextEditing.phtml:11
+msgid ""
+"If you do not need shortcodes (use the Visual-Editor-Integration instead) it "
+"is possible to disable the shortcode processing for performance reasons."
+msgstr ""
+"Si vous n'avez pas besoin de codes courts (utilisez plutôt l'intégration "
+"avec l'éditeur graphique), il est possible de désactiver le traitement du "
+"code court pour des raisons de performances."
+
+#: views/admin/TextEditing.phtml:12
+msgid ""
+"<strong>Notice</strong>: the LowLevel Shortcode Processor is <strong>not "
+"invoked</strong> by the <a href=\"https://developer.wordpress.org/reference/"
+"functions/do_shortcode/\">do_shortcode</a> function! If you need shortcode "
+"processing in other content section, you should consider to use the legacy "
+"version or add custom filters!"
+msgstr ""
+"<strong>Remaruqe</strong> : le processeur de short code LowLevel n'est "
+"<strong>pas appelé</strong> par la fonction <a href=\"https://developer."
+"wordpress.org/reference/functions/do_shortcode/\">do_shortcode</a> ! Si vous "
+"avez besoin d'un traitement de code court dans une autre section de contenu, "
+"vous devriez envisager d'utiliser la version antérieure ou ajouter des "
+"filtres personnalisés !"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Processor"
+msgstr "Processeur"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Enlighter Low-Level (default)"
+msgstr "Enlighter Low-Level (default)"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Legacy (WordPress based)"
+msgstr "Légal (basé sur WordPress)"
+
+#: views/admin/TextEditing.phtml:13
+msgid "Disable Shortcodes"
+msgstr "Désactiver les codes courts"
+
+#: views/admin/TextEditing.phtml:16
+msgid "Filter Targets - LowLevel Shortcode Processor"
+msgstr "Cibles des filtres - Processeur LowLevel Shortcode"
+
+#: views/admin/TextEditing.phtml:17
+msgid ""
+"Choose the content-sections to which the shortcode processor should be "
+"applied."
+msgstr ""
+"Choisissez les sections de contenu auxquelles le processeur de code court "
+"doit être appliqué."
+
+#: views/admin/TextEditing.phtml:35
+msgid "Language Shortcodes"
+msgstr "Langage des codes courts"
+
+#: views/admin/TextEditing.phtml:36
+msgid ""
+"Do you want to use language shortcodes like [js] ? Disable it when your "
+"using other plugins which uses such shortcodes!"
+msgstr ""
+"Voulez-vous utiliser des codes courts de langue comme [js]? Désactivez-le si "
+"vous utilisez d'autres plugins qui utilisent de tels codes courts !"
+
+#: views/admin/TextEditing.phtml:37
+msgid "Enable Language Shortcodes"
+msgstr "Active les codes courts"
+
+#: views/admin/TextEditing.phtml:40
+msgid "Inline Syntax Highlighting"
+msgstr "Mise en évidence de la syntaxe en ligne"
+
+#: views/admin/TextEditing.phtml:41
+msgid "Should shortcodes without linebreaks insinde handled as inline-code ?"
+msgstr ""
+"Les codes courts sans sauts de ligne à l'intérieur doivent-ils être gérés en "
+"tant que code en ligne ?"
+
+#: views/admin/TextEditing.phtml:42
+msgid "Enable Inline Syntax Highlighting"
+msgstr "Active la surbrillance de la syntaxe en ligne"
+
+#: views/admin/TextEditing.phtml:53
+msgid "Fenced Code Blocks"
+msgstr "Blocs de code fermés"
+
+#: views/admin/TextEditing.phtml:54
+msgid ""
+"Markdown Fanatic ? Enlighter also supports <a href=\"https://help.github.com/"
+"articles/creating-and-highlighting-code-blocks/\">GFM style</a> fenced code "
+"blocks. In case no language identifier is given, choose the default "
+"behaviour."
+msgstr ""
+"Fan de Markdown? Enlighter prend également en charge les <a href=\"https://"
+"help.github.com/articles/creating-and-highlighting-code-blocks/\">styles "
+"GFM</a> bloqués. Si aucun identifiant de langue n'est fourni, choisissez le "
+"comportement par défaut."
+
+#: views/admin/TextEditing.phtml:59
+msgid ""
+"Choose the content-sections to which the markdown processor should be "
+"applied."
+msgstr ""
+"Choisissez les sections de contenu auxquelles le processeur de marquage doit "
+"être appliqué."
+
+#: views/admin/TextEditing.phtml:81
+msgid "Text/HTML Editor"
+msgstr "Éditeur Texte/HTML"
+
+#: views/admin/TextEditing.phtml:84
+msgid "QuickTags"
+msgstr "QuickTags"
+
+#: views/admin/TextEditing.phtml:85
+msgid ""
+"QuickTags are used to simplify the editing process when working in text/html "
+"mode. A bunch of QuickTags (all registered languages) can be added to the "
+"Text/HTML Editor Toolbar."
+msgstr ""
+"Les QuickTags sont utilisés pour simplifier le processus d’édition en mode "
+"text/html. Les QuickTags (toutes les langues enregistrées) peuvent être "
+"ajoutés à la barre d'outils de l'éditeur texte/HTML."
+
+#: views/admin/VisualEditing.phtml:24
+msgid "Enable Backend Integration"
+msgstr "Intégration à l’éditeur dans le Back-Office"
+
+#: views/admin/TextEditing.phtml:90
+msgid "Do you want to use the QuickTags extensions in your frontend (website)?"
+msgstr ""
+"Voulez-vous utiliser les extensions QuickTags dans votre interface Front-"
+"Office (site Web) ?"
+
+#: views/admin/VisualEditing.phtml:27
+msgid "Enable Frontend Integration"
+msgstr "Intégration à l’éditeur dans le Front-Office"
+
+#: views/admin/TextEditing.phtml:93
+msgid "HTML Tags are fully compatible with the Visual Editor Mode."
+msgstr "Les balises HTML sont entières compatibles avec l'éditeur visuel."
+
+#: views/admin/TextEditing.phtml:94
+msgid "QuickTag Mode"
+msgstr "Mode QuickTag"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Print HTML Tags (default)"
+msgstr "Affiche les balises HTML (défaut)"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Print Shortcode Tags"
+msgstr "Affiches les codes courts"
+
+#: views/admin/TextEditing.phtml:94
+msgid "Disable QuickTags"
+msgstr "Désactive les codes courts"
+
+#: views/admin/ThemeCustomizer.phtml:8
+msgid "Leave fields blank to force basic theme styles"
+msgstr "Laissez les champs vides pour forcer les styles du thème de base"
+
+#: views/admin/ThemeCustomizer.phtml:10
+msgid "Open Live Preview"
+msgstr "Ouvrir l'aperçu en direct"
+
+#: views/admin/ThemeCustomizer.phtml:14
+msgid "Theme Base"
+msgstr "Thème de base"
+
+#: views/admin/ThemeCustomizer.phtml:16
+msgid "Basic Theme (will be extended)"
+msgstr "Thème de base (sera étendu)"
+
+#: views/admin/ThemeCustomizer.phtml:26
+msgid "Load Theme styles"
+msgstr "Charge les styles du thèmes"
+
+#: views/admin/ThemeCustomizer.phtml:33
+msgid "Font Styles"
+msgstr "Styles d’écriture"
+
+#: views/admin/VisualEditing.phtml:50
+msgid "Font-Family"
+msgstr "Police"
+
+#: views/admin/ThemeCustomizer.phtml:36 views/admin/ThemeCustomizer.phtml:53
+#: views/admin/ThemeCustomizer.phtml:67
+msgid "e.g. Monaco, Courier, Monospace"
+msgstr "ex Monaco, Courier, Monospace"
+
+#: views/admin/VisualEditing.phtml:53
+msgid "Font-Size"
+msgstr "Taille d’écriture"
+
+#: views/admin/ThemeCustomizer.phtml:39 views/admin/ThemeCustomizer.phtml:70
+msgid "e.g. 12px, 1.2em, 11pt"
+msgstr "ex 12px, 1.2em, 11pt"
+
+#: views/admin/VisualEditing.phtml:56
+msgid "Line height"
+msgstr "Hauteur de ligne"
+
+#: views/admin/ThemeCustomizer.phtml:42 views/admin/ThemeCustomizer.phtml:73
+msgid "e.g. 16px, 1.5em"
+msgstr "ex. 16px, 1.5em"
+
+#: views/admin/VisualEditing.phtml:59
+msgid "Font-Color"
+msgstr "Couleur d’écriture"
+
+#: views/admin/ThemeCustomizer.phtml:45 views/admin/ThemeCustomizer.phtml:59
+#: views/admin/ThemeCustomizer.phtml:76 views/admin/ThemeCustomizer.phtml:87
+msgid "e.g. #000000, #ff00c1"
+msgstr "ex #000000, #ff00c1"
+
+#: views/admin/ThemeCustomizer.phtml:50
+msgid "Line Number Styles"
+msgstr "Styles des numéro de ligne"
+
+#: views/admin/ThemeCustomizer.phtml:56
+msgid "e.g. 10px, 1.2em, 11pt"
+msgstr "ex 10px, 1.2em, 11pt"
+
+#: views/admin/ThemeCustomizer.phtml:64
+msgid "RAW Font Styles"
+msgstr "Styles de polices RAW"
+
+#: views/admin/VisualEditing.phtml:62
+msgid "Background-Color"
+msgstr "Couleur de fond"
+
+#: views/admin/ThemeCustomizer.phtml:79
+msgid "e.g. #ffffff"
+msgstr "ex. #ffffff"
+
+#: views/admin/ThemeCustomizer.phtml:84
+msgid "Special Styles"
+msgstr "Styles spéciaux"
+
+#: views/admin/ThemeCustomizer.phtml:87
+msgid "Line highlighting Color"
+msgstr "Couleur de la ligne surlignée"
+
+#: views/admin/ThemeCustomizer.phtml:90
+msgid "Line hover Color"
+msgstr "Couleur de la ligne survolé"
+
+#: views/admin/ThemeCustomizer.phtml:90
+msgid "e.g. #f0f0ff"
+msgstr "ex. #f0f0ff"
+
+#: views/admin/ThemeCustomizer.phtml:95
+msgid "Token Styles"
+msgstr "Styles des jetons"
+
+#: views/admin/ThemeCustomizer.phtml:100
+msgid "Keyword(Type1)"
+msgstr "Mot clef (Type1)"
+
+#: views/admin/ThemeCustomizer.phtml:101
+msgid "Keyword(Type2)"
+msgstr "Mot clef (Type2)"
+
+#: views/admin/ThemeCustomizer.phtml:102
+msgid "Keyword(Type3)"
+msgstr "Mot clef (Type3)"
+
+#: views/admin/ThemeCustomizer.phtml:103
+msgid "Keyword(Type4)"
+msgstr "Mot clef (Type4)"
+
+#: views/admin/ThemeCustomizer.phtml:104
+msgid "Slash-StyleComments"
+msgstr "Slash-StyleComments"
+
+#: views/admin/ThemeCustomizer.phtml:105
+msgid "Multiline-StyleComments"
+msgstr "Multiline-StyleComments"
+
+#: views/admin/ThemeCustomizer.phtml:106
+msgid "Strings(Type1)"
+msgstr "Chaîne de caractères (Type1)"
+
+#: views/admin/ThemeCustomizer.phtml:107
+msgid "Strings(Type2)"
+msgstr "Chaîne de caractères (Type2)"
+
+#: views/admin/ThemeCustomizer.phtml:108
+msgid "Strings(Type3)"
+msgstr "Chaîne de caractères (Type3)"
+
+#: views/admin/ThemeCustomizer.phtml:109
+msgid "Number"
+msgstr "Nombre"
+
+#: views/admin/ThemeCustomizer.phtml:110
+msgid "Method(Type1)"
+msgstr "Méthode (Type1)"
+
+#: views/admin/ThemeCustomizer.phtml:111
+msgid "Method(Type2)"
+msgstr "Méthode (Type2)"
+
+#: views/admin/ThemeCustomizer.phtml:112
+msgid "Bracket"
+msgstr "Parenthèse"
+
+#: views/admin/ThemeCustomizer.phtml:113
+msgid "Symbol"
+msgstr "Symbole"
+
+#: views/admin/ThemeCustomizer.phtml:114
+msgid "EscapeSymbol"
+msgstr "Symbole d'échappement"
+
+#: views/admin/ThemeCustomizer.phtml:115
+msgid "Regex"
+msgstr "Regex"
+
+#: views/admin/ThemeCustomizer.phtml:116
+msgid "StartDelimiter"
+msgstr "StartDelimiter"
+
+#: views/admin/ThemeCustomizer.phtml:117
+msgid "StopDelimiter"
+msgstr "StopDelimiter"
+
+#: views/admin/ThemeCustomizer.phtml:121
+msgid "No Decoration"
+msgstr "Pas de décoration"
+
+#: views/admin/ThemeCustomizer.phtml:122
+msgid "Underline"
+msgstr "Souligné"
+
+#: views/admin/ThemeCustomizer.phtml:123
+msgid "Overline"
+msgstr "Surligné"
+
+#: views/admin/ThemeCustomizer.phtml:124
+msgid "Line through"
+msgstr "Barré"
+
+#: views/admin/ThemeCustomizer.phtml:128
+msgid "Normal Style"
+msgstr "Normal"
+
+#: views/admin/ThemeCustomizer.phtml:129
+msgid "Bold Style"
+msgstr "Gras"
+
+#: views/admin/ThemeCustomizer.phtml:130
+msgid "Italic Style"
+msgstr "Italic"
+
+#: views/admin/ThemeCustomizer.phtml:131
+msgid "Bold+Italic Style"
+msgstr "Gras + Italic"
+
+#: views/admin/ThemeCustomizer.phtml:145
+msgid "Text:"
+msgstr "Texte :"
+
+#: views/admin/ThemeCustomizer.phtml:149
+msgid "Background:"
+msgstr "Fond :"
+
+#: views/admin/VisualEditing.phtml:5
+msgid "Gutenberg Editor"
+msgstr "Éditeur Gutenberg"
+
+#: views/admin/VisualEditing.phtml:8
+msgid "Gutenberg Editor Plugin"
+msgstr "Extension de l’éditeur Gutenberg"
+
+#: views/admin/VisualEditing.phtml:9
+msgid ""
+"To use EnlighterJS within Gutenberg you can enable this feature. It loads "
+"the EnlighterJS Gutenberg.Plugin."
+msgstr ""
+"Pour utiliser EnlighterJS dans Gutenberg, il faut activer cette "
+"fonctionnalité. Ceci chargera l’extension EnlighterJS dans Gutenberg."
+
+#: views/admin/VisualEditing.phtml:10
+msgid ""
+"Warning: Please keep in mind that this version of Enlighter Plugin.Gutenberg "
+"is still BETA software and may have some serious bugs!"
+msgstr ""
+"Attention : cette version de l’extension Enlighter pour Gutenberg est "
+"toujours en version BETA et peut contenir de sérieux bugs!"
+
+#: views/admin/VisualEditing.phtml:12
+msgid "Enable"
+msgstr "Activé"
+
+#: views/admin/VisualEditing.phtml:18
+msgid "Classic Editor (TinyMCE 4)"
+msgstr "Éditeur standard (TinyMCE 4)"
+
+#: views/admin/VisualEditing.phtml:22
+msgid "Visual Editor Integration"
+msgstr "Intégration à l’éditeur avancée"
+
+#: views/admin/VisualEditing.phtml:23
+msgid ""
+"Enlighter provides a full Visual Editor integration. You can turn it off if "
+"you only want to use shortcodes."
+msgstr ""
+"Enlighter fournit une intégration complète de l’éditeur avancée. Vous pouvez "
+"le désactiver si vous souhaitez uniquement utiliser des codes courts."
+
+#: views/admin/VisualEditing.phtml:26
+msgid ""
+"Do you want to use the Visual Editor extensions in your frontend (website) ? "
+"May required for frontend editing plugins."
+msgstr ""
+"Utiliser les extensions de l’éditeur graphique dans votre interface ? Il "
+"peut-être requis pour les plugins d’édition frontale."
+
+#: views/admin/VisualEditing.phtml:30
+msgid "Tweaks"
+msgstr "Tweaks"
+
+#: views/admin/VisualEditing.phtml:31
+msgid ""
+"WordPress Limits the Editor-Width to ~600px. You can disable this limit - "
+"might be useful for posting source-code!"
+msgstr ""
+"Par défaut, WordPress limite la largeur de l’éditeur à ~600px. Vous pouvez "
+"désactiver cette limite. Cela pourrait être utile pour poster du code "
+"source !"
+
+#: views/admin/VisualEditing.phtml:32
+msgid "Automatic Width (max)"
+msgstr "Largeur automatique (max)"
+
+#: views/admin/VisualEditing.phtml:34
+msgid ""
+"In addition to the code-insert button, Enlighter can add a set formats to "
+"the editor."
+msgstr ""
+"En plus du bouton d’insertion de code, Enlighter peut ajouter un ensemble de "
+"formats à l’éditeur."
+
+#: views/admin/VisualEditing.phtml:35
+msgid "Add Editor Formats"
+msgstr "Ajouter les formats à l’éditeur"
+
+#: views/admin/VisualEditing.phtml:37
+msgid ""
+"The default keyboard shortcut (shift+alt+x) action can be modified to "
+"convert the current selection into an Enlighter codeblock."
+msgstr ""
+"Le raccourci clavier par défaut (Maj + Alt + x) peut être modifiée pour "
+"convertir la sélection actuelle en un bloc de code Enlighter."
+
+#: views/admin/VisualEditing.phtml:38
+msgid "Enable Keyboard Shortcut"
+msgstr "Activer les raccourcis clavier"
+
+#: views/admin/VisualEditing.phtml:40
+msgid ""
+"By default, the <kbd>tab</kbd> button does not add indentation to the "
+"content. Enlighter comes with its own editing plugin which allows you to use "
+"tabs within the Editor to align code."
+msgstr ""
+"Par défaut, la touche <kbd>tab</ kbd> n’ajoute pas d’indentation au contenu. "
+"Enlighter est livré avec son propre plug-in d’édition qui vous permet "
+"d’utiliser des fabulations dans l’éditeur pour aligner le code."
+
+#: views/admin/VisualEditing.phtml:41
+msgid ""
+"This option disables the <strong>tabfocus plugin</strong> and requires that "
+"the Enlighter <code>indent</code> option has been set to spaces!"
+msgstr ""
+"Cette option désactive l’<strong>extension tabfocus</strong> et requiert que "
+"l’option <code>d’indentation</code> de Enlighter a été paramétrée avec des "
+"espaces !"
+
+#: views/admin/VisualEditing.phtml:42
+msgid "Enable Tab Indentation"
+msgstr "Activé l’indentation avec tabulations"
+
+#: views/admin/VisualEditing.phtml:45
+msgid "Code-Block Styles"
+msgstr "Styles de bloc de code"
+
+#: views/admin/VisualEditing.phtml:46
+msgid ""
+"It is also possible to influence the code-block styles of the Visual-Editor. "
+"Maybe you like another background color or font-family."
+msgstr ""
+"Il est possible de modifier les styles de bloc de code dans l’éditeur "
+"graphique. Avec une autre couleur de fond ou une famille de police."
+
+#: views/admin/VisualEditing.phtml:50
+msgid ""
+"e.g. \"Source Code Pro\", \"Liberation Mono\", \"Courier New\", Courier, "
+"monospace"
+msgstr ""
+"ex « Source Code Pro », « Liberation Mono », « Courier New », Courier, "
+"monospace"
+
+#: views/admin/VisualEditing.phtml:53
+msgid "e.g. 0.7em"
+msgstr "ex 0.7em"
+
+#: views/admin/VisualEditing.phtml:56
+msgid "e.g. 1.4em"
+msgstr "ex 1.4em"
+
+#: views/admin/VisualEditing.phtml:59
+msgid "e.g. #565b60"
+msgstr "ex #565b60"
+
+#: views/admin/VisualEditing.phtml:62
+msgid "e.g. #f7f7f7"
+msgstr "ex #f7f7f7"
+
+#: views/admin/VisualEditing.phtml:65
+msgid "Restore defaults"
+msgstr "Restaurer les valeurs d’origines"
+
+#: views/admin/Webfonts.phtml:5
+msgid "Webfonts Loader"
+msgstr "Chargement des polices Web"
+
+#: views/admin/Webfonts.phtml:9
+msgid ""
+"Some Enlighter Themes uses modern fonts which may not available for your "
+"users by default."
+msgstr ""
+"Certains thèmes d’Enlighter utilisent des polices modernes qui peuvent ne "
+"pas être disponibles par défaut pour vos utilisateurs."
+
+#: views/admin/Webfonts.phtml:11
+msgid ""
+"To provide the best visual experience, it`s possible to load the missing "
+"fonts automatically using <a href=\"https://www.google.com/fonts\">Google "
+"Webfonts</a>."
+msgstr ""
+"Pour offrir la meilleure expérience visuelle possible, il est possible de "
+"charger automatiquement les polices manquantes à l’aide de <a href=\"https://"
+"www.google.com/fonts\">Google Webfonts</a>."
+
+#: views/admin/Webfonts.phtml:12
+msgid "The following fonts are used by Enlighter`s build-in themes:"
+msgstr ""
+"Les polices suivantes sont utilisées par les thèmes intégrés d’Enlighter :"
+
+#: views/admin/Webfonts.phtml:22
+msgid "Monospace Webfonts"
+msgstr "Police de type Monospace (chasse fixe)"
+
+#: views/admin/Webfonts.phtml:23
+msgid "Only regular, italic, bold, bold-italic variants are loaded!"
+msgstr ""
+"Seul les variantes : normales, italiques, gras, gras-italique seront chargé !"

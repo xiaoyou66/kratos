@@ -1,0 +1,98 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- Shortcode Processing -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Shortcodes', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <h4><?php _e('Shortcode Processing', 'enlighter'); ?></h4>
+        <p><?php _e('WordPress provides a build-in Shortcode-API to process shortcodes used by third-party plugins. This function may can cause issues when using it in Text-Editor-Mode with unescaped html characters - especially when posting source-code!', 'enlighter'); ?>
+            <?php _e('To avoid such issues, Enlighter provides its own, fault tolerant, Shortcode processor (only affects Enlighter shortcodes!).', 'enlighter'); ?><br />
+            <?php _e('If you do not need shortcodes (use the Visual-Editor-Integration instead) it is possible to disable the shortcode processing for performance reasons.', 'enlighter'); ?></p>
+        <p><?php _e('<strong>Notice</strong>: the LowLevel Shortcode Processor is <strong>not invoked</strong> by the <a href="https://developer.wordpress.org/reference/functions/do_shortcode/">do_shortcode</a> function! If you need shortcode processing in other content section, you should consider to use the legacy version or add custom filters!', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displaySelect(__('Processor', 'enlighter'), 'shortcodeMode', array(__('Enlighter Low-Level (default)', 'enlighter') => 'modern', __('Legacy (WordPress based)', 'enlighter') => 'legacy', __('Disable Shortcodes', 'enlighter') => 'disabled')); ?>
+
+        <div id="EnlighterShortcodeFilters">
+        <h4><?php _e('Filter Targets - LowLevel Shortcode Processor', 'enlighter'); ?></h4>
+        <p><?php _e('Choose the content-sections to which the shortcode processor should be applied.', 'cryptex'); ?></p>
+        <!-- Enable the_content filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_content', 'enlighter'), 'shortcodeFilterContent'); ?>
+
+        <!-- Enable the_excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_excerpt', 'enlighter'), 'shortcodeFilterExcerpt'); ?>
+
+        <!-- Enable comment-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments', 'enlighter'), 'shortcodeFilterComments'); ?>
+
+        <!-- Enable comment-excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments-excerpt', 'enlighter'), 'shortcodeFilterCommentsExcerpt'); ?>
+
+        <!-- Enable Widget-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable widget-text', 'enlighter'), 'shortcodeFilterWidgetText'); ?>
+        </div>
+
+        <!-- Language Shortcodes -->
+        <h4><?php _e('Language Shortcodes', 'enlighter'); ?></h4>
+        <p><?php _e('Do you want to use language shortcodes like [js] ? Disable it when your using other plugins which uses such shortcodes!', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Language Shortcodes', 'enlighter'), 'languageShortcode'); ?>
+
+        <!-- Inline Highlighting -->
+        <h4><?php _e('Inline Syntax Highlighting', 'enlighter'); ?></h4>
+        <p><?php _e('Should shortcodes without linebreaks insinde handled as inline-code ?', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Inline Syntax Highlighting', 'enlighter'), 'enableInlineHighlighting'); ?>
+
+
+     </div>
+</div>
+
+<!-- Markdown Processing -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Markdown', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <h4><?php _e('Fenced Code Blocks', 'enlighter'); ?></h4>
+        <p><?php _e('Markdown Fanatic ? Enlighter also supports <a href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">GFM style</a> fenced code blocks. In case no language identifier is given, choose the default behaviour.', 'enlighter'); ?></p>
+
+        <?php $this->_settingsUtility->displaySelect(__('Generic Code Blocks', 'enlighter'), 'gfmDefaultLanguage', array(__('Generic Highlighting', 'enlighter') => 'generic', __('No Highlighting (RAW)', 'enlighter') => 'raw')); ?>
+
+        <h4><?php _e('Filter Targets', 'enlighter'); ?></h4>
+        <p><?php _e('Choose the content-sections to which the markdown processor should be applied.', 'enlighter'); ?></p>
+
+        <!-- Enable the_content filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_content', 'enlighter'), 'gfmFilterContent'); ?>
+
+        <!-- Enable the_excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_excerpt', 'enlighter'), 'gfmFilterExcerpt'); ?>
+
+        <!-- Enable comment-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments', 'enlighter'), 'gfmFilterComments'); ?>
+
+        <!-- Enable comment-excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments-excerpt', 'enlighter'), 'gfmFilterCommentsExcerpt'); ?>
+
+        <!-- Enable Widget-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable widget-text', 'enlighter'), 'gfmFilterWidgetText'); ?>
+
+    </div>
+</div>
+
+<!-- Text Editor -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Text/HTML Editor', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+        <!-- Quicktags -->
+        <h4><?php _e('QuickTags', 'enlighter'); ?></h4>
+        <p><?php _e('QuickTags are used to simplify the editing process when working in text/html mode. A bunch of QuickTags (all registered languages) can be added to the Text/HTML Editor Toolbar.', 'enlighter'); ?></p>
+
+
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Backend Integration', 'enlighter'), 'enableQuicktagBackendIntegration'); ?>
+
+        <p><?php _e('Do you want to use the QuickTags extensions in your frontend (website)?', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Frontend Integration', 'enlighter'), 'enableQuicktagFrontendIntegration'); ?>
+
+        <p><?php _e('HTML Tags are fully compatible with the Visual Editor Mode.', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displaySelect(__('QuickTag Mode', 'enlighter'), 'editorQuicktagMode', array(__('Print HTML Tags (default)', 'enlighter') => 'html', __('Print Shortcode Tags', 'enlighter') => 'shortcode', __('Disable QuickTags', 'enlighter') => 'disabled')); ?>
+    </div>
+</div>
+
+

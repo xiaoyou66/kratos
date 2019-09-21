@@ -19,6 +19,9 @@ add_action('admin_menu', 'QPlayer_menu');
 add_action('wp_footer', 'footer');
 add_filter('plugin_action_links', 'QPlayer_plugin_setting', 10, 2);
 
+
+
+
 function QPlayer_menu() {
     add_options_page('QPlayer', 'QPlayer','manage_options', 'QPlayer_page', 'QPlayer_page');
 }
@@ -36,10 +39,10 @@ function QPlayer_plugin_setting( $links, $file )
 
 function footer(){
     wp_enqueue_style( 'player', QPlayer_URL.'/css/player.css','',QPlayer_VER);
-
-	echo '
-		<div id="QPlayer" style="z-index:999999">
-		<div id="pContent">
+    get_option('random')?$random="true":$random="false";
+    echo kratos_option('open_music') ?'<div id="QPlayer" style="z-index:999999;transform: translateX(250px);">': '<div id="QPlayer" style="z-index:999999">';
+	echo '<div id="pContent">
+           <div id="randomstatus" class="'.$random.'" style="display:none"></div>
 			<div id="player">
 				<span class="cover"></span>
 				<div class="ctrl">
@@ -65,9 +68,9 @@ function footer(){
 					</div>
 				</div>
 			</div>
-			<div class="ssBtn">
-			        <div class="adf"></div>
-		    </div>
+			<div class="ssBtn">';
+			echo kratos_option('open_music')? '<div class="adf on"></div>' : '<div class="adf"></div>';
+	echo '</div>
 		</div>
 		<ol id="playlist"></ol>
 		</div>
@@ -86,6 +89,7 @@ function footer(){
     if (get_option('css') != '') {
         echo '<style>'.get_option('css').'</style>' . "\n";
     }
+
     echo '
         <script>
           var autoplay = '.(get_option('autoPlay')?1:0).';

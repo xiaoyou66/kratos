@@ -13,10 +13,18 @@
                         echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
                         echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
-                        bloginfo('url');
-                        echo '/feed"><i class="fa fa-rss"></i></a>';?>
+                       if(kratos_option('show_rss')){ bloginfo('url');
+                        echo '/feed"><i class="fa fa-rss"></i></a>';}
+                        //B站logo
+                        if(kratos_option('social_bilibili'))
+                        {
+                            echo '<a target="_blank" rel="nofollow" href="https://space.bilibili.com/'.kratos_option('social_bilibili').'"><img style="height: 30px;top:-9px;position:relative;left:-4px;" title="bilibili" src="';
+                            bloginfo('template_url');
+                            echo '/static/images/ua/bilibili.png"></a>';
+                        }?>
+
                     </p>
-                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br><?php _e('本站已萌萌哒(✪ω✪)运行','moedog'); ?> <span id="span_dt_dt">Loading...</span><br>Theme <a href="https://xiaoyou66.com/%e6%9c%ac%e7%ab%99%e4%b8%bb%e9%a2%98%e6%ad%a3%e5%bc%8f%e5%bc%80%e6%ba%90%ef%bc%81/" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">Moedog</a> Modified by <a href="https://xiaoyou66.com" target="_blank" rel="nofollow">XiaoYou</a><?php if(kratos_option('sitemap')) echo ' <br><a href="'.get_option('home').'/sitemap.html" target="_blank">Sitemap</a>'; ?>
+                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br>本站已萌萌哒(✪ω✪)运行<span id="span_dt_dt">Loading...</span><br>Theme <a href="https://xiaoyou66.com/%e6%9c%ac%e7%ab%99%e4%b8%bb%e9%a2%98%e6%ad%a3%e5%bc%8f%e5%bc%80%e6%ba%90%ef%bc%81/" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">moedog</a> Modified by <a href="https://xiaoyou66.com" target="_blank" rel="nofollow">XiaoYou</a><?php if(kratos_option('sitemap')) echo ' <br><a href="'.get_option('home').'/sitemap.html" target="_blank">Sitemap</a>'; ?>
                         <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
                         if(kratos_option('gov_num')) echo '<br><a href="'.kratos_option('gov_link').'" rel="external nofollow" target="_blank"><i class="govimg"></i>'.kratos_option('gov_num').'</a>'; ?>
                         <br><!--  站长统计-->
@@ -28,9 +36,17 @@
         <div class="cd-tool text-center">
             <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class="fa fa-chevron-up"></span></div></div>
             <?php if(kratos_option('cd_weixin')) echo '<div id="wechat-img" class="wechat-img"><span class="fa fa-weixin"></span><div id="wechat-pic"><img src="'.kratos_option('weixin_image').'"></div></div>'; ?>
-
-
-
+            <?php if(kratos_option('bibo_open')) {?>
+                <?php if(kratos_option('bibo_pagelink')){?>
+                    <div class="bilbili-box">
+                        <?php if($_COOKIE['goto_bibo']==1){?>
+                            <a href="<?php echo site_url();?>?style=krato"> <span class="fa fa-exchange"  title="切换风格"></span></a>
+                        <?php }else{?>
+                            <a href="<?php echo site_url();?>?style=bibo"> <span class="fa fa-exchange"  title="切换风格"></span></a>
+                        <?php }?>
+                    </div>
+                <?php } ?>
+            <?php }?>
             <div class="search-box">
                 <span class="fa fa-search"></span>
                 <form class="search-form" role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
@@ -47,7 +63,6 @@
 </footer>
 </div>
 </div>
-
 <?php
 if (! wp_is_mobile() && kratos_option('openlive2d')) {
     echo '<div class="waifu" >
@@ -77,12 +92,38 @@ if (! wp_is_mobile() && kratos_option('openlive2d')) {
 }
 ?>
 <!--Qplayer-->
+<!--动态加载效果-->
+
 
 <?php wp_footer();if(kratos_option('add_script')){ ?>
     <script type="text/javascript">
         <?php echo kratos_option('add_script'); ?>
     </script>
 <?php } ?>
+
+<!--切换标签实现网页标题变化-->
+<script type="text/javascript">
+    /*自动刷新页面，避免无法访问*/
+    var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+    <?PHP if(kratos_option('title_change')){?>
+        document.title = '<?php echo kratos_option('title_change'); ?> ';
+        clearTimeout(titleTime);
+    <?php }?>
+    }
+    else {
+    <?php if(kratos_option('title_back')){?>
+        document.title = '<?php echo kratos_option('title_back'); ?>';
+        titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+        }, 3000);
+    <?php } ?>
+    }
+    });
+
+</script>
 
 <!--       鼠标特效 -->
 <script type="text/javascript">

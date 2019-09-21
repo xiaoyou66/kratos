@@ -1,0 +1,84 @@
+
+/* line number background */
+ol.wpcustomEnlighterJS, ul.wpcustomEnlighterJS{
+	background-color: #f8f8f8;
+}
+/* borders on top&botton */
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+	border: 1px solid #e8e8e2;
+}
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: none;
+	border-left: solid 4px #52ce52;
+	line-height: 20px;
+	color: #505050;
+	font-size: 14px;
+	background-color: #ffffff;
+}
+ol.wpcustomEnlighterJS li.even, ul.wpcustomEnlighterJS li.even{
+	background-color: #f8f8f8;
+}
+/* inlline container style */
+span.wpcustomEnlighterJS{
+	background-color: transparent;
+	border: none;
+}
+/* hover color */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	border: none;
+	border-left: solid 4px #52ce52;
+	background-color: #ddf0dd;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+	background-color: #edf9ec;
+	border-left-color: #3fa03f;
+}
+/* non leading zero */
+ol.wpcustomEnlighterJS li {
+    color: #000000;
+    list-style-type: decimal;
+}
+.wpcustomEnlighterJS span{
+	font-size: 15px;
+}
+/** Symbol styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #ffffff;
+	font-size: 15px;
+	color: #000000;
+	line-height: 20px;
+}
+/* Button Styles  */
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+}
+/* Tab Styles */
+.wpcustomEnlighterJSTabPane .controls{
+	background-color: #f8f8f8;
+	height: 31px;
+	border: 1px solid #e8e8e2;
+	border-bottom-width: 0px;
+}
+.wpcustomEnlighterJSTabPane .controls ul{
+	margin: 0px 0px 0px 35px;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+	border-radius: 0px;
+	font-size: 15px;
+	background-color: transparent;
+	line-height: 20px;
+	padding: 5px 10px 5px 10px;
+}
+.wpcustomEnlighterJSTabPane .controls li.selected, .wpcustomEnlighterJSTabPane .controls li.selected:hover{
+	background-color: #52ce52;
+	color: #f9f9f9;
+	font-weight: bold;
+}
+.wpcustomEnlighterJSTabPane .pane{
+	padding: 0px;
+}
+.wpcustomEnlighterJSTabPane .wpcustomEnlighterJS{
+	border-top-width: 0px;
+} 

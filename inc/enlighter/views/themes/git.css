@@ -1,0 +1,56 @@
+
+/* borders on top&botton */
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+	border: 1px solid #eee;
+	font-family: Courier, monospace;
+}
+/* no line borders */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: none;
+	line-height: 20px;
+}
+/* hover color */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	background-color: #ffffcc;
+	border: none;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+	background-color: #fffff2;
+}
+/* non leading zero */
+ol.wpcustomEnlighterJS {
+	list-style-type: decimal;
+}
+/** Symbol styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #ffffff;
+	font-size: 12px;
+	color: #000000;
+	line-height: 20px;
+}
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+}
+/* Tab Styles */
+.wpcustomEnlighterJSTabPane .controls{
+	background-color: #f2f2f2;
+	border: 1px solid #eee;
+	border-bottom-width: 0px;
+}
+.wpcustomEnlighterJSTabPane .controls ul{
+	margin: 0px 0px 0px 35px;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+	border-radius: 0px;
+}
+.wpcustomEnlighterJSTabPane .controls li.selected{
+	background-color: #e0e0e0;
+}
+.wpcustomEnlighterJSTabPane .pane{
+	padding: 0px;
+}
+.wpcustomEnlighterJSTabPane .wpcustomEnlighterJS{
+	border-top-color: #e0e0e0;
+} 

@@ -1,0 +1,33 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper{
+    font-family: Monaco, Courier, monospace;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+ol.wpcustomEnlighterJS li{
+	border-left: 1px solid #939393;
+}
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background-color: #F4F8FC;
+}
+/* theme symbol styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	line-height: 16px;
+}
+/* Toolbar */
+.wpcustomEnlighterJSTabPane .controls li{
+	border-radius: 0px;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover {
+	background-color: #e5e5e5;
+}
+.wpcustomEnlighterJSTabPane .controls li.selected{
+	background-color: #e5e5e5;
+}

@@ -1,0 +1,56 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper{
+    font-family: Monaco, Courier, monospace;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+	background-color: #ffffff;
+}
+.wpcustomEnlighterJSTabPane .controls .selected, .wpcustomEnlighterJSTabPane .controls .selected:hover, .wpcustomEnlighterJSTabPane .controls li:hover{
+	background-color: #F4F8FC;
+}
+.wpcustomEnlighterJS {
+	color: #000000;
+}
+ol.wpcustomEnlighterJS {
+	background-color: #fbfbfb;
+	list-style-type: decimal;
+}
+ul.wpcustomEnlighterJS {
+	background-color: #fbfbfb;
+}
+span.wpcustomEnlighterJS {
+	background-color: #f9f9f9;
+	border: none;
+}
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: none;
+	line-height: 16px;
+}
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	background-color: #F4F8FC;
+    color: #000000;
+	border: none;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline  {
+	background-color: #F4F8FC;
+}
+/** Symbol styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #ffffff;
+	font-size: 12px;
+	color: #000000;
+	line-height: 16px;
+}
+/* Tab Pane */
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+	opacity: 0.8;
+	border: none;
+	width: 21px;
+	height: 21px;
+}
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a:HOVER{
+	opacity: 1.0;
+}

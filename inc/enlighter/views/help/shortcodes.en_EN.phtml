@@ -1,0 +1,15 @@
+<p>The most easy way to use Enlighter is to wrap your code, which should be highlighted, in a language-shortcode tag.<br /><strong><em>You should not use this feature in Visual-Editor Mode!</em></strong></p>
+
+<p>
+    <strong>Example</strong>
+    <code>[js]var x = new EnligherJS.Helper($$('pre'));[/js]</code>
+</p>
+
+<h4>Language-Shortcode List</h4>
+<pre><?php
+    $langs = Enlighter::getAvailableLanguages();
+    foreach ($langs as $d => $l) {
+        echo '[', $l, '] ';
+    }
+    ?>
+</pre>

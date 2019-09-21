@@ -1,0 +1,44 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- appearance !-->
+<!-- Theme Customizer -->
+<div class="postbox">
+	<h3 class="hndle"><span><?php _e('Appearance', 'enlighter'); ?></span></h3>
+	<div class="inside EnlighterBlockcontent">
+
+	<p><?php _e('You can specify the default language and theme as well as the some output styles. If you want to customize themes, choose the default theme option "custom"', 'enlighter');?><br />
+    <?php _e('The indent-option will replace each tab at the beginning of a line with a selectable number of space-characters', 'enlighter'); ?></p>
+
+	<h4><?php _e('Global Settings', 'enlighter'); ?></h4>
+
+    <!-- Theme -->
+	<?php $this->_settingsUtility->displaySelect(__('Theme', 'enlighter'), 'defaultTheme', $themeList); ?>
+    
+    <!-- Language -->
+	<?php $this->_settingsUtility->displaySelect(__('Default Language', 'enlighter'), 'defaultLanguage', Enlighter::getAvailableLanguages()); ?>
+
+	<!-- Indent -->
+    <?php $this->_settingsUtility->displaySelect(__('Code-Indent', 'enlighter'), 'indent', array(__('No modification (keep tabs)', 'enlighter') => -1, __('1 Space', 'enlighter') => 1, '2 '.__('Spaces', 'enlighter') => 2, '3 '.__('Spaces', 'enlighter') => 3, '4 '.__('Spaces', 'enlighter') => 4, '5 '.__('Spaces', 'enlighter') => 5, '6 '.__('Spaces', 'enlighter') => 6, '7 '.__('Spaces', 'enlighter') => 7)); ?>
+	
+	<!-- Output Style -->
+	<?php $this->_settingsUtility->displayCheckbox(__('Show Linenumbers', 'enlighter'), 'linenumbers'); ?>
+    
+    <!-- Mouseover -->
+	<?php $this->_settingsUtility->displayCheckbox(__('Mouseover on codelines', 'enlighter'), 'hoverClass'); ?>
+	
+	<!-- Change to RAW Code on DBClick -->
+	<?php $this->_settingsUtility->displayCheckbox(__('RawCode on dbclick', 'enlighter'), 'rawcodeDoubleclick'); ?>
+
+	<h4><?php _e('Button Toolbar', 'enlighter'); ?></h4>
+	<p><?php _e('Enable/Disable specific toolbar buttons.', 'enlighter'); ?></p>
+	
+	<!-- Raw Code Button -->
+	<?php $this->_settingsUtility->displayCheckbox(__('Raw-Codebutton', 'enlighter'), 'rawButton'); ?>
+	
+	<!-- Window Button -->
+	<?php $this->_settingsUtility->displayCheckbox(__('Window-button (new Window)', 'enlighter'), 'windowButton'); ?>
+	
+	<!-- Info Button -->
+	<?php $this->_settingsUtility->displayCheckbox(__('Info-button', 'enlighter'), 'infoButton'); ?>
+	
+</div></div>

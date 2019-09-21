@@ -1,0 +1,96 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper, .wpcustomEnlighterJSTabPane{
+    font-family: "Ubuntu Mono", "Source Code Pro", "Courier New", Courier, monospace;
+}
+/* Inline specific styles */
+span.wpcustomEnlighterJS{
+	background-color: transparent;
+    border: none;
+}
+/* LIST specific styles */
+ol.wpcustomEnlighterJS, ul.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+	font-size: 13px;
+	color: #404141;
+	background-color: transparent;
+    padding: 10px 0px 10px 0px;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: solid 0px #ffffff;
+	padding: 1px 5px 1px 0px;
+	line-height: 20px;
+	color: #94a9bf;
+    background-color: transparent;
+    font-size: 10px;
+    border-bottom: dotted 1px #e9e9f0;
+}
+ol.wpcustomEnlighterJS li:nth-of-type(1), ul.wpcustomEnlighterJS li:nth-of-type(1) {
+    border-top: dotted 1px #e9e9f0;
+}
+ol.wpcustomEnlighterJS li{
+	list-style: decimal-leading-zero inside;
+	padding: 1px 10px 1px 10px;
+    margin: 0px 0px 0px 0px;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+	background-color: #f9f9f9;
+}
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover {
+	background-color: #f0f0f0;
+}
+ol.wpcustomEnlighterJS.hoverEnabled li:hover{
+}
+.wpcustomEnlighterJS span{
+    font-size: 15px;
+    color: #121212;
+}
+/* symbol styles */
+/* Delimiter e.g. <?php ?> */
+/* Laanguage Kewords */
+/* Comments */
+/* Strings */
+/* Numbers */
+/* Brackets */
+/* Symbols */
+/* Escape Sequences */
+/* Regular Expression outside Strings */
+/* Tab Panel */
+.wpcustomEnlighterJSTabPane .controls{
+	background-color: transparent;
+	padding: 5px 5px 0px 5px;
+}
+.wpcustomEnlighterJSTabPane .controls ul{
+    margin: 0px 0px 5px 0px;
+}
+.wpcustomEnlighterJSTabPane .controls li {
+    font-size: 14px;
+    color: #758697;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1px 6px 1px 6px;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover {
+	background-color: transparent;
+}
+.wpcustomEnlighterJSTabPane .controls .selected,.wpcustomEnlighterJSTabPane .controls .selected:hover{
+	border-bottom: dotted 1px #758697;
+    background-color: #f0f0f0;
+}
+.wpcustomEnlighterJSTabPane .pane{
+	padding: 0px;
+}
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: transparent;
+	font-size: 15px;
+    line-height: 22px;
+	color: #2a2a2a;
+}
+/* Raw Button */
+.wpcustomEnlighterJSWrapper .EnlighterJSRawButton{
+}

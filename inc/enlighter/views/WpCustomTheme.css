@@ -1,0 +1,46 @@
+/* hover color */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	background-color: $(HOVER_BG_COLOR);
+}
+
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline{
+	background-color: $(HIGHLIGHT_BG_COLOR);
+}
+
+/* base styles */
+ol.wpcustomEnlighterJS, ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS, ul.wpcustomEnlighterJS li{
+	$(LINESTYLE)
+}
+
+/* default symbol style */
+.wpcustomEnlighterJS span{
+	$(FONTSTYLE)
+}
+
+/* Symbol styles */
+.wpcustomEnlighterJS .de1 { $(DE1) }
+.wpcustomEnlighterJS .de2 { $(DE2) }
+.wpcustomEnlighterJS .kw1 { $(KW1) }
+.wpcustomEnlighterJS .kw2 { $(KW2) }
+.wpcustomEnlighterJS .kw3 { $(KW3) }
+.wpcustomEnlighterJS .kw4 { $(KW4) }
+.wpcustomEnlighterJS .co1 { $(CO1) }
+.wpcustomEnlighterJS .co2 { $(CO2) }
+.wpcustomEnlighterJS .st0 { $(ST0) }
+.wpcustomEnlighterJS .st1 { $(ST1) }
+.wpcustomEnlighterJS .st2 { $(ST2) }
+.wpcustomEnlighterJS .nu0 { $(NU0) }
+.wpcustomEnlighterJS .me0 { $(ME0) }
+.wpcustomEnlighterJS .me1 { $(ME1) }
+.wpcustomEnlighterJS .br0 { $(BR0) }
+.wpcustomEnlighterJS .sy0 { $(SY0) }
+.wpcustomEnlighterJS .es0 { $(ES0) }
+.wpcustomEnlighterJS .re0 { $(RE0) }
+
+.wpcustomEnlighterJSRawButton::AFTER{
+	content: 'Toggle RAW Code';
+}
+.wpcustomEnlighterJSWrapper pre{
+	$(RAWSTYLE)
+}

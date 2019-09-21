@@ -1,0 +1,32 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- Webfonts -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Webfonts Loader', 'enlighter'); ?></span></h3>
+
+    <div class="inside EnlighterBlockcontent">
+
+        <p><?php _e('Some Enlighter Themes uses modern fonts which may not available for your users by default.'); ?>
+            <br/>
+            <?php _e('To provide the best visual experience, it`s possible to load the missing fonts automatically using <a href="https://www.google.com/fonts">Google Webfonts</a>.', 'enlighter'); ?>
+            <?php _e('The following fonts are used by Enlighter`s build-in themes:', 'enlighter'); ?>
+            <ul>
+                <li><strong>Source Code Pro</strong>: Beyond, Classic, Eclipse, Enlighter, Godzilla, Droide, MooTwo</li>
+                <li><strong>Inconsolata</strong>: Atomic</li>
+                <li><strong>Droid Sans Mono</strong>: Minimal</li>
+                <li><strong>Ubuntu Mono</strong>: Rowhammer</li>
+                <li><strong>Courier/Monaco</strong>: Git, Mocha, MooTools, Panic, Tutto, Twilight </li>
+            </ul>
+        </p>
+
+        <h4><?php _e('Monospace Webfonts', 'enlighter'); ?></h4>
+        <p><?php _e('Only regular, italic, bold, bold-italic variants are loaded!', 'enlighter'); ?></p>
+        <?php
+            foreach ($webfonts as $name => $font){
+                $fid = preg_replace('/[^A-Za-z0-9]/', '', $name);
+                $this->_settingsUtility->displayCheckbox($name, 'webfonts'.$fid);
+            }
+
+        ?>
+    </div>
+</div>

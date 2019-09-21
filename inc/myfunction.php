@@ -1,8 +1,10 @@
 <?php
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 //把Qplayer集成到主题中
-if(kratos_option('openmusicplug')) include ("QPlayer/QPlayer.php");
-if(kratos_option('open_tinymce')) include ("tinymce-advanced/tinymce-advanced.php");
-
+if(!is_plugin_active('QPlayer/QPlayer.php')) if(kratos_option('openmusicplug')) include ("QPlayer/QPlayer.php");
+if(!is_plugin_active('tinymce-advanced/tinymce-advanced.php')) if(kratos_option('open_tinymce')) include ("tinymce-advanced/tinymce-advanced.php");
+/*集成代码美化插件*/
+if(!is_plugin_active('enlighter/Enlighter.php')) if(kratos_option('open_enlighter')) include ("enlighter/Enlighter.php");
 
 //字数统计
 function count_words ($text) {
@@ -27,13 +29,26 @@ function article_index($content) {
     $matches = array();
     $ul_li = '';
     $js='';//js脚本
-    $r = '/<h([2-6]).*?\>(.*?)<\/h[2-6]>/is';
+    $r = '/<h([2-3]).*?\>(.*?)<\/h[2-3]>/is';
     $i=0;
     if(is_single() && preg_match_all($r, $content, $matches)) {
+        $onetitle=1;
+        $towtitle=1;
         foreach($matches[1] as $key => $value) {
             $title = trim(strip_tags($matches[2][$key]));
-            $content = str_replace($matches[0][$key], '<h' . $value . ' id="title-' . $key . '">'.$title.'</h2>', $content);
-            $ul_li .= '<li id="go-'.$key.'" title="'.$title.'">'.$title."</li>\n";
+            $content = str_replace($matches[0][$key], '<h' . $value . ' id="title-' . $key . '">'.$title.'</h'.$value.'>', $content);
+            if($value==2)
+            {
+                $ul_li .= '<li id="go-'.$key.'" title="'.$title.'">'.$onetitle.":".$title."</li>\n";
+                $towtitle=1;
+                $onetitle++;
+            }
+            else
+            {
+                $ul_li .= '<li class="index-ul-li" id="go-'.$key.'" title="'.$title.'">'.($onetitle-1).".".$towtitle.':'.$title."</li>\n";
+                $towtitle++;
+            }
+
             $i++;
         }
         for($j=0;$j<$i;$j++)
@@ -42,7 +57,7 @@ function article_index($content) {
                     document.querySelector("#title-'.$j.'").scrollIntoView(true);
                 };';
         }
-        $content = "<div id=\"article-index\"><div id=\"article-index-move\">文章目录<a id=\"category-close\">[x]</a></div>
+        $content = "<div class='wow shake' id=\"article-index\"><div id=\"article-index-move\">文章目录<a id=\"category-close\">[x]</a></div>
 <ol id=\"index-ul\">" . $ul_li . "</ol>
 </div>".'<script type="text/javascript">'.$js.'</script>'.$content;
     }
@@ -52,12 +67,36 @@ if(kratos_option('opencontent')) add_filter( 'the_content', 'article_index');
 
 //随机显示头像
 function local_random_avatar( $avatar, $id_or_email, $size, $default, $alt) {
-    $imgs=getfilecouts(dirname(dirname(__FILE__)).'/static/images/avatar/*');
-    if ( $id_or_email->user_id ==0) {
-        $random = mt_rand(0,count($imgs)-1);
-        $avatar = get_bloginfo('template_url')."/static/images/avatar/".substr($imgs[$random],strripos($imgs[$random],'/')+1);
-        $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}'/>";
+//    var_dump($avatar);
+    $comment_ID=get_comment_ID();
+    $photo=get_comment_meta($comment_ID,'photo',true);
+    $hang=get_comment_meta($comment_ID,'hang',true);
+    $uid=get_comment_meta($comment_ID,'uid',true);
+    $level=get_comment_meta($comment_ID,'level',true);
+//    if ($id_or_email->user_id ==0) {
+
+    if($uid) {
+        $avatar ='<div class="entry-header pull-left"><a bilibili="" href="//space.bilibili.com/'.$uid.'/dynamic" target="_blank" class="user-head c-pointer" style="background-image: url('.$photo.'); border-radius: 50%;" data-userinfo-popup-inited="true"><div data-v-4077d7b8="" class="user-decorator" style="background-image: url('.$hang.');"></div></a><a href="//www.bilibili.com/blackboard/help.html#会员等级相关" target="_blank" lvl="'.$level.'" class="h-level m-level"></a></div>';
     }
+    else{
+        if(kratos_option('random_avatar'))
+        {
+            $images=explode("\r\n",kratos_option('random_avatar'));
+            $random = mt_rand(0,count($images)-1);
+            $avatar=$images[$random];
+        }
+        else
+        {
+            $imgs=getfilecouts(dirname(dirname(__FILE__)).'/static/images/avatar/*');
+            $random = mt_rand(0,count($imgs)-1);
+            $avatar = get_bloginfo('template_url') . "/static/images/avatar/" . substr($imgs[$random], strripos($imgs[$random], '/') + 1);
+         }
+        $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}'/><div style='position: absolute;'><a href='//www.bilibili.com/blackboard/help.html#会员等级相关' target='_blank' lvl='0' class='n-level m-level'></a></div>";
+
+    }
+//    }else{
+//        $avatar.="<div style='position: absolute;'><a href='//www.bilibili.com/blackboard/help.html#会员等级相关' target='_blank' lvl='6' class='n-level m-level'></a></div>";
+//    }
     return $avatar;
 }
 add_filter( 'get_avatar' , 'local_random_avatar' , 1 , 5 );
@@ -104,8 +143,8 @@ function send_email($new,$old,$post)
                 <div style="background:#fff;width:750px;text-align:left;position:relative;margin:0 auto;font-size:14px;line-height:1.5">
                     <div style="zoom:1;padding:25px 40px;background:#518bcb; border-bottom:1px solid #467ec3;">
                         <h1 style="color:#fff;font-size:25px;line-height:30px;margin:0"><a href="'.home_url().'" style="text-decoration:none;color:#FFF">'.get_bloginfo('name').'</a></h1>
-                        <img style="position: relative;left: 423px;top:25px;" src="https://img.xiaoyou66.com/images/2019/05/17/lvDc.png">
-                        <h3 style="position: relative;color:#FFF;left: 263px;bottom: -25px;">(〃\'▽\'〃)你关注的博主有文章更新啦( • ̀ω•́ )✧</h3>
+                        <img style="position: relative;left: 423px;top:25px;" src="">
+                        <h3 style="position: relative;color:#FFF;left: 263px;bottom: -25px;">(〃\'▽\'〃)你关注的博主有文章更新啦( • ̀ω•́ )✧--'.$post->post_title.'</h3>
                     </div>
                     <div style="padding:35px 40px 30px">
                         <h2 style="font-size:18px;margin:5px 0">文章标题:'.$post->post_title.'</h2>
@@ -257,5 +296,118 @@ function unzip($fromName, $toName)
     }
     return $zipArc->close();
 }
+
+
+//删除文件
+function delFile($dirName,$delSelf=false){
+    if(file_exists($dirName) && $handle = opendir($dirName)){
+        while(false !==($item = readdir( $handle))){
+            if($item != '.' && $item != '..'){
+                if(file_exists($dirName.'/'.$item) && is_dir($dirName.'/'.$item)){
+                    delFile($dirName.'/'.$item);
+                }else{
+                    if(!unlink($dirName.'/'.$item)){
+                        return false;
+                    }
+                }
+            }
+        }
+        closedir($handle);
+        if($delSelf){
+            if(!rmdir($dirName)){
+                return false;
+            }
+        }
+    }else{
+        return false;
+    }
+    return true;
+}
+
+
+
+//获取热门文章
+function most_hot_posts($days=30,$nums=5){
+    global $wpdb;
+    $today = date("Y-m-d H:i:s");
+    $daysago = date("Y-m-d H:i:s",strtotime($today)-($days*24*60*60));
+    $result = $wpdb->get_results("SELECT comment_count,ID,post_title,post_date FROM $wpdb->posts WHERE post_date BETWEEN '$daysago' AND '$today' and post_type='post' and post_status='publish' ORDER BY comment_count DESC LIMIT 0 ,$nums");
+    $output = '';
+    if(empty($result)){
+        $output = '<li>'.__('暂时没有数据','moedog').'</li>';
+    }else{
+        foreach($result as $topten){
+            $postid = $topten->ID;
+            $title = $topten->post_title;
+            $commentcount = $topten->comment_count;
+            if($commentcount>=0){
+                $output .= '<h4 class="title nowrap"><a class="list-group-item visible-lg" title="'.$title.'" href="'.get_permalink($postid).'" rel="bookmark">';
+                $output .= strip_tags($title);
+                $output .= '</a></h4>';
+            }
+        }
+    }
+    echo $output;
+}
+//
+////全站显示相对路径同时优化sitemap
+//add_filter( 'home_url', 'cx_remove_root' );
+//function cx_remove_root( $url) {
+//    if(!is_feed() && !get_query_var( 'sitemap') &&){
+//        $url = preg_replace( '|^(https?:)?//[^/]+(/?.*)|i', '$2', $url );
+//        return '/' . ltrim( $url, '/' );
+//    }else{
+//        return $url;
+//    }
+//}
+
+
+/*B站uid评论功能*/
+//存储数据
+add_action('wp_insert_comment','wp_insert_weibo',10,2);
+function wp_insert_weibo($comment_ID,$commmentdata) {
+    $uid= isset($_POST['uid']) ? $_POST['uid'] : false;
+//    $nickname= isset($_REQUEST['nickname']) ? $_REQUEST['nickname'] : "无名";
+    $bilibiliphoto= isset($_REQUEST['photo']) ? $_REQUEST['photo'] : "无照片";
+    $avatarshang= isset($_REQUEST['hang']) ? $_REQUEST['hang'] : "无挂件";
+    $level= isset($_REQUEST['level']) ? $_REQUEST['level'] : "0";
+    update_comment_meta($comment_ID,'uid',$uid);
+//    update_comment_meta($comment_ID,'nickname',$nickname);
+    update_comment_meta($comment_ID,'photo',$bilibiliphoto);
+    update_comment_meta($comment_ID,'hang',$avatarshang);
+    update_comment_meta($comment_ID,'level',$level);
+}
+//后台显示uid
+add_filter( 'manage_edit-comments_columns', 'my_comments_columns' );
+add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
+function my_comments_columns( $columns ){
+    $columns[ 'uid' ] = __( 'uid' );        //uid是代表列的名字
+//    $columns[ 'nickname' ] = __( '昵称' );
+    $columns[ 'photo' ] = __( '照片地址' );
+    $columns[ 'hang' ] = __( '头像挂件' );
+    $columns[ 'level' ] = __( '等级' );
+    return $columns;
+}
+function output_my_comments_columns( $column_name, $comment_id ){
+    switch( $column_name ) {
+        case "uid" :
+            echo get_comment_meta( $comment_id, 'uid', true );
+            break;
+//        case "nickname" :
+//            echo get_comment_meta( $comment_id, 'nickname', true );
+//            break;
+        case "photo" :
+            echo get_comment_meta( $comment_id, 'photo', true );
+            break;
+        case "hang" :
+            echo get_comment_meta( $comment_id, 'hang', true );
+            break;
+        case "level" :
+            echo get_comment_meta( $comment_id, 'level', true );
+            break;
+    }
+}
+
+
 
 ?>

@@ -1,0 +1,75 @@
+
+/* Inline specific styles */
+span.wpcustomEnlighterJS{
+    border-radius: 4px;
+    background-color: #f0f0f1;
+    border: solid 1px #f0f0f1;
+}
+/* LIST specific styles (BLOCK) */
+ol.wpcustomEnlighterJS, ul.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+    font-size: 11px;
+    background-color: #f0f0f1;
+    border: solid 1px #f0f0f1;
+    border-radius: 7px;
+}
+.wpcustomEnlighterJSWrapper pre{
+    font-size: 14px;
+    line-height: 22px;
+    color: #313437;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+    border: solid 0px #ffffff;
+    line-height: 18px;
+    color: #313437;
+    background-color: #f0f0f1;
+    padding: 1px 5px 1px 14px;
+}
+ol.wpcustomEnlighterJS li{
+    list-style: decimal outside;
+    color: #9c9ea0;
+}
+/* default symbol styles */
+.wpcustomEnlighterJS span{
+    font-size: 14px;
+    color: #313437;
+}
+/* Symbol Styles */
+/* Delimiter e.g. <?php ?> */
+/* Laanguage Kewords */
+/* Comments */
+/* Strings */
+/* Numbers */
+/* Brackets */
+/* Symbols */
+/* Escape Sequences */
+/* Regular Expression outside Strings */
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover {
+    background-color: #e9e9e9;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+    background-color: #e9e9e9;
+}
+/* Tab Pane */
+.wpcustomEnlighterJSTabPane .controls{
+    background-color: #585b5e;
+    padding: 10px 0px 10px 0px;
+    border-radius: 8px;
+}
+.wpcustomEnlighterJSTabPane .controls ul{
+    margin-left: 10px;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+    border-radius: 0px;
+    background-color: transparent;
+    line-height: 20px;
+    font-size: 15px;
+    color: #f0f0f0;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover {
+}
+.wpcustomEnlighterJSTabPane .controls li.selected{
+    text-decoration: underline;
+}

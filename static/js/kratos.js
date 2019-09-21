@@ -308,39 +308,106 @@ jQuery(document).ready(function(jQuery) {
         __cancel_text = __cancel.text(),
         __list = 'comment-list';
     jQuery(document).on('submit','#commentform',function(){
-        jQuery.ajax({
-            url:xb.ajax_url,
-            data:jQuery(this).serialize()+'&action=ajax_comment',
-            type:jQuery(this).attr('method'),
-            beforeSend:addComment.createButterbar('正在提交'),
-            error:function(request){
-                var t = addComment;
-                t.createButterbar(request.responseText)
-            },
-            success:function(data){
-                jQuery('textarea').each(function(){this.value = ''});
-                var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
-                if(parent!='0'){
-                    jQuery('#respond').before('<ol class="children">'+data+'</ol>')
-                }else if(!jQuery('.'+__list).length){
-                    jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
-                }else{
-                    if(xb.order=='asc'){
-                        jQuery('.'+__list).append(data)
+        var that=this;
+        var uid,nickname,photo,hang,level;
+        //先获取uid
+        uid=$('#uid').val();
+        if(uid)
+        {
+            /*发出ajax请求获B站信息*/
+            myajax=$.ajax({
+                url:"//api.xiaoyou66.com/theme/bilibili/?uid="+uid,
+                type:'get',
+                success:function(res){
+                    if(!res)
+                    {
+                        window.alert("uid错误,请重新填写！");
+                        return false;
+                    }
+                    var list=res.split(",");
+                    nickname=list[1];
+                    photo=list[2];
+                    level=list[3];
+                    hang=list[4];
+                    $("#author").val(nickname);
+                }
+            });
+            /*等待ajax请求完毕*/
+            $.when(myajax).done(function () {
+                if(nickname)
+                {
+                    SetCookie('Buid',uid,365);
+                    jQuery.ajax({
+                        url:xb.ajax_url,
+                        data:jQuery(that).serialize()+'&photo='+photo+'&hang='+hang+'&level='+level+'&action=ajax_comment',
+                        type:jQuery(that).attr('method'),
+                        beforeSend:addComment.createButterbar('正在提交'),
+                        error:function(request){
+                            var t = addComment;
+                            t.createButterbar(request.responseText)
+                        },
+                        success:function(data){
+                            jQuery('textarea').each(function(){that.value = ''});
+                            var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
+                            if(parent!='0'){
+                                jQuery('#respond').before('<ol class="children">'+data+'</ol>')
+                            }else if(!jQuery('.'+__list).length){
+                                jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
+                            }else{
+                                if(xb.order=='asc'){
+                                    jQuery('.'+__list).append(data)
+                                }else{
+                                    jQuery('.'+__list).prepend(data)
+                                }
+                            }
+                            t.createButterbar('提交成功');
+                            cancel.style.display = 'none';
+                            cancel.onclick = null;
+                            t.I('comment_parent').value = '0';
+                            if(temp&&respond){
+                                temp.parentNode.insertBefore(respond,temp);
+                                temp.parentNode.removeChild(temp)
+                            }
+                        }
+                    });
+                }
+            });
+        }else
+        {
+            jQuery.ajax({
+                url:xb.ajax_url,
+                data:jQuery(this).serialize()+'&action=ajax_comment',
+                type:jQuery(this).attr('method'),
+                beforeSend:addComment.createButterbar('正在提交'),
+                error:function(request){
+                    var t = addComment;
+                    t.createButterbar(request.responseText)
+                },
+                success:function(data){
+                    jQuery('textarea').each(function(){this.value = ''});
+                    var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
+                    if(parent!='0'){
+                        jQuery('#respond').before('<ol class="children">'+data+'</ol>')
+                    }else if(!jQuery('.'+__list).length){
+                        jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
                     }else{
-                        jQuery('.'+__list).prepend(data)
+                        if(xb.order=='asc'){
+                            jQuery('.'+__list).append(data)
+                        }else{
+                            jQuery('.'+__list).prepend(data)
+                        }
+                    }
+                    t.createButterbar('提交成功');
+                    cancel.style.display = 'none';
+                    cancel.onclick = null;
+                    t.I('comment_parent').value = '0';
+                    if(temp&&respond){
+                        temp.parentNode.insertBefore(respond,temp);
+                        temp.parentNode.removeChild(temp)
                     }
                 }
-                t.createButterbar('提交成功');
-                cancel.style.display = 'none';
-                cancel.onclick = null;
-                t.I('comment_parent').value = '0';
-                if(temp&&respond){
-                    temp.parentNode.insertBefore(respond,temp);
-                    temp.parentNode.removeChild(temp)
-                }
-            }
-        });
+            });
+        }
         return false
     });
     addComment = {
@@ -383,6 +450,7 @@ jQuery(document).ready(function(jQuery) {
     }
 });
 
+
 //time
 var now = new Date();
 function createtime(){
@@ -402,8 +470,35 @@ setInterval('createtime()',250);
 if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
 
 
-/*夜间模式*/
+//*********************************************************
+//*********************************************************
+// 目的：    设置Cookie
+// 输入：    sName, sValue,iExpireDays
+// 返回：    无
+//*********************************************************
+function SetCookie(sName, sValue,iExpireDays) {
+    if (iExpireDays){
+        var dExpire = new Date();
+        dExpire.setTime(dExpire.getTime()+parseInt(iExpireDays*24*60*60*1000));
+        document.cookie = sName + "=" + escape(sValue) + "; expires=" + dExpire.toGMTString()+ "; path=/;domain=xiaoyou66.com";
+    }
+    else{
+        document.cookie = sName + "=" + escape(sValue)+ "; path=/;domain=xiaoyou66.com";
+    }
+}
 
+//*********************************************************
+//*********************************************************
+// 目的：    返回Cookie
+// 输入：    Name
+// 返回：    Cookie值
+//*********************************************************
+function GetCookie(sName) {
+    var arr = document.cookie.match(new RegExp("(^| )"+sName+"=([^;]*)(;|$)"));
+    if(arr !=null){return unescape(arr[2])};
+    return null;
+
+}
 
 
 

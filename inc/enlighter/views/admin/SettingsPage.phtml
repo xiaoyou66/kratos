@@ -1,0 +1,130 @@
+<?php
+/**
+    Descriptionn: Enlighter Admin Settings Page
+    Plugin URI: http://andidittrich.de/go/enlighter
+    Version: 3.0
+    Author: Andi Dittrich
+    Author URI: http://andidittrich.de
+    License: MIT X11-License
+
+    Copyright (c) 2013-2016, Andi Dittrich
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+?>
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+<?php add_thickbox(); ?>
+
+<!-- EnlighterSettings:wrap -->
+<div class="wrap" id="EnlighterSettings">
+
+<!-- Settings Tabs -->
+<h2 class="nav-tab-wrapper" id="EnlighterTabNav">
+    <a data-tab="EnlighterTabAppearance" class="nav-tab"><?php _e('Appearance', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabThemeCustomizer" class="nav-tab" id="EnlighterTabhandleThemeCustomizer"><?php _e('Theme Customizer', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabVisualEditing" class="nav-tab"><?php _e('Visual Editor', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabTextEditing" class="nav-tab"><?php _e('Text Editor', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabWebfonts" class="nav-tab"><?php _e('Webfonts', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabExtensions" class="nav-tab"><?php _e('Extensions', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabCompatibility" class="nav-tab"><?php _e('Compatibility', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabOptions" class="nav-tab"><?php _e('Options', 'enlighter'); ?></a>
+    <a data-tab="EnlighterTabBeta" class="nav-tab"><?php _e('BETA', 'enlighter'); ?></a>
+</h2>
+
+<!-- Main Title -->
+<h1 class="maintitle"><div id="EnlighterTitleBadge"></div><?php _e('Enlighter - Customizable Syntax Highlighter', 'enlighter'); ?></h1>
+<p><?php _e('Select the content you want to highlight and Enlighter takes care of the rest.', 'enlighter'); ?></p>
+
+<!-- settings !-->
+<form method="post" action="options.php">
+    <?php settings_fields('enlighter-settings-group' ); ?>
+    <!-- #poststuff -->
+    <div id="poststuff">
+
+<!-- 2 Column Layout -->
+<div id="post-body" class="metabox-holder columns-2">
+    <div id="post-body-content">
+     
+        <div id="EnlighterTabAppearance">
+        <?php require ('Appearance.phtml'); ?>
+        </div>
+        
+        <div id="EnlighterTabThemeCustomizer">
+        <?php require ('ThemeCustomizer.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabWebfonts">
+            <?php require ('Webfonts.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabVisualEditing">
+            <?php require ('VisualEditing.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabTextEditing">
+            <?php require ('TextEditing.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabExtensions">
+            <?php require ('Extensions.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabCompatibility">
+            <?php require ('Compatibility.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabOptions">
+        <?php require ('Options.phtml'); ?>
+        </div>
+
+        <div id="EnlighterTabBeta">
+        <?php require ('Beta.phtml'); ?>
+        </div>
+
+        <!-- submit !-->
+        <?php submit_button(); ?>
+
+    </div>
+    <!-- // MAIN COLUMN -->
+    
+    <!-- Right Column -->
+    <div id="postbox-container-1" class="postbox-container">
+        <?php require('SystemInfo.phtml'); ?>
+        <?php require('Related.phtml'); ?>
+    </div>
+    <!-- // Right Column -->
+    
+</div>
+<!-- // 2 Column Layout -->
+
+</div>
+<!-- // #poststuff -->
+
+</form>
+<div class="clear"></div>
+<hr />
+
+<p class="credits">
+<strong><a href="https://github.com/EnlighterJS/Plugin.WordPress">The Enlighter Plugin</a> <?php _e('is developed by', 'enlighter'); ?> <a href="https://andidittrich.de">Andi Dittrich</a></strong>.
+<?php printf(__('It`s released under the terms of the %s. ', 'enlighter'), '<a href="#TB_inline?width=800&height=550&inlineId=enlighter-license" class="thickbox">'.__('MIT X11 License', 'enlighter').'</a>'); ?>
+</p>
+
+<p class="credits"><strong>Includes: </strong>
+<a href="https://github.com/EnlighterJS/EnlighterJS">EnlighterJS</a> - MIT License | 
+<a href="https://github.com/EnlighterJS/Plugin.TinyMCE">EnlighterJS Plugin.TinyMCE</a> - MPL 2.0 | 
+<a href="https://github.com/EnlighterJS/Plugin.Gutenberg">EnlighterJS Plugin.Gutenberg</a> - MPL 2.0<br />
+<a href="http://mootools.net">MooTools Javascript Framework</a> - MIT License | 
+<a href="http://www.eyecon.ro/colorpicker/">Colorpicker</a> by <a href="http://www.eyecon.ro">Stefan Petre</a> - MIT/GPL License | 
+<a href="https://github.com/carhartl/jquery-cookie">jquery.cookie</a> by <a href="https://twitter.com/carhartl">Klaus Hartl</a> - MIT License
+</p>
+
+<?php require('License.phtml'); ?>
+
+</div>
+<!-- // EnlighterSettings:wrap -->
+
+<div class="clear"></div>

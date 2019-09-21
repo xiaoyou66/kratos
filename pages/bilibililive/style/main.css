@@ -1,0 +1,280 @@
+/*Temporary CSS*/
+a,
+.list .hot,
+.comment-to,
+.blogname .ca-icon,
+.trends .state-count,
+.master-info-small .nickname,
+.gotop,
+.share,
+#share a:hover,
+.content h2:before,
+.player .list .playing,
+.player .list li:hover,
+.player .control .item:hover,
+.archives .list li a:hover,
+#overlay .full-link:hover {
+    color: #4c4c4c;
+}
+
+.nav-menu a:hover,
+.main-menu .current-menu-item a {
+    border-color: #4c4c4c;
+    color: #4c4c4c;
+}
+
+#button,
+.button a,
+#awaiting-comments {
+    background: linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+    background: -o-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+    background: -ms-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+    background: -moz-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+    background: -webkit-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+}
+
+.checkbox-radio:checked + .radioinput:after {
+    background-color: #4c4c4c;
+}
+
+.comment-reply,
+.children .comment-body:before,
+.loader .circle:after,
+#nprogress .bar {
+    background: #4c4c4c;
+}
+
+.tips-temp:before {
+    border-bottom-color: #4c4c4c;
+}
+.tips-temp:after {
+    background: #4c4c4c;
+}
+
+#nprogress .peg {
+    box-shadow-color: 0 0 10px #4c4c4c, 0 0 5px #4c4c4c;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: #4c4c4c;
+    border-left-color: #4c4c4c;
+}
+
+#notification .title {
+    border-color: #4c4c4c;
+}
+
+.links-bar .item a:hover {
+    background: #4c4c4c;
+    color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4c4c4c;
+}
+
+.sns-avatar.max {
+    border-radius:12px
+}
+
+.avatar-200 {
+    border-radius:8px
+}
+.avatar-36,
+.avatar-42,
+.avatar-75 {
+    border-radius:4px
+}
+
+.avatar-24 {
+    border-radius:3px
+}
+
+.content .tags a {
+    border-radius:2px
+}
+.font-color {
+    color: #999;
+}
+.bottom a {
+    color: #777;
+}
+.bottom a:hover {
+    color: #999999;
+}
+.link-color {
+    color: #777;
+}
+.top {
+    margin-left: 20%;
+}
+.navi-top {
+    font-size: 18px;
+    margin-left: 18%;
+}
+.navbar-default .navbar-nav li a{
+    color: #FFF;
+}
+.navi-top li a{
+    padding-top: 10px;
+}
+.paging {
+    text-align: center;
+}
+.abroad-img {
+    width: 220px!important;
+    height: 150px!important;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.excerpt {
+    margin-bottom: 10px;
+    padding: 0px 20px 10px 20px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    line-height: 22px;
+    color: #828282;
+}
+.excerpt:hover {
+    background-color: #FAFDFF;
+    border: 1px solid #88D3F9;
+}
+.excerpt p img{
+    width: 100%;
+    height: 100%;
+}
+.frame {
+    margin-bottom: 10px;
+    padding: 0px 20px 80px 20px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+}
+.frame img {
+    width: 100%;
+    height: 100%;
+}
+.portrait {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: all 2s;
+    float: left;
+    margin: 10px 0px 10px 0px;
+}
+.portrait:hover {
+    transform: rotate(360deg);
+}
+.com {
+    margin-left: 55px;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+.com-color {
+    color: #00B6E1;
+}
+.route {
+    background-color: #fff;
+    border: 0px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+/*颜表情评论框*/
+.expression {
+    list-style: none;
+    padding-left: 20px;
+}
+.expression li {
+    overflow: hidden;
+    float: left;
+    width: auto;
+    border-radius: 30px;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px ;
+    background-color: #F7F7F7;
+}
+.expression li:hover{
+    -webkit-animation: shake 1s infinite;
+    animation: shake 1s infinite;
+}
+.clear{
+    clear:both;
+}
+.title-color:hover {
+    color: #61B3E6;
+}
+.nav-back {
+    background-color: rgba(40, 42, 44, .3);
+    height: 35px;
+}
+.nav-back ul {
+    padding-top: 0px;
+}
+/*以下是文字抖动特效*/
+@-webkit-keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 2px);
+    }
+    25% {
+        -webkit-transform: translate(-2px, -2px);
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px);
+    }
+    75% {
+        -webkit-transform: translate(2px, -2px);
+    }
+    100% {
+        -webkit-transform: translate(-2px, 2px);
+    }
+}
+@keyframes shake {
+    0% {
+        transform: translate(2px, 2px);
+    }
+    25% {
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    75% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}
+.shake {
+    -webkit-animation: shake 1s infinite;
+    animation: shake 1s infinite;
+}
+/*!*表情框抖动*!*/
+/*.pl{*/
+    /*font-size: 5px;*/
+    /*color: #888;*/
+/*}*/
+/*.pl:hover{*/
+    /*-webkit-animation: shake 0.5s infinite;*/
+    /*animation: shake 0.5s infinite;*/
+    /*background-color: #FFFFFF;*/
+    /*color: #444;*/
+/*}*/
+/*!*颜表情*!*/
+/*#OwO-body{*/
+    /*display: none;*/
+    /*float: left;*/
+    /*border: 1px solid #fff;*/
+/*}*/
+/*#OwO-body li{*/
+    /*cursor: pointer;*/
+/*}*/
+.input-div{
+    float: right;
+}
+.align{
+    text-align:left;
+    list-style:none;
+    margin-left: 20%;
+}
+

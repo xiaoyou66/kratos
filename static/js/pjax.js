@@ -1,4 +1,4 @@
-﻿var ajaxignore_string = new String('data:, /wp-, /rss, /feed, /sitemap.xml, /sitemap.html, #respond, #toc_i-, javascript:, .pdf, .zip, .rar, .7z, .jpg, .png, .gif, .bmp');
+var ajaxignore_string = new String('data:, /wp-, /rss, /feed, /sitemap.xml, /sitemap.html, #respond, #toc_i-, javascript:, .pdf, .zip, .rar, .7z, .jpg, .png, .gif, .bmp');
 $(document).on("click","*:not(#comments-nav)>a[target!=_blank]",function(){
     if($(this).attr("href")){
         var req_url = $(this).attr("href")
@@ -29,12 +29,16 @@ $(function(){
 });
 var ajaxignore = ajaxignore_string.split(', ');
 function ajaxcheck_do(url){
+    console.log(url);
+    if(url.indexOf("id=")!=-1){console.log("直接跳转");return true}
     if(!url) return false;
+    if(url.indexOf("style=")!=-1){return false}
     for(var i in ajaxignore){
         if(url.indexOf(ajaxignore[i])>=0){
             return false
         }
     }
+    //通过正则来获取参数(解决B博下无法刷新的问题)
     return true
 }
 function ajax(reqUrl,msg,getData){

@@ -159,31 +159,31 @@ function of_sanitize_font_face( $value ) {
 add_filter( 'of_font_face', 'of_sanitize_font_face' );
 function of_recognized_background_repeat() {
     $default = array(
-        'no-repeat' => __( '不重复', 'moedog' ),
-        'repeat-x'  => __( '水平重复', 'moedog' ),
-        'repeat-y'  => __( '垂直重复', 'moedog' ),
-        'repeat'    => __( '全部重复', 'moedog' ),
+        'no-repeat' =>'不重复',
+        'repeat-x'  =>'水平重复',
+        'repeat-y'  =>'垂直重复',
+        'repeat'    =>'全部重复',
         );
     return apply_filters( 'of_recognized_background_repeat', $default );
 }
 function of_recognized_background_position() {
     $default = array(
-        'top left'      => __( '上部左边', 'moedog' ),
-        'top center'    => __( '上部中间', 'moedog' ),
-        'top right'     => __( '上部右边', 'moedog' ),
-        'center left'   => __( '中部左边', 'moedog' ),
-        'center center' => __( '中部中间', 'moedog' ),
-        'center right'  => __( '中部右边', 'moedog' ),
-        'bottom left'   => __( '下部左边', 'moedog' ),
-        'bottom center' => __( '下部中间', 'moedog' ),
-        'bottom right'  => __( '下部右边', 'moedog')
+        'top left'      =>'上部左边',
+        'top center'    =>'上部中间',
+        'top right'     =>'上部右边',
+        'center left'   =>'中部左边',
+        'center center' =>'中部中间',
+        'center right'  =>'中部右边',
+        'bottom left'   =>'下部左边',
+        'bottom center' =>'下部中间',
+        'bottom right'  =>'下部右边'
         );
     return apply_filters( 'of_recognized_background_position', $default );
 }
 function of_recognized_background_attachment() {
     $default = array(
-        'scroll' => __( '正常滚动', 'moedog' ),
-        'fixed'  => __( '固定', 'moedog')
+        'scroll' => '正常滚动',
+        'fixed'  => '固定'
         );
     return apply_filters( 'of_recognized_background_attachment', $default );
 }
@@ -215,10 +215,10 @@ function of_recognized_font_faces() {
 }
 function of_recognized_font_styles() {
     $default = array(
-        'normal'      => __( '常规', 'moedog' ),
-        'italic'      => __( '斜体', 'moedog' ),
-        'bold'        => __( '粗体', 'moedog' ),
-        'bold italic' => __( '斜粗体', 'moedog' )
+        'normal'      =>'常规',
+        'italic'      =>'斜体',
+        'bold'        => '粗体',
+        'bold italic' =>'斜粗体'
         );
     return apply_filters( 'of_recognized_font_styles', $default );
 }

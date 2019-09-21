@@ -1,0 +1,40 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- Legacy Code Processing -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Compatibility Mode / 3rd Party Migration', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <h4><?php _e('Compatibility', 'enlighter'); ?></h4>
+        <p>
+        <?php _e('Do you use plugins which did not support Enlighter directly? In this case the compatibility mode converts the legacy code (desgined for other syntax highlighting plugins) into Enlighter codeblocks on the fly.', 'enlighter'); ?><br />
+        <?php _e('This feature allows you to migrate to Enlighter without altering your old posts.', 'enlighter'); ?>
+        </p>
+
+        <p><strong>Tested with: </strong>Jetpack Markdown</p>
+
+        <h4><?php _e('Defaults', 'enlighter'); ?></h4>
+        <p><?php _e('Codeblocks with missing language identifier should highlighted as:', 'enlighter'); ?></p>
+
+        <?php $this->_settingsUtility->displaySelect(__('Generic Code Blocks', 'enlighter'), 'compatDefaultLanguage', array(__('Generic Highlighting', 'enlighter') => 'generic', __('No Highlighting (RAW)', 'enlighter') => 'raw')); ?>
+
+        <h4><?php _e('Filter Targets', 'enlighter'); ?></h4>
+        <p><?php _e('Choose the content-sections to which the compatibility filter should be applied.', 'enlighter'); ?></p>
+
+        <!-- Enable the_content filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_content', 'enlighter'), 'compatFilterContent'); ?>
+
+        <!-- Enable the_excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable the_excerpt', 'enlighter'), 'compatFilterExcerpt'); ?>
+
+        <!-- Enable comment-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments', 'enlighter'), 'compatFilterComments'); ?>
+
+        <!-- Enable comment-excerpt filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable comments-excerpt', 'enlighter'), 'compatFilterCommentsExcerpt'); ?>
+
+        <!-- Enable Widget-text filter -->
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable widget-text', 'enlighter'), 'compatFilterWidgetText'); ?>
+
+    </div>
+</div>

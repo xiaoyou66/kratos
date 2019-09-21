@@ -1,0 +1,97 @@
+/*Temporary CSS*/
+a,
+.list .hot,
+.comment-to,
+.blogname .ca-icon,
+.trends .state-count,
+.master-info-small .nickname,
+.gotop,
+.share,
+#share a:hover,
+.content h2:before,
+.player .list .playing,
+.player .list li:hover,
+.player .control .item:hover,
+.archives .list li a:hover,
+#overlay .full-link:hover {
+    color: #4c4c4c;
+}
+
+.nav-menu a:hover,
+.main-menu .current-menu-item a {
+    border-color: #4c4c4c;
+    color: #4c4c4c;
+}
+
+#button, 
+.button a,
+#awaiting-comments {
+	background: linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+	background: -o-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+	background: -ms-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+	background: -moz-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+	background: -webkit-linear-gradient(left , rgba(33,221,140,0.99),rgba(34,226,214,0.99) 100%);
+}
+
+.checkbox-radio:checked + .radioinput:after {
+    background-color: #4c4c4c;
+}
+
+.comment-reply,
+.children .comment-body:before,
+.loader .circle:after,
+#nprogress .bar {
+	background: #4c4c4c;
+}
+
+.tips-temp:before {
+	border-bottom-color: #4c4c4c;
+}
+.tips-temp:after {
+	background: #4c4c4c;
+}
+
+#nprogress .peg {
+	box-shadow-color: 0 0 10px #4c4c4c, 0 0 5px #4c4c4c;
+}
+
+#nprogress .spinner-icon {
+	border-top-color: #4c4c4c;
+    border-left-color: #4c4c4c;
+}
+
+#notification .title {
+	border-color: #4c4c4c;
+}
+
+.links-bar .item a:hover {
+    background: #4c4c4c;
+    color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4c4c4c;
+}
+
+.sns-avatar.max {
+	border-radius:12px
+}
+
+.avatar-200 {
+	border-radius:8px
+}
+.avatar-36,
+.avatar-42,
+.avatar-75 {
+	border-radius:4px
+}
+
+.avatar-24 {
+	border-radius:3px
+}
+
+.content .tags a {
+	border-radius:2px
+}
+
+

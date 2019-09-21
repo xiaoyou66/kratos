@@ -19,11 +19,11 @@ function QPlayer_add_jquery() {
 function get_netease_music($id, $type = 'song'){
     $return = false;
     switch ( $type ) {
-        case 'song': $url = "http://music.163.com/api/song/detail/?ids=[$id]"; $key = 'songs'; break;
-        case 'album': $url = "http://music.163.com/api/album/$id?id=$id"; $key = 'album'; break;
-        case 'artist': $url = "http://music.163.com/api/artist/$id?id=$id"; $key = 'artist'; break;
-        case 'collect': $url = "http://music.163.com/api/playlist/detail?id=$id"; $key = 'result'; break;
-        default: $url = "http://music.163.com/api/song/detail/?ids=[$id]"; $key = 'songs';
+        case 'song': $url = "https://music.163.com/api/song/detail/?ids=[$id]"; $key = 'songs'; break;
+        case 'album': $url = "https://music.163.com/api/album/$id?id=$id"; $key = 'album'; break;
+        case 'artist': $url = "https://music.163.com/api/artist/$id?id=$id"; $key = 'artist'; break;
+        case 'collect': $url = "https://music.163.com/api/playlist/detail?id=$id"; $key = 'result'; break;
+        default: $url = "https://music.163.com/api/song/detail/?ids=[$id]"; $key = 'songs';
     }
     if (!function_exists('curl_init')) return false;
     $ch = curl_init();
@@ -31,7 +31,7 @@ function get_netease_music($id, $type = 'song'){
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         //发送请求头
         "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36",
-        "Referer: http://music.163.com/",
+        "Referer: https://music.163.com/",
         "cookie:player1.0"
     ));
     curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
@@ -60,8 +60,8 @@ function get_netease_music($id, $type = 'song'){
                 $list[$data['id']] = array(
                         'title' => $data['name'],
                         'artist' => $data['artists'][0]['name'],
-                        'location' => "http://music.163.com/song/media/outer/url?id=".$data['id'].".mp3",
-                        'pic' => $data['album']['blurPicUrl'].'?param=106x106'
+                        'location' => "https://music.163.com/song/media/outer/url?id=".$data['id'].".mp3",
+                        'pic' =>str_replace("http","https",$data['album']['blurPicUrl']) .'?param=106x106'
                 );
             }
             //修复一次添加多个id的乱序问题
@@ -119,6 +119,7 @@ function QPlayer_page() {
     if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']=='POST'){
         update_option('autoPlay', sanitize_text_field($_POST['autoPlay']));
         update_option('rotate', sanitize_text_field($_POST['rotate']));
+        update_option('random', sanitize_text_field($_POST['random']));
         update_option('color', sanitize_text_field($_POST['color']));
         update_option('css', stripcslashes(sanitize_text_field($_POST['css'])));
         update_option('js', stripcslashes(sanitize_text_field($_POST['js'])));
@@ -184,6 +185,10 @@ function QPlayer_page() {
 			  <input type="radio" name="rotate" value="0" <?php if (!get_option('rotate')) echo "checked";?>>否
   			  <input type="radio" name="rotate" value="1" <?php if (get_option('rotate')) echo "checked";?>>是
 			</div><br>
+            <div><div class="title">开启随机播放</div>
+                <input type="radio" name="random" value="0" <?php if (!get_option('random')) echo "checked";?>>否
+                <input type="radio" name="random" value="1" <?php if (get_option('random')) echo "checked";?>>是
+            </div><br>
 			<div><div class="title">自定义主色调</div>
 			  <input type="text" name="color" value="<?php echo get_option('color'); ?>">
   			  <p class="tip">默认为<span style="color: #1abc9c;">#1abc9c</span>, 你可以自定义任何你喜欢的颜色作为播放器主色调。自定义主色调支持css的设置格式，如: `#233333`,"rgb(255,255,255)","rgba(255,255,255,1)","hsl(0, 0%, 100%)","hsla(0, 0%, 100%,1)"。填写其他错误的格式可能不会生效。</p>

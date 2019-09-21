@@ -1,0 +1,157 @@
+/**
+ * Settings Page Design for WordPress >= v3.8
+*/
+
+#EnlighterSettings .maintitle {
+    margin: 15px 0px 15px 0px;
+}
+
+#EnlighterTitleBadge {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+    width: 35px;
+    height: 29px;
+    vertical-align: middle;
+    background-image: url(badge35.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+#EnlighterSettings #post-body-content ul {
+    padding-left: 30px;
+    list-style: square;
+}
+
+#EnlighterSettings #post-body-content li {
+    line-height: 20px;
+}
+
+.EnlighterBlockcontent h4 {
+    color: #0074a2;
+    display: block;
+    border-bottom: dotted 2px #c0c0c0;
+}
+
+.EnlighterBlockcontent img {
+    padding-left: 15px;
+}
+
+.EnlighterSetting {
+    display: block;
+    padding: 5px 10px 5px 15px;
+}
+
+.EnlighterSettingTitle {
+    float: left;
+    width: 250px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 16px;
+}
+
+.EnlighterBlockcontent img {
+    padding-left: 15px;
+}
+
+.EnlighterCustomSettingItem {
+    float: left;
+}
+
+.EnlighterCustomSettingItem label {
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 5px 0px 0px;
+}
+
+.EnlighterCustomSettingItem input[type="text"] {
+    margin: 0px 20px 0px 0px;
+    width: 100px;
+}
+
+.EnlighterCustomSettingItem select {
+    margin: 0px 20px 0px 0px;
+}
+
+.EnlighterSettingItem {
+    float: left;
+}
+
+.EnlighterSettingClear {
+    clear: left;
+}
+
+.EnlighterTRUE {
+    font-weight: bold;
+    color: #7ad03a;
+}
+
+.EnlighterFALSE {
+    font-weight: bold;
+    color: #d03a3a;
+}
+
+/* Error Messages
+-------------------------------- */
+.EnlighterError {
+    color: #d03a3a;
+    background-color: #fff1f1;
+    padding: 10px;
+    border: dotted 1px #d03a3a;
+    border-left: solid 3px #d03a3a;
+}
+
+.EnlighterWarning {
+    color: #a56d06;
+    background-color: #fff8e3;
+    padding: 10px;
+    border: dotted 1px #d69621;
+    border-left: solid 3px #d69621;
+}
+
+.EnlighterError code, .EnlighterWarning code {
+    background-color: #ffffff;
+}
+
+/* Column Layout
+-------------------------------- */
+#EnlighterSettings .postbox h3 {
+    background-color: #23282d !important;
+    color: #ffffff !important;
+    cursor: default;
+    font-style: italic;
+}
+
+/* Footer
+-------------------------------- */
+#EnlighterSettings .credits {
+    color: #333333;
+    font-style: italic;
+}
+
+/* Tab Nav
+-------------------------------- */
+#EnlighterTabNav {
+    display: none;
+    position: relative !important;
+}
+
+#EnlighterTabNav a {
+    cursor: pointer;
+}
+
+/* Contextual Help
+-------------------------------- */
+
+/* Fix the Contextual Help Link */
+#screen-meta-links, #contextual-help-link-wrap, #contextual-help-link {
+    z-index: 100 !important;
+}
+
+/* Highlight pre tags like code tags */
+.contextual-help-tabs-wrap pre{
+    background: rgba(0,0,0,0.07) !important;
+    padding: 5px;
+    display: inline-block;
+    margin: 0px !important;
+}
+

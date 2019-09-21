@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- 
+		Enlighter Preview Mode
+		
+		Author: Andi Dittrich <http://andidittrich.de>
+		Version: 1.0
+		License: MIT X11 License
+	 -->
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" type="text/css" href="../../resources/admin/ThemePreview.css"/>
+	
+	<!-- EnlighterJS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/EnlighterJS.min.css"/>
+	<script type="text/javascript" src="../../resources/mootools-core-yc.js"></script>
+	<script type="text/javascript" src="../../resources/EnlighterJS.min.js"></script>
+	
+	<!-- Preview/Demo Engine -->
+	<script type="text/javascript" src="../../resources/admin/ThemePreview.js"></script>
+
+	<!-- Initialize EnlighterJS; set default language+theme as well as some options -->	
+	<meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-language="html" data-theme="wpcustom" data-indent="4" data-selector-block="pre" data-selector-inline="code" data-rawcodebutton="true" data-windowbutton="true" data-infobutton="true" />
+
+	<title>Enlighter Theme Preview</title>
+</head>
+<body>
+			<!-- ############################################################# -->
+			<p class="inline">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../Build/EnlighterJS.yui.css&quot; /&gt;</code> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+</p>
+<pre>
+&lt;head&gt;
+		&lt;!-- Include EnlighterJS Styles --&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../Build/EnlighterJS.yui.css&quot; /&gt;
+		
+		&lt;!-- Include MooTools Framework --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;mootools-core-1.4.5-full-nocompat.js&quot;&gt;&lt;/script&gt;
+		
+		&lt;!-- Include EnlighterJS --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;../Build/EnlighterJS.yui.js&quot; &gt;&lt;/script&gt;
+		
+		&lt;!-- Initialize EnlighterJS --&gt; 
+		&lt;script type=&quot;text/javascript&quot;&gt;
+		window.addEvent('domready', function() {
+			// highlight all pre tags
+			$$('pre').light({
+				altLines : 'hover',
+				indent : 2,
+				editable: false
+			});
+		});
+		&lt;/script&gt;
+
+&lt;!-- Syntax highlight using Languages/Js.js and default theme --&gt; 
+&lt;pre data-enlighter-language=&quot;css&quot;&gt;var myClass = new Class({})&lt;/pre&gt; 
+ 
+&lt;!-- Syntax highlight using Languages/Php.js and theme from Themes/Twilight.css --&gt; 
+&lt;pre data-enlighter-language=&quot;php&quot; data-enlighter-theme=&quot;twilight&quot;&gt;&lt;?php php_info() ?&gt;&lt;/pre&gt;
+
+</pre>
+			<!-- ############################################################# -->
+
+</body>
+</html>

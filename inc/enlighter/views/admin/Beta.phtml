@@ -1,0 +1,17 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- EXPERIMENTAL SETTINGS -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('BETA Features', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <p class="EnlighterFALSE"><strong><?php _e('Warning: These options are for advanced users only and subjected to change!', 'enlighter'); ?></strong></p>
+
+        <!-- Resource Invocation -->
+        <h4><?php _e('Dynamic Resource Invocation (DRI)', 'enlighter'); ?></h4>
+        <p><?php _e('To optimize your website load-time it`s possible to load the EnlighterJS script dependencies only if they are required (requires script-position: footer).', 'enlighter'); ?><br />
+        <?php _e('In case it`s enable, the plugin will observer it`s invocation (visual editor, shortcodes, markdown).', 'enlighter'); ?>
+        </p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable DRI', 'enlighter'), 'dynamicResourceInvocation'); ?>
+
+</div></div>

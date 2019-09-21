@@ -17,8 +17,8 @@ get_header(); ?>
                 <article>
                     <div class="kratos-hentry kratos-post-inner clearfix">
                         <div class="kratos-post-content-l">
-                            <h2 class="title-h2" style="text-align:center;font-size:18pt"><?php _e('dalao们','moedog'); ?></h2>
-                            <p style="text-align:center"><span style="color:#999999"><?php _e('dalao们的链接，每次刷新随机排序~','moedog'); ?></span></p>
+                            <h2 class="title-h2" style="text-align:center;font-size:18pt">dalao们</h2>
+                            <p style="text-align:center"><span style="color:#999999">dalao们的链接，每次刷新随机排序~</span></p>
                             <div class="linkpage">
                                 <hr/>
                                 <ul><?php

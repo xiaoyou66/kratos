@@ -1,0 +1,79 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- CDN SETTINGS -->
+<div class="postbox">
+	<h3 class="hndle"><span><?php _e('Resources &amp; CDN (Content Delivery Network)', 'enlighter'); ?></span></h3>
+	<div class="inside EnlighterBlockcontent">
+	
+	<p><?php _e('These options might be required when using a Content-Delivery-Network (CDN) or another server/location which outsources your CSS+Javascript files.', 'enlighter'); ?> <br />
+	<?php _e('In this case you have to manually include EnlighterJS.js, EnlighterJS.css and the MooTools Framework into your page!', 'enlighter'); ?><br />
+	<?php _e('Custom styles, generated with the ThemeCustomizer are', 'enlighter'); ?> <a href="<?php echo plugins_url('/enlighter/cache/EnlighterJS.custom.css') ?>"><?php _e('available here', 'enlighter'); ?></a> (enlighter/cache/EnlighterJS.custom.css).</p>
+	
+	<!-- embed css !-->
+	<?php $this->_settingsUtility->displayCheckbox(__('Include Enlighter-CSS', 'enlighter'), 'embedEnlighterCSS') ?>
+
+	<!-- embed JS !-->
+	<?php $this->_settingsUtility->displayCheckbox(__('Include Enlighter-Javascript', 'enlighter'), 'embedEnlighterJS'); ?>
+
+	<!-- embed external css !-->
+	<h4><?php _e('External Themes', 'enlighter'); ?></h4>
+	<p><?php _e('Custom/external themes located into your themes directory can be automatically loaded.', 'enlighter'); ?></p>
+	<?php $this->_settingsUtility->displayCheckbox(__('Include External Themes', 'enlighter'), 'embedExternalThemes'); ?>
+	
+	<!-- embed MooTools !-->
+	<h4><?php _e('MooTools Framework Source', 'enlighter'); ?></h4>
+	<p><?php _e('The required MooTools-Framework can be hosted by a public CDN provider or by your own.', 'enlighter'); ?></p>
+	<?php $this->_settingsUtility->displaySelect(__('MooTools Framework Source', 'enlighter'), 'mootoolsSource', array(__('Your WordPress Site', 'enlighter') => 'local', __('Google CDN', 'enlighter') => 'google', __('CDNJS (Cloudfare)', 'enlighter') => 'cdnjs', __('JSDELIVR', 'enlighter') => 'jsdelivr', __('Not include', 'enlighter') => 'none')); ?>
+
+	<!-- Inline/External JS Settings -->
+	<h4><?php _e('Initialization', 'enlighter'); ?></h4>
+	<p><?php _e('Select the source/location of Enlighter`s initialization script.', 'enlighter'); ?></p>
+	<?php $this->_settingsUtility->displaySelect(__('Enlighter Config', 'enlighter'), 'jsType', array(__('Inline within header/footer', 'enlighter') => 'inline', __('External File using <script src=""...>', 'enlighter') => 'external', __('Not include', 'enlighter') => 'none')); ?>
+
+    <!-- Script Position -->
+    <h4><?php _e('Javascript Position', 'enlighter'); ?></h4>
+    <p><?php _e('Related Javascript files/inline scripts can be added to the footer (wp_footer) or header (wp_head).', 'enlighter'); ?></p>
+    <?php $this->_settingsUtility->displaySelect(__('Javascript Position', 'enlighter'), 'jsPosition', array(__('Header within wp_head', 'enlighter') => 'header', __('Footer within wp_footer', 'enlighter') => 'footer')); ?>
+
+    <h4><?php _e('CDN Location Info', 'enlighter'); ?></h4>
+	<p><?php _e('List of available CDN locations used by Enlighter.', 'enlighter'); ?></p>
+	<ul>
+		<li>MooTools-Local: <code><?php echo Enlighter\ResourceLoader::$cdnLocations['mootools-local']; ?></code></li>
+		<li>MooTools-Google: <code><?php echo Enlighter\ResourceLoader::$cdnLocations['mootools-google']; ?></code></li>
+		<li>MooTools-CDNJS: <code><?php echo Enlighter\ResourceLoader::$cdnLocations['mootools-cdnjs']; ?></code></li>
+        <li>MooTools-JSDELIVR: <code><?php echo Enlighter\ResourceLoader::$cdnLocations['mootools-jsdelivr']; ?></code></li>
+	</ul>
+	
+	</div>
+</div>
+
+<!-- ADVANCED SETTINGS -->
+<!-- Theme Customizer -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Advanced Options', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <p class="EnlighterFALSE"><strong><?php _e('Warning: These options are for advanced users only!', 'enlighter'); ?></strong></p>
+
+        <!-- Change wpautop filter priority !-->
+        <h4><?php _e('"WpAutoP" Filter Priority', 'enlighter'); ?></h4>
+        <p><?php _e('<strong>Deprecated:</strong> This feature will be removed in the future, because the new LowLevel Shortcode Handler will avoid wpautop rendering issues!', 'enlighter'); ?></p>
+        <p><?php _e('The processing priority of the wpautop filter. Normally the filter will be applied before shortcode is handled and will maybe crash your code-appearance by adding linebreaks and p/br tags.', 'enlighter'); ?><br />
+            <?php _e('The Enlighter-Plugin <strong>does not</strong> change the priority of the filter by default.<strong>It may can influence other plugins.</strong>', 'enlighter'); ?>
+        </p>
+        <?php $this->_settingsUtility->displaySelect(__('Filter-Priority', 'enlighter'), 'wpAutoPFilterPriority', array(__('Default (no changes)', 'enlighter') => 'default', __('Priority 12 (after shortcode)', 'enlighter') => '12')); ?>
+
+        <!-- advanced css selector !-->
+        <h4><?php _e('CSS Selector', 'enlighter'); ?></h4>
+        <p><?php _e('The selectors are used to match all generated tags. Normally pre.EnlighterJSRAW/code.EnlighterJSRAW should be perfect (all tags which are generated by the plugin will be highlighted)', 'enlighter'); ?></p>
+        <p><?php _e('<strong>Default: </strong>pre.EnlighterJSRAW', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayInput(__('Block CSS Selector', 'enlighter'), 'selector', __('The CSS selector used to match generated block code', 'enlighter')); ?>
+
+        <p><?php _e('<strong>Default: </strong>code.EnlighterJSRAW', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayInput(__('Inline CSS Selector', 'enlighter'), 'selectorInline', __('The CSS selector used to match generated inline code', 'enlighter')); ?>
+
+        <!-- I18n -->
+        <h4><?php _e('I18n (Internationalization)', 'enlighter'); ?></h4>
+        <p><?php _e('Should the plugin load language files (if available) to translate the settings page ?', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable I18n', 'enlighter'), 'enableTranslation'); ?>
+</div></div>

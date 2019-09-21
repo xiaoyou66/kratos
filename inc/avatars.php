@@ -33,26 +33,29 @@ class kratos_local_avatars{
             update_user_meta($user_id,'kratos_local_avatar',$local_avatars);
         }elseif(substr($local_avatars[$size],0,4)!='http') $local_avatars[$size] = home_url($local_avatars[$size]);
         $author_class = is_author($user_id)?' current-author':'';
-        $avatar = "<img alt='".esc_attr($alt)."' src='".$local_avatars[$size]."' class='avatar avatar-{$size}{$author_class} photo' height='{$size}' width='{$size}' />";
+        if($id_or_email->user_id==1)
+            $avatar = "<img alt='".esc_attr($alt)."' src='".$local_avatars[$size]."' class='avatar avatar-{$size}{$author_class} photo' height='{$size}' width='{$size}'/>";
+        else
+            $avatar = "<img alt='".esc_attr($alt)."' src='".$local_avatars[$size]."' class='avatar avatar-{$size}{$author_class} photo' height='{$size}' width='{$size}'/><div class='level' style='position: absolute;'><a href='//www.bilibili.com/blackboard/help.html#会员等级相关' target='_blank' lvl='6' class='n-level m-level'></a></div>";
         return apply_filters('kratos_local_avatar',$avatar);
     }
     public function edit_user_profile($profileuser){ ?>
     <table class="form-table">
         <tr>
-            <th><label for="kratos-local-avatar"><?php _e('上传头像','moedog'); ?></label></th>
+            <th><label for="kratos-local-avatar">上传头像</label></th>
             <td style="width: 50px;" valign="top">
                 <?php echo get_avatar($profileuser->ID); ?>
             </td>
             <td><?php
                 if(kratos_option('lo_ava')||current_user_can('upload_files')){ ?>
                     <input type="file" name="kratos-local-avatar" id="kratos-local-avatar" /><br /><?php
-                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">'.__('尚未设置本地头像，请点击“浏览”按钮上传本地头像。','moedog').'</span>';
+                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">尚未设置本地头像，请点击“浏览”按钮上传本地头像</span>';
                     else echo '
-                            <input type="checkbox" name="kratos-local-avatar-erase" value="1" /> '.__('移除本地头像','moedog').'<br />
-                            <span class="description">'.__('如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。','moedog').'</span>';      
+                            <input type="checkbox" name="kratos-local-avatar-erase" value="1" /> 移除本地头像<br />
+                            <span class="description">如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像.</span>';
                 }else{
-                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">'.__('尚未设置本地头像，请在 Gravatar.com 网站设置头像。','moedog').'</span>';
-                    else echo '<span class="description">'.__('你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。','moedog').'</span>';
+                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">尚未设置本地头像，请在 Gravatar.com 网站设置头像。</span>';
+                    else echo '<span class="description">你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。</span>';
                 } ?>
             </td>
         </tr>
@@ -70,14 +73,14 @@ class kratos_local_avatars{
             );
             if(!function_exists('wp_handle_upload')) require_once(ABSPATH.'wp-admin/includes/file.php');
             $this->avatar_delete($user_id);
-            if(strstr($_FILES['kratos-local-avatar']['name'],'.php')) wp_die(__('.php不能出现在文件名中！','moedog'));
+            if(strstr($_FILES['kratos-local-avatar']['name'],'.php')) wp_die('.php不能出现在文件名中！');
             $this->user_id_being_edited = $user_id;
             $avatar = wp_handle_upload($_FILES['kratos-local-avatar'],array('mimes'=>$mimes,'test_form'=>false,'unique_filename_callback'=>array($this,'unique_filename_callback')));
             if(empty($avatar['file'])){
                 switch($avatar['error']){
                     case 'Sorry, this file type is not permitted for security reasons.':
-                        wp_die(__('请上传jpg,gif,png,bmp,tif格式文件！','moedog'));break;
-                    default: wp_die('<strong>'.__('上传头像过程中出现以下错误：','moedog').'</strong> '.esc_attr($avatar['error']));
+                        wp_die('请上传jpg,gif,png,bmp,tif格式文件！');break;
+                    default: wp_die('<strong>上传头像过程中出现以下错误：</strong> '.esc_attr($avatar['error']));
                 }
                 return;
             }

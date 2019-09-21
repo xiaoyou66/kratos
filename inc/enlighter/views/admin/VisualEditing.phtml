@@ -1,0 +1,68 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- Visual Editor -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Gutenberg Editor', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+        <!-- Gutenberg Editor -->
+        <h4><?php _e('Gutenberg Editor Plugin', 'enlighter'); ?></h4>
+        <p><?php _e('To use EnlighterJS within Gutenberg you can enable this feature. It loads the EnlighterJS Gutenberg.Plugin.', 'enlighter'); ?><br />
+        <strong><?php _e('Warning: Please keep in mind that this version of Enlighter Plugin.Gutenberg is still BETA software and may have some serious bugs!', 'enlighter'); ?></strong>
+        </p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable', 'enlighter'), 'gutenbergSupport'); ?>
+    </div>
+</div>
+
+<!-- Visual Editor -->
+<div class="postbox">
+    <h3 class="hndle"><span><?php _e('Classic Editor (TinyMCE 4)', 'enlighter'); ?></span></h3>
+    <div class="inside EnlighterBlockcontent">
+
+        <!-- TinyMCE Integration -->
+        <h4><?php _e('Visual Editor Integration', 'enlighter'); ?></h4>
+        <p><?php _e('Enlighter provides a full Visual Editor integration. You can turn it off if you only want to use shortcodes.', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Backend Integration', 'enlighter'), 'enableTinyMceIntegration'); ?>
+
+        <p><?php _e('Do you want to use the Visual Editor extensions in your frontend (website) ? May required for frontend editing plugins.', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Frontend Integration', 'enlighter'), 'enableFrontendTinyMceIntegration'); ?>
+
+        <!-- TinyMCE Tweaks -->
+        <h4><?php _e('Tweaks', 'enlighter'); ?></h4>
+        <p><?php _e('WordPress Limits the Editor-Width to ~600px. You can disable this limit - might be useful for posting source-code!', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Automatic Width (max)', 'enlighter'), 'editorAutowidth'); ?>
+
+        <p><?php _e('In addition to the code-insert button, Enlighter can add a set formats to the editor.', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Add Editor Formats', 'enlighter'), 'editorAddStyleFormats'); ?>
+
+        <p><?php _e('The default keyboard shortcut (shift+alt+x) action can be modified to convert the current selection into an Enlighter codeblock.', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Keyboard Shortcut', 'enlighter'), 'editorKeyboardShortcuts'); ?>
+
+        <?php _e('By default, the <kbd>tab</kbd> button does not add indentation to the content. Enlighter comes with its own editing plugin which allows you to use tabs within the Editor to align code.', 'enlighter'); ?><br />
+        <?php _e('This option disables the <strong>tabfocus plugin</strong> and requires that the Enlighter <code>indent</code> option has been set to spaces!', 'enlighter'); ?></p>
+        <?php $this->_settingsUtility->displayCheckbox(__('Enable Tab Indentation', 'enlighter'), 'editorTabIndentation'); ?>
+
+        <!-- Codeblock Font Styles -->
+        <h4><?php _e('Code-Block Styles', 'enlighter'); ?></h4>
+        <p><?php _e('It is also possible to influence the code-block styles of the Visual-Editor. Maybe you like another background color or font-family.', 'enlighter'); ?></p>
+
+        <?php
+        // font family
+        $this->_settingsUtility->displayInput(__('Font-Family', 'enlighter'), 'editorFontFamily', __('e.g. "Source Code Pro", "Liberation Mono", "Courier New", Courier, monospace', 'enlighter'), '', true);
+
+        // font size
+        $this->_settingsUtility->displayInput(__('Font-Size', 'enlighter'), 'editorFontSize', __('e.g. 0.7em', 'enlighter'), '', true);
+
+        // line height
+        $this->_settingsUtility->displayInput(__('Line height', 'enlighter'), 'editorLineHeight', __('e.g. 1.4em', 'enlighter'), '', true);
+
+        // font color
+        $this->_settingsUtility->displayInput(__('Font-Color', 'enlighter'), 'editorFontColor', __('e.g. #565b60', 'enlighter'), 'EnlighterJSColorChooser', true);
+
+        // background color
+        $this->_settingsUtility->displayInput(__('Background-Color', 'enlighter'), 'editorBackgroundColor', __('e.g. #f7f7f7', 'enlighter'), 'EnlighterJSColorChooser', true);
+        ?>
+
+        <input type="button" value="<?php _e('Restore defaults', 'enlighter');?> " id="enlighter_editorstylesDefault" class="button button-primary" />
+
+    </div>
+</div>

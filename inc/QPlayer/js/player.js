@@ -7,8 +7,26 @@
 		autoClearTimer,
 		autoShowTimer,
 		isFirstPlay = localStorage.qplayer == undefined? true: false,
-		isShuffle = localStorage.qplayer == undefined? false: localStorage.qplayer === 'true'? true: false;
-    var volume=1;
+		isShuffle = localStorage.qplayer == undefined? $('#randomstatus').attr('class') : localStorage.qplayer === 'true'? true: false;
+    	//console.log($('#randomstatus').attr('class')+":"+isShuffle);
+    	//(看一下是否开始随机播放)
+		if (isShuffle) {
+                $("#player .cover").attr("title","点击关闭随机播放");
+                var temp = [];
+                for (var i = 0; i < playlist.length; i++) {
+                    temp[i] = i;
+                }
+                shuffleArray = shuffle(temp);
+                for (var j = 0; j < shuffleArray.length; j++) {
+                    if (shuffleArray[j] === currentTrack) {
+                        shuffleIndex = j;
+                        break;
+                    }
+                }
+                localStorage.qplayer_shuffle_array = JSON.stringify(shuffleArray);
+            	if(localStorage.qplayer==undefined) localStorage.qplayer='true';
+		}
+	var volume=1;
 
 	// Load playlist
 	for (var i = 0; i < playlist.length; i++){
@@ -48,6 +66,7 @@
 	} 
 
 	var play = function(){
+
 		audio.play();
 		audio.volume=volume;
 		if (isRotate) {
@@ -101,8 +120,7 @@
 
 		isInitMarquee = true;
 		$('audio').remove();
-		loadMusic(track);
-		play();
+		loadMusic(track,1);
 	}
 
 	// Shuffle
@@ -146,7 +164,7 @@
 	}
 
 	// Load track
-	var loadMusic = function(i){
+	var loadMusic = function(i,isplay){
 		var item = playlist[i];
 		while (item.mp3 == "") {
 	        showNotification('歌曲地址为空，已自动跳过');
@@ -160,18 +178,37 @@
 			}
 			item = playlist[i];
 		}
-		var newaudio = $('<audio>').html('<source src="'+item.mp3+'"><source src="'+item.ogg+'">').appendTo('#player');
-		$('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
-		$('.musicTag').html('<strong>'+item.title+'</strong><span> - </span><span class="artist">'+item.artist+'</span>');
-		$('#playlist li').removeClass('playing').eq(i).addClass('playing');
-		audio = newaudio[0];
-		audio.addEventListener('progress', beforeLoad, false);
-		audio.addEventListener('durationchange', beforeLoad, false);
-		audio.addEventListener('canplay', afterLoad, false);
-		audio.addEventListener('ended', ended, false);
+		/*发出ajax请求获取音乐地址*/
+        myajax=$.ajax({
+            url:"//api.xiaoyou66.com/theme/music/?src="+item.mp3,
+            type:'get',
+			refer:'//api.xiaoyou66.com',
+            success:function(res){
+                item.mp3=res;
+                //console.log(res);
+            }
+        });
+        /*等待ajax请求完毕*/
+        $.when(myajax).done(function () {
+            var newaudio = $('<audio>').html('<source src="'+item.mp3+'"><source src="'+item.ogg+'">').appendTo('#player');
+            $('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
+            $('.musicTag').html('<strong>'+item.title+'</strong><span> - </span><span class="artist">'+item.artist+'</span>');
+            $('#playlist li').removeClass('playing').eq(i).addClass('playing');
+            audio = newaudio[0];
+            audio.addEventListener('progress', beforeLoad, false);
+            audio.addEventListener('durationchange', beforeLoad, false);
+            audio.addEventListener('canplay', afterLoad, false);
+            audio.addEventListener('ended', ended, false);
+            if(isplay || autoplay)
+            {
+                play();
+            }
+        });
+
 	}
 
-	loadMusic(currentTrack);
+	loadMusic(currentTrack,0);
+
 
 	$('.playback').on('click', function(){
 		if ($(this).hasClass('playing')){
@@ -245,11 +282,11 @@
 	$("#QPlayer .ssBtn").on('click', function(){
 		var mA = $("#QPlayer");
 		if ($('.ssBtn .adf').hasClass('on') === false) {
-			if (isFirstPlay) {
-			    setTimeout("showTips('#player .cover','点击封面开启(关闭)随机播放', " + function(){setTimeout("showTips('#player .ctrl .musicTag','点击拖动标题栏快进(快退)')", 1000)} + ");", 500);
-			    isFirstPlay = !isFirstPlay;
-			    localStorage.qplayer = 'false';
-			}
+			 if (isFirstPlay) {
+			     setTimeout("showTips('#player .cover','点击封面开启(关闭)随机播放', " + function(){setTimeout("showTips('#player .ctrl .musicTag','点击拖动标题栏快进(快退)')", 1000)} + ");", 500);
+			     isFirstPlay = !isFirstPlay;
+                 if(localStorage.qplayer==undefined) localStorage.qplayer = 'false';
+			 }
 			mA.css("transform", "translateX(250px)");
 		    $('.ssBtn .adf').addClass('on');
 		} else {	
@@ -363,7 +400,7 @@ function showNotification(info) {
 	//用width:auto来自动获取通知栏宽度
 	var width = $('.qplayer-notification').css({"opacity":"0", "width":"auto"}).width() + 20;
 	$('.qplayer-notification').css({"width":"50px","opacity":"1"});
-	
+
 	autoShowTimer = setTimeout(function(){
 		$('.qplayer-notification').css({"width":width,"transition":"all .7s ease"});
 		$('.qplayer-notification .close').delay(500).show(0);

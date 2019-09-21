@@ -1,0 +1,176 @@
+<?php if (!defined('ENLIGHTER_INIT')) die('DIRECT ACCESS PROHIBITED'); ?>
+
+<!-- Theme Customizer -->
+<div class="postbox">
+	<h3 class="hndle"><span><?php _e('Theme Customizer', 'enlighter'); ?></span></h3>
+	<div class="inside EnlighterBlockcontent">
+
+	<p><?php _e('Leave fields blank to force basic theme styles', 'enlighter'); ?></p>
+	
+	<p><input type="button" value="<?php _e('Open Live Preview', 'enlighter');?> " id="enlighter_themePreviewMode" class="button button-primary" data-url="<?php echo plugins_url('/enlighter/views/admin/ThemePreview.html'); ?>" /></p>
+
+	
+<!-- Basic Theme -->
+<h4><?php _e('Theme Base', 'enlighter'); ?></h4>	
+	<div class="EnlighterSetting">
+		<div class="EnlighterSettingTitle"><?php _e('Basic Theme (will be extended)', 'enlighter'); ?></div>
+		<div class="EnlighterCustomSettingItem">
+		<select name="enlighter-customThemeBase" id="enlighter-customThemeBase">
+		<?php 
+		foreach ($this->_themeManager->getBuildInThemes() as $value=>$e){
+			$selected = ($this->_settingsUtility->getOption('customThemeBase') == $value) ? 'selected="selected"' : '';
+			echo '<option value="'.$value.'" '.$selected.'>'.$value.'</option>';
+		}
+		?>	
+		</select>
+		<input type="button" value="<?php _e('Load Theme styles', 'enlighter');?> " id="enlighter_loadBasicTheme" class="button button-primary" />
+		</div>
+		<div class="EnlighterSettingClear"></div>
+	</div>
+<!-- //Basic Theme -->	
+
+<!-- Theme Font Styles -->
+<h4><?php _e('Font Styles', 'enlighter'); ?></h4>
+	<?php 
+		// font family
+		$this->_settingsUtility->displayInput(__('Font-Family', 'enlighter'), 'customFontFamily', __('e.g. Monaco, Courier, Monospace', 'enlighter'), '', true);
+	
+		// font size
+		$this->_settingsUtility->displayInput(__('Font-Size', 'enlighter'), 'customFontSize', __('e.g. 12px, 1.2em, 11pt', 'enlighter'), '', true);
+		
+		// line height
+		$this->_settingsUtility->displayInput(__('Line height', 'enlighter'), 'customLineHeight', __('e.g. 16px, 1.5em', 'enlighter'), '', true);
+		
+		// font color
+		$this->_settingsUtility->displayInput(__('Font-Color', 'enlighter'), 'customFontColor', __('e.g. #000000, #ff00c1', 'enlighter'), 'EnlighterJSColorChooser', true);
+	?>
+<!-- // Theme Font Styles -->
+
+<!-- Theme Linenumber Font Styles -->
+<h4><?php _e('Line Number Styles', 'enlighter'); ?></h4>
+	<?php 
+		// linenumber font family
+		$this->_settingsUtility->displayInput(__('Font-Family', 'enlighter'), 'customLinenumberFontFamily', __('e.g. Monaco, Courier, Monospace', 'enlighter'), '', true);
+		
+		// linenumber font size
+		$this->_settingsUtility->displayInput(__('Font-Size', 'enlighter'), 'customLinenumberFontSize', __('e.g. 10px, 1.2em, 11pt', 'enlighter'), '', true);
+		
+		// linenumber font color
+		$this->_settingsUtility->displayInput(__('Font-Color', 'enlighter'), 'customLinenumberFontColor', __('e.g. #000000, #ff00c1', 'enlighter'), 'EnlighterJSColorChooser', true);
+	?>
+<!-- // Theme Linenumber Font Styles -->
+
+<!-- RAW Styles -->
+<h4><?php _e('RAW Font Styles', 'enlighter'); ?></h4>
+	<?php 
+		// font family
+		$this->_settingsUtility->displayInput(__('Font-Family', 'enlighter'), 'customRawFontFamily', __('e.g. Monaco, Courier, Monospace', 'enlighter'), '', true);
+	
+		// font size
+		$this->_settingsUtility->displayInput(__('Font-Size', 'enlighter'), 'customRawFontSize', __('e.g. 12px, 1.2em, 11pt', 'enlighter'), '', true);
+		
+		// line height
+		$this->_settingsUtility->displayInput(__('Line height', 'enlighter'), 'customRawLineHeight', __('e.g. 16px, 1.5em', 'enlighter'), '', true);
+		
+		// font color
+		$this->_settingsUtility->displayInput(__('Font-Color', 'enlighter'), 'customRawFontColor', __('e.g. #000000, #ff00c1', 'enlighter'), 'EnlighterJSColorChooser', true);
+		
+		// bg color
+		$this->_settingsUtility->displayInput(__('Background-Color', 'enlighter'), 'customRawBackgroundColor', __('e.g. #ffffff', 'enlighter'), 'EnlighterJSColorChooser', true);
+	?>
+<!-- // RAW Styles -->
+
+<!-- Theme Special Styles -->
+<h4><?php _e('Special Styles', 'enlighter'); ?></h4>
+	<?php 
+		// line highlight background color
+		$this->_settingsUtility->displayInput(__('Line highlighting Color', 'enlighter'), 'customLineHighlightColor', __('e.g. #000000, #ff00c1', 'enlighter'), 'EnlighterJSColorChooser', true);
+		
+		// line hover background color
+		$this->_settingsUtility->displayInput(__('Line hover Color', 'enlighter'), 'customLineHoverColor', __('e.g. #f0f0ff', 'enlighter'), 'EnlighterJSColorChooser', true);
+	?>
+<!-- // Theme Special Styles -->
+
+<!-- Theme Token Styles -->
+<h4><?php _e('Token Styles', 'enlighter'); ?></h4>
+<?php 
+	
+	// description table of all customizable styles
+	$customStyles = array(
+		'kw1' => __('Keyword(Type1)', 'enlighter'),
+		'kw2' => __('Keyword(Type2)', 'enlighter'),
+		'kw3' => __('Keyword(Type3)', 'enlighter'),
+		'kw4' => __('Keyword(Type4)', 'enlighter'),
+		'co1' => __('Slash-StyleComments', 'enlighter'),
+		'co2' => __('Multiline-StyleComments', 'enlighter'),
+		'st0' => __('Strings(Type1)', 'enlighter'),
+		'st1' => __('Strings(Type2)', 'enlighter'),
+		'st2' => __('Strings(Type3)', 'enlighter'),
+		'nu0' => __('Number', 'enlighter'),
+		'me0' => __('Method(Type1)', 'enlighter'),
+		'me1' => __('Method(Type2)', 'enlighter'),
+		'br0' => __('Bracket', 'enlighter'),
+		'sy0' => __('Symbol', 'enlighter'),
+		'es0' => __('EscapeSymbol', 'enlighter'),
+		're0' => __('Regex', 'enlighter'),
+		'de1' => __('StartDelimiter', 'enlighter'),
+		'de2' => __('StopDelimiter', 'enlighter')
+	);
+	
+	$textDecorationOptions = array(
+		'normal' 	=> __('No Decoration', 'enlighter'),
+		'underline' => __('Underline', 'enlighter'),
+		'overline'	=> __('Overline', 'enlighter'),
+		'through'	=> __('Line through', 'enlighter') 
+	);
+	
+	$textStyleOptions = array(
+		'normal'	=> __('Normal Style', 'enlighter'),
+		'bold'		=> __('Bold Style', 'enlighter'),
+		'italic'	=> __('Italic Style', 'enlighter'),
+		'bolditalic' => __('Bold+Italic Style', 'enlighter') 
+	);
+	
+	// generate token style options
+	foreach (Enlighter\ThemeGenerator::getCustomStyleKeys() as $style){
+		// get description
+		$description = $customStyles[$style];
+		
+		echo '<!-- Token Style [ ', esc_html($description), '] -->';
+		echo '<div class="EnlighterSetting">';
+		echo '<div class="EnlighterSettingTitle">', esc_html($description), '</div>';
+		echo '<div class="EnlighterCustomSettingItem">';
+		
+		// text colors
+		echo '<label for="enlighter-custom-color-', $style, '">', __('Text:', 'enlighter'), '</label>';
+		echo '<input name="enlighter-custom-color-', $style, '" id="enlighter-custom-color-', $style,'" type="text" value="', $this->_settingsUtility->getOption('custom-color-'.$style), '" class="text EnlighterJSColorChooser" />';
+
+		// background colors
+		echo '<label for="enlighter-custom-bgcolor-', $style, '">', __('Background:', 'enlighter'), '</label>';
+		echo '<input name="enlighter-custom-bgcolor-', $style, '" id="enlighter-custom-bgcolor-', $style,'" type="text" value="', $this->_settingsUtility->getOption('custom-bgcolor-'.$style), '" class="text EnlighterJSColorChooser" />';
+
+
+		// font style
+		echo '<select name="enlighter-custom-fontstyle-', $style, '" id="enlighter-custom-fontstyle-', $style, '">';		
+		foreach ($textStyleOptions as $cssValue => $cssText){
+			$selected = ($this->_settingsUtility->getOption('custom-fontstyle-'.$style) == $cssValue) ? 'selected="selected"' : '';
+			echo '<option value="', $cssValue, '" ', $selected, '>', $cssText, '</option>';
+		}
+		echo '</select>';
+        
+		// font decoration
+		echo '<select name="enlighter-custom-decoration-', $style, '" id="enlighter-custom-decoration-', $style, '">';
+		foreach ($textDecorationOptions as $cssValue => $cssText){
+			$selected = ($this->_settingsUtility->getOption('custom-decoration-'.$style) == $cssValue) ? 'selected="selected"' : '';
+			echo '<option value="', $cssValue, '" ', $selected, '>', $cssText, '</option>';
+		}
+		echo '</select>';
+		
+		// block end
+		echo '</div><div class="EnlighterSettingClear"></div></div>';
+		echo '<!-- // Token Style [ ', esc_html($description), '] -->';
+	}
+?>
+
+<!-- // Theme Token Styles -->
+</div></div>

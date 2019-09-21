@@ -1,0 +1,81 @@
+
+/* Inline specific styles */
+span.wpcustomEnlighterJS{
+	border-radius: 3px;
+	background-color: #fafafa;
+}
+/* LIST specific styles */
+ol.wpcustomEnlighterJS, ul.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper pre{
+	font-size: 11px;
+	color: #939393;
+	border-radius: 8px;
+	border: solid 1px #e0e0e0;
+	background-color: #f9f9f9;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li{
+	border: solid 0px #ffffff;
+	padding: 1px 5px 1px 14px;
+	line-height: 16px;
+	color: #aaaaaa;
+}
+ol.wpcustomEnlighterJS li{
+	list-style: decimal outside;
+	border-left: 1px solid #e0e0e0;
+	padding: 1px 5px 1px 14px;
+}
+/* special line highlight color */
+ol.wpcustomEnlighterJS li.specialline, ul.wpcustomEnlighterJS li.specialline {
+	background-color: #fdf5f0;
+}
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover {
+	background-color: #fffcd3;
+	border: solid 0px #ffffff;
+	color: #444444;
+}
+ol.wpcustomEnlighterJS.hoverEnabled li:hover{
+	border-left: 1px solid #e0e0e0;
+}
+/* symbol styles */
+/* Tab Panel */
+.wpcustomEnlighterJSTabPane .controls{
+	border-radius: 8px 8px 0px 0px;
+	background-color: #f9f9f9;
+	border: solid 1px #e0e0e0;
+	border-bottom-width: 0px;
+	padding: 5px;
+}
+.wpcustomEnlighterJSTabPane .controls li {
+	border-radius: 4px;
+	border: solid 1px #e0e0e0;
+	font-size: 12px;
+	color: #000000;
+	background-color: transparent;
+	cursor: pointer;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover {
+	background-color: transparent;
+}
+.wpcustomEnlighterJSTabPane .controls .selected,.wpcustomEnlighterJSTabPane .controls .selected:hover{
+	background-color: #e5e5e5;
+	color: #000000;
+	border-color: #c9c9c9;
+}
+.wpcustomEnlighterJSTabPane .wpcustomEnlighterJS, .wpcustomEnlighterJSTabPane pre{
+	border-radius: 0px 0px 8px 8px;
+}
+.wpcustomEnlighterJSTabPane .pane{
+	padding: 0px;
+}
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #ffffff;
+	font-size: 12px;
+	color: #717171;
+}
+/* Raw Button */
+.wpcustomEnlighterJSWrapper .EnlighterJSRawButton{
+	border-radius: 3px;
+	background-color: #f7f7f7;
+}

@@ -55,12 +55,12 @@ function custom_password_form(){
         <div class="panel panel-pwd">
             <div class="panel-body text-center">
                 <img class="post-pwd" src="'.get_template_directory_uri().'/static/images/fingerprint.png"><br />
-                <h4>'.__('这是一篇受保护的文章，请输入阅读密码！','moedog').'</h4>
+                <h4>这是一篇受保护的文章，请输入阅读密码！</h4>
                 <div class="input-group" id="respond">
                     <div class="input-group-addon"><i class="fa fa-key"></i></div>
-                    <p><input class="form-control" placeholder="'.__('输入阅读密码','moedog').'" name="post_password" id="'.$label.'" type="password" size="20"></p>
+                    <p><input class="form-control" placeholder="输入阅读密码" name="post_password" id="'.$label.'" type="password" size="20"></p>
                 </div>
-                <div class="comment-form" style="margin-top:15px;"><button id="generate" class="btn btn-primary btn-pwd" name="Submit" type="submit">'.__('确认','moedog').'</button></div>
+                <div class="comment-form" style="margin-top:15px;"><button id="generate" class="btn btn-primary btn-pwd" name="Submit" type="submit">确认</button></div>
             </div>
         </div>
     </form>';
@@ -69,67 +69,67 @@ return $o;
 //Comments face
 add_filter('smilies_src','custom_smilies_src',1,10);
 function custom_smilies_src($img_src,$img,$siteurl){
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
+    $owodir = get_bloginfo('template_directory');
     return $owodir.'/static/images/smilies/'.$img;
 }
 function smilies_reset(){
     global $wpsmiliestrans,$wp_smiliessearch,$wp_version;
     if(!get_option('use_smilies')||$wp_version<4.2) return;
     $wpsmiliestrans = array(
-     ':hehe:' => 'hehe.png',
-     ':haha:' => 'haha.png',
-    ':tushe:' => 'tushe.png',
-        ':a:' => 'a.png',
-       ':ku:' => 'ku.png',
-       ':nu:' => 'nu.png',
-   ':kaixin:' => 'kaixin.png',
-      ':han:' => 'han.png',
-      ':lei:' => 'lei.png',
-  ':heixian:' => 'heixian.png',
-    ':bishi:' => 'bishi.png',
-':bugaoxing:' => 'bugaoxing.png',
- ':zhenbang:' => 'zhenbang.png',
-     ':qian:' => 'qian.png',
-    ':yiwen:' => 'yiwen.png',
-  ':yinxian:' => 'yinxian.png',
-       ':tu:' => 'tu.png',
-       ':yi:' => 'yi.png',
-    ':weiqv:' => 'weiqv.png',
-   ':huaxin:' => 'huaxin.png',
-       ':hu:' => 'hu.png',
-  ':xiaoyan:' => 'xiaoyan.png',
-     ':leng:' => 'leng.png',
-':taikaixin:' => 'taikaixin.png',
-     ':meng:' => 'meng.png',
-':mianqiang:' => 'mianqiang.png',
- ':kuanghan:' => 'kuanghan.png',
-     ':guai:' => 'guai.png',
- ':shuijiao:' => 'shuijiao.png',
-   ':jingku:' => 'jingku.png',
-  ':shengqi:' => 'shengqi.png',
-   ':jingya:' => 'jingya.png',
-      ':pen:' => 'pen.png',
-    ':aixin:' => 'aixin.png',
-   ':xinsui:' => 'xinsui.png',
-   ':meigui:' => 'meigui.png',
-     ':liwu:' => 'liwu.png',
-  ':caihong:' => 'caihong.png',
-     ':xxyl:' => 'xxyl.png',
-      ':sun:' => 'sun.png',
-    ':money:' => 'money.png',
-     ':bulb:' => 'bulb.png',
-      ':cup:' => 'cup.png',
-     ':cake:' => 'cake.png',
-    ':music:' => 'music.png',
-    ':haha2:' => 'haha2.png',
-      ':win:' => 'win.png',
-     ':good:' => 'good.png',
-      ':bad:' => 'bad.png',
-       ':ok:' => 'ok.png',
-     ':stop:' => 'stop.png',
-        ':huaji:' => 'huaji.png',
-        ':huaji2:' => 'huaji2.png',
-   ':hahaha:' => 'hahaha.png',
+     ':hehe:' => 'tieba/hehe.png',
+     ':haha:' => 'tieba/haha.png',
+    ':tushe:' => 'tieba/tushe.png',
+        ':a:' => 'tieba/a.png',
+       ':ku:' => 'tieba/ku.png',
+       ':nu:' => 'tieba/nu.png',
+   ':kaixin:' => 'tieba/kaixin.png',
+      ':han:' => 'tieba/han.png',
+      ':lei:' => 'tieba/lei.png',
+  ':heixian:' => 'tieba/heixian.png',
+    ':bishi:' => 'tieba/bishi.png',
+':bugaoxing:' => 'tieba/bugaoxing.png',
+ ':zhenbang:' => 'tieba/zhenbang.png',
+     ':qian:' => 'tieba/qian.png',
+    ':yiwen:' => 'tieba/yiwen.png',
+  ':yinxian:' => 'tieba/yinxian.png',
+       ':tu:' => 'tieba/tu.png',
+       ':yi:' => 'tieba/yi.png',
+    ':weiqv:' => 'tieba/weiqv.png',
+   ':huaxin:' => 'tieba/huaxin.png',
+       ':hu:' => 'tieba/hu.png',
+  ':xiaoyan:' => 'tieba/xiaoyan.png',
+     ':leng:' => 'tieba/leng.png',
+':taikaixin:' => 'tieba/taikaixin.png',
+     ':meng:' => 'tieba/meng.png',
+':mianqiang:' => 'tieba/mianqiang.png',
+ ':kuanghan:' => 'tieba/kuanghan.png',
+     ':guai:' => 'tieba/guai.png',
+ ':shuijiao:' => 'tieba/shuijiao.png',
+   ':jingku:' => 'tieba/jingku.png',
+  ':shengqi:' => 'tieba/shengqi.png',
+   ':jingya:' => 'tieba/jingya.png',
+      ':pen:' => 'tieba/pen.png',
+    ':aixin:' => 'tieba/aixin.png',
+   ':xinsui:' => 'tieba/xinsui.png',
+   ':meigui:' => 'tieba/meigui.png',
+     ':liwu:' => 'tieba/liwu.png',
+  ':caihong:' => 'tieba/caihong.png',
+     ':xxyl:' => 'tieba/xxyl.png',
+      ':sun:' => 'tieba/sun.png',
+    ':money:' => 'tieba/money.png',
+     ':bulb:' => 'tieba/bulb.png',
+      ':cup:' => 'tieba/cup.png',
+     ':cake:' => 'tieba/cake.png',
+    ':music:' => 'tieba/music.png',
+    ':haha2:' => 'tieba/haha2.png',
+      ':win:' => 'tieba/win.png',
+     ':good:' => 'tieba/good.png',
+      ':bad:' => 'tieba/bad.png',
+       ':ok:' => 'tieba/ok.png',
+     ':stop:' => 'tieba/stop.png',
+        ':huaji:' => 'tieba/huaji.png',
+        ':huaji2:' => 'tieba/huaji2.png',
+   ':hahaha:' => 'tieba/hahaha.png',
     ':zhihu1:' => 'zhihu/1.gif',
     ':zhihu2:' => 'zhihu/2.gif',
     ':zhihu3:' => 'zhihu/3.gif',
@@ -250,6 +250,55 @@ function smilies_reset(){
     ':bilibili96:' => 'bilibili/96.png',
     ':bilibili97:' => 'bilibili/97.png',
     ':bilibili98:' => 'bilibili/98.png',
+        ':tv1:' => 'bilibili_tv/tv_1.png',
+        ':tv2:' => 'bilibili_tv/tv_2.png',
+        ':tv3:' => 'bilibili_tv/tv_3.png',
+        ':tv4:' => 'bilibili_tv/tv_4.png',
+        ':tv5:' => 'bilibili_tv/tv_5.png',
+        ':tv6:' => 'bilibili_tv/tv_6.png',
+        ':tv7:' => 'bilibili_tv/tv_7.png',
+        ':tv8:' => 'bilibili_tv/tv_8.png',
+        ':tv9:' => 'bilibili_tv/tv_9.png',
+        ':tv10:' => 'bilibili_tv/tv_10.png',
+        ':tv11:' => 'bilibili_tv/tv_11.png',
+        ':tv12:' => 'bilibili_tv/tv_12.png',
+        ':tv13:' => 'bilibili_tv/tv_13.png',
+        ':tv14:' => 'bilibili_tv/tv_14.png',
+        ':tv15:' => 'bilibili_tv/tv_15.png',
+        ':tv16:' => 'bilibili_tv/tv_16.png',
+        ':tv17:' => 'bilibili_tv/tv_17.png',
+        ':tv18:' => 'bilibili_tv/tv_18.png',
+        ':tv19:' => 'bilibili_tv/tv_19.png',
+        ':tv20:' => 'bilibili_tv/tv_20.png',
+        ':tv21:' => 'bilibili_tv/tv_21.png',
+        ':tv22:' => 'bilibili_tv/tv_22.png',
+        ':tv23:' => 'bilibili_tv/tv_23.png',
+        ':tv24:' => 'bilibili_tv/tv_24.png',
+        ':tv25:' => 'bilibili_tv/tv_25.png',
+        ':tv26:' => 'bilibili_tv/tv_26.png',
+        ':tv27:' => 'bilibili_tv/tv_27.png',
+        ':tv28:' => 'bilibili_tv/tv_28.png',
+        ':tv29:' => 'bilibili_tv/tv_29.png',
+        ':tv30:' => 'bilibili_tv/tv_30.png',
+        ':tv31:' => 'bilibili_tv/tv_31.png',
+        ':tv32:' => 'bilibili_tv/tv_32.png',
+        ':tv33:' => 'bilibili_tv/tv_33.png',
+        ':tv34:' => 'bilibili_tv/tv_34.png',
+        ':tv35:' => 'bilibili_tv/tv_35.png',
+        ':tv36:' => 'bilibili_tv/tv_36.png',
+        ':tv37:' => 'bilibili_tv/tv_37.png',
+        ':tv38:' => 'bilibili_tv/tv_38.png',
+        ':tv39:' => 'bilibili_tv/tv_39.png',
+        ':tv40:' => 'bilibili_tv/tv_40.png',
+        ':tv41:' => 'bilibili_tv/tv_41.png',
+        ':tv42:' => 'bilibili_tv/tv_42.png',
+        ':tv43:' => 'bilibili_tv/tv_43.png',
+        ':tv44:' => 'bilibili_tv/tv_44.png',
+        ':tv45:' => 'bilibili_tv/tv_45.png',
+        ':tv46:' => 'bilibili_tv/tv_46.png',
+        ':tv47:' => 'bilibili_tv/tv_47.png',
+        ':tv48:' => 'bilibili_tv/tv_48.png',
+        ':tv49:' => 'bilibili_tv/tv_49.png',
     );
 }
 smilies_reset();
@@ -258,9 +307,9 @@ function kratos_pages($range=5){
     global $paged,$wp_query,$max_page;
     if(!$max_page){$max_page=$wp_query->max_num_pages;}
     if($max_page>1){if(!$paged){$paged=1;}
-    echo "<div class='text-center' id='page-footer'><ul class='pagination'>";
-        if($paged != 1) echo '<li><a href="'.get_pagenum_link(1).'" class="extend" title="'.__('首页','moedog').'">&laquo;</a></li>';
-        if($paged>1) echo '<li><a href="'.get_pagenum_link($paged-1).'" class="prev" title="'.__('上一页','moedog').'">&lt;</a></li>';
+    echo "<div class='text-center wow swing' id='page-footer'><ul class='pagination'>";
+        if($paged != 1) echo '<li><a href="'.get_pagenum_link(1).'" class="extend" title="首页">&laquo;</a></li>';
+        if($paged>1) echo '<li><a href="'.get_pagenum_link($paged-1).'" class="prev" title="上一页">&lt;</a></li>';
         if($max_page>$range){
             if($paged<$range){
                 for($i=1;$i<=($range+1);$i++){
@@ -289,8 +338,8 @@ function kratos_pages($range=5){
                 echo "><a href='".get_pagenum_link($i)."'>$i</a></li>";
             }
         }
-        if($paged<$max_page) echo '<li><a href="'.get_pagenum_link($paged+1).'" class="next" title="'.__('下一页','moedog').'">&gt;</a></li>';
-        if($paged!=$max_page) echo '<li><a href="'.get_pagenum_link($max_page).'" class="extend" title="'.__('尾页','moedog').'">&raquo;</a></li>';
+        if($paged<$max_page) echo '<li><a href="'.get_pagenum_link($paged+1).'" class="next" title="下一页">&gt;</a></li>';
+        if($paged!=$max_page) echo '<li><a href="'.get_pagenum_link($max_page).'" class="extend" title="尾页">&raquo;</a></li>';
         echo "</ul></div>";
     }
 }

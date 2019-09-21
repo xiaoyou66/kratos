@@ -121,7 +121,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['donman']) {
                 //批量删除图片
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/thumb.zip',$imgpath)
+                downloadimg('http://cdn.xiaoyou66.com/image/thumb.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -129,7 +129,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['bilibili']) {
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/bilibili.zip',$imgpath);
+                downloadimg('http://cdn.xiaoyou66.com/image/bilibili.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载哔哩哔哩图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -156,7 +156,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['man']) {
                 //批量删除图片
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/avatarman.zip',$imgpath)
+                downloadimg('http://cdn.xiaoyou66.com/image/avatarman.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫男生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -164,7 +164,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['woman']) {
-                downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/avatarwoman.zip',$imgpath);
+                downloadimg('http://cdn.xiaoyou66.com/image/avatarwoman.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫女生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -173,10 +173,30 @@ function live2d_option_page() {
             }
         }
         if($_POST['downlive2d']) {
-            downloadimg('http://pvhveuwrn.bkt.clouddn.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
+            downloadimg('http://cdn.xiaoyou66.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
             ?>
             <div id="message" class="updated">
                 <p><strong>已下载live2d资源，不保证绝对成功，请自行检查</strong></p>
+            </div>
+            <?php
+        }
+        /*表情包下载*/
+        if($_POST['downloadsmilies'])
+        {
+            $smilepath=dirname(dirname(dirname(__FILE__))).'/static/images/smilies/';
+            $owo=dirname(dirname(__FILE__))."/OwO.json";
+            if(!file_exists($smilepath."tieba/")) downloadimg('http://cdn.xiaoyou66.com/image/smile.zip', $smilepath);
+            $url="";
+            if($_POST['tieba']) $url.="1";
+            if($_POST['face'])  $url?$url.=",2":$url.="2";
+            if($_POST['zhihu']) $url?$url.=",3":$url.="3";
+            if($_POST['bilibili']) $url?$url.=",4":$url.="4";
+            if($_POST['tv']) $url?$url.=",5":$url.="5";
+            if(file_exists($owo)) unlink($owo);
+            curlGet("http://api.xiaoyou66.com/theme/OwO/?id=".$url,$owo);
+            ?>
+            <div id="message" class="updated">
+                <p><strong>已下载表情包，不保证绝对成功，请自行检查</strong></p>
             </div>
             <?php
         }
@@ -238,7 +258,21 @@ function live2d_option_page() {
         </div>
         </div>
         <?php
-    }
+    }?>
+    <div>
+        <form action="" method="post">
+            <div class="title"><h4>表情包下载</h4>请自行选择你喜欢的类型(<span style="color:red;">会把之前的表情包全部删除，请至少选择一个表情包</span>)</div>
+            <p><div>
+                贴吧泡泡:<input type="checkbox" name="tieba"/>
+                颜文字:<input type="checkbox" name="face" />
+                知乎表情包:<input type="checkbox" name="zhihu" />
+                B站表情包:<input type="checkbox" name="bilibili" />
+                B站小电视表情包:<input type="checkbox" name="tv" />
+            </div></p>
+            <p><input type="submit" name="downloadsmilies" value="开始下载"/></p>
+        </form>
+    </div>
+<?php
 }
 
 //注册数据库

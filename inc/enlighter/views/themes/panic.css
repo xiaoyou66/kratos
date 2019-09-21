@@ -1,0 +1,39 @@
+
+.wpcustomEnlighterJS, .wpcustomEnlighterJSWrapper{
+    font-family: Monaco, Courier, monospace;
+}
+.wpcustomEnlighterJSTabPane .controls li{
+	background-color: #f2f2f2;
+}
+.wpcustomEnlighterJSTabPane .controls li:hover{
+	background-color: #e5e5e5;
+}
+.wpcustomEnlighterJSTabPane .controls .selected, .wpcustomEnlighterJSTabPane .controls .selected:hover{
+	background-color: #E4F8FC;
+}
+/* line styles */
+ol.wpcustomEnlighterJS li, ul.wpcustomEnlighterJS li {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+ol.wpcustomEnlighterJS li{
+	border-left: 1px solid #939393;
+}
+/* hover effect */
+ol.wpcustomEnlighterJS.hoverEnabled li:hover, ul.wpcustomEnlighterJS.hoverEnabled li:hover{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background-color: #F4F8FC;
+}
+/** Symbol styles */
+/* Raw Code Pane */
+.wpcustomEnlighterJSWrapper pre{
+	background-color: #ffffff;
+	font-size: 12px;
+	color: #000000;
+	line-height: 16px;
+}
+/* Tab Pane */
+.wpcustomEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+}
