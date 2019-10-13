@@ -1,67 +1,16 @@
-# kratos
-一款二次元wordpress主题
+<p align="center">
+<img src="https://xiaoyou66.com/wp-content/uploads/2019/10/20191013113909.png" alt="KRATOS"/>
+</p>
 
-主题更新的地方
-本次主题相比上次有了很大的变化，下面只说几个改动大的，其他细微的地方请大家自己探索。
+<p align="center">
+<a href="https://xiaoyou66.com"><img alt="Author" src="https://img.shields.io/badge/Author-xiaoyou-red.svg?style=flat-square"/></a>
+<img alt="License" src="https://img.shields.io/github/license/xb2016/kratos-pjax.svg?style=flat-square"/>
+</p>
 
-1.后台添加了可以设置的界面
+## kratos
 
-![](https://img.xiaoyou66.com/images/2019/07/19/UmFz.png)
-
-上次修改比较仓促，这次把以前需要改动源码的地方都转移到设置里面，尽量不麻烦大家修改源码。至于其中一些设置我会在后面详细说明。
-
-2.修改了文章背景图片
-
-![](https://img.xiaoyou66.com/images/2019/07/19/U9x3.png)
-
-文章背景图片全部换成非常清晰的图片，同时网页背景和主页的背景都改成了我现在的背景，如果需要修改文章背景的可以看后面我的详细介绍。
-
-3.评论表情更新
+一款可爱的二次元主题
 
 
-![](https://img.xiaoyou66.com/images/2019/07/19/UZT4.png)
-
-本次更新添加了知乎表情和哔哩哔哩表情，同时删除了QQ表情，后面我也会讲一下怎么添加表情。
-
-4.头像随机显示
-
-![](https://img.xiaoyou66.com/images/2019/07/19/UUKT.png)
-
-
-对于没有头像的用户将会随机显示一个动漫头像，目前有59张动漫头像可以随机显示。
-
-5.主题集成了音乐播放器
-
-![](https://img.xiaoyou66.com/images/2019/07/19/UwmE.png)
-
-
-无需安装插件，安装主题即可自带音乐播放器，同时改插件被我修改，目前可以完美的支持网易云音乐解析，这里可以添加自己的歌单，同时默认开始pjax加载，切换界面时音乐可以继续播放，只要不刷新音乐播放器就不会重置。
-
-6.添加了N个看板娘模型
-
-![](https://img.xiaoyou66.com/images/2019/07/19/UxrK.png)
-
-添加了初音未来.雪，初音未来，33娘全身板，茵蒂克丝，尤（少女终末旅行），凉风青叶（new game），小埋，蕾姆，紫罗兰永恒花园女主，樱花庄（加了一几个角色），德莉沙等人物（因为人物过多所以需要自建api服务器，后面会教大家怎么自建）
-
-7.文章编辑页面按钮精简
-
-![](https://img.xiaoyou66.com/images/2019/07/19/U3eR.png)
-
-
-去掉很多对我来说没用的按钮，添加了代码高亮按钮和本地音乐播放器按钮，这里推荐大家配合TinyMCE Advanced食用
-
-使用该插件后效果如下：
-
-
-![](https://img.xiaoyou66.com/images/2019/07/19/Ubso.png)
-
-
-
-8.添加了文章目录模块
-
-![](https://img.xiaoyou66.com/images/2019/07/19/UDvi.png)
-
-
-如果你的文章有H2-H4的标签均会显示目录，同时文章目录模块可以拖动，这里推荐大家使用H2作为主目录，H3作为主目录的分支。
 
 
