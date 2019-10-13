@@ -13,8 +13,8 @@
                         echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
                         echo (!kratos_option('social_github'))?'':'<a class="github-tip" target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>';
                         echo (!kratos_option('show_rss'))?'':'<a class="rss-tip" title="RSS订阅" target="_blank" rel="nofollow" href="';
-                       if(kratos_option('show_rss')){ bloginfo('url');
-                        echo '/feed"><i class="fa fa-rss"></i></a>';}
+                        if(kratos_option('show_rss')){ bloginfo('url');
+                            echo '/feed"><i class="fa fa-rss"></i></a>';}
                         //B站logo
                         if(kratos_option('social_bilibili'))
                         {
@@ -108,20 +108,20 @@ if (! wp_is_mobile() && kratos_option('openlive2d')) {
     var OriginTitile = document.title;
     var titleTime;
     document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-    <?PHP if(kratos_option('title_change')){?>
-        document.title = '<?php echo kratos_option('title_change'); ?> ';
-        clearTimeout(titleTime);
-    <?php }?>
-    }
-    else {
-    <?php if(kratos_option('title_back')){?>
-        document.title = '<?php echo kratos_option('title_back'); ?>';
-        titleTime = setTimeout(function() {
-        document.title = OriginTitile;
-        }, 3000);
-    <?php } ?>
-    }
+        if (document.hidden) {
+            <?PHP if(kratos_option('title_change')){?>
+            document.title = '<?php echo kratos_option('title_change'); ?> ';
+            clearTimeout(titleTime);
+            <?php }?>
+        }
+        else {
+            <?php if(kratos_option('title_back')){?>
+            document.title = '<?php echo kratos_option('title_back'); ?>';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 3000);
+            <?php } ?>
+        }
     });
 
 </script>

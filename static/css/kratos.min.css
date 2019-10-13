@@ -179,7 +179,6 @@ blockquote.pull-right{padding-right:15px;padding-left:0;text-align:right;border-
 caption{padding-top:8px;padding-bottom:8px;color:#777;text-align:left}
 cite{font-style:normal}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
-code{padding:2px 4px;font-size:90%;color:#333;background-color:#f8f8f8;border-radius:0;border:1px solid #e1e1e1;margin:0 5px}
 dfn{font-style:italic}
 dl{margin-top:0;margin-bottom:20px}
 dd,dt{line-height:1.42857143}
@@ -218,8 +217,8 @@ legend{padding:0;border:0}
 mark{padding:.4px 4px;background-color:#9e9e9e;color:#000}
 ol ol,ol ul,ul ol,ul ul{margin-bottom:0}
 optgroup{font-weight:700}
-pre{overflow:auto;display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.5;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc}
-pre.hl{overflow:hidden;padding:0;background-color:transparent;border:none}
+pre{overflow:auto;display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.5;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;}
+pre.hl{overflow:hidden;padding:0;border:none}
 pre code{border:none;background-color:transparent;margin:0}
 ruby{background:#f2f2f2;margin:0 2px;padding:0 2px;border-radius:4px}
 select[multiple],select[size]{height:auto}
@@ -264,8 +263,7 @@ user agent stylesheet li{text-align:-webkit-match-parent}
 .padder{padding-right:15px;padding-left:15px}
 .l-h{line-height:1.42857143}
 .tl-content{position:relative;display:inline-block;padding-top:10px;padding-bottom:10px}
-.panel{border-radius:4px}
-.panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+.panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
 .bg-info{background-color:#23b7e5}
 .h5,h5{font-size:14px}
 .h4,.h5,.h6,h4,h5,h6{margin-top:10px;margin-bottom:10px}
@@ -362,25 +360,7 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .form-control{padding:6px 12px;line-height:1.42857143;width:100%;color:#555;z-index:2;float:left}
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
-.hljs{display:block;overflow-x:auto;background:#8559a5;color:#000000;padding:15px}
-.hljs-keyword,.hljs-literal,.hljs-name,.hljs-symbol{color:#569cd6}
-.hljs-link{color:#569cd6;text-decoration:underline}
-.hljs-built_in,.hljs-type{color:#4ec9b0}
-.hljs-class,.hljs-number{color:#b8d7a3}
-.hljs-meta-string,.hljs-string{color:#d69d85}
-.hljs-regexp,.hljs-template-tag{color:#9a5334}
-.hljs-formula,.hljs-function,.hljs-params,.hljs-subst,.hljs-title{color:#dcdcdc}
-.hljs-comment,.hljs-quote{color:#57a64a;font-style:italic}
-.hljs-doctag{color:#608b4e}
-.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9b9b9b}
-.hljs-template-variable,.hljs-variable{color:#bd63c5}
-.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9cdcfe}
-.hljs-section{color:gold}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-bullet,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-selector-tag{color:#d7ba7d}
-.hljs-addition{background-color:#144212;display:inline-block;width:100%}
-.hljs-deletion{background-color:#600;display:inline-block;width:100%}
+
 .input-group{display:table;border-collapse:separate}
 .input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
 .input-group-addon:first-child{border-right:0}
@@ -568,7 +548,7 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .kratos-status-inner p a{color:#ff3e6d}
 .kratos-status-inner footer{font-size:12px;color:#aaa}
 .kratos-status-inner footer a{color:#aaa}
-.kratos-hentry{opacity:0.95;margin:15px;margin-bottom:15px;background-color:#ffffff;box-shadow:0 2px 4px rgba(0,0,0,.1);border-radius:20px;-webkit-transition:all .6s ease;transition:all .6s ease}
+.kratos-hentry{margin:15px;margin-bottom:15px;background-color:#ffffff;box-shadow:0 2px 4px rgba(0,0,0,.1);border-radius:20px;-webkit-transition:all .6s ease;transition:all .6s ease}
 .kratos-hentry.kratos-post-inner{margin-bottom:0}
 .container article.kratos-hentry:hover{box-shadow:0 8px 15px rgba(146,146,146,.39)}
 .kratos-post-nav{padding:10px 20px 10px 20px;color:#5a5a5a}
@@ -582,7 +562,7 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .kratos-post-inner-new header .label:after{position:absolute;width:0;height:0;vertical-align:top;content:"";top:8px;right:-3px;border-left:4px solid #51aded;border-top:4px solid transparent;border-bottom:4px solid transparent}
 .kratos-post-inner-new header .label:hover{color:#fff!important}
 .kratos-post-content,.kratos-post-content-l{word-break:break-all;word-wrap:break-word;margin:10px}
-.kratos-post-content p{line-height: 24px;font-size:18px;color:#000000}
+.kratos-post-content p{line-height: 24px;font-size: 16px;color: #24292e;}
 .kratos-post-content img,.kratos-status-post img{height:auto;max-width:100%;display:block}
 .kratos-post-content embed{max-width:100%}
 .kratos-entry-title{margin:0 0 15px;font-size:30px}
@@ -830,7 +810,7 @@ li.OwO-item a {color: #000000;}
 @media(max-width: 1652px){#article-index{display:none;}}
 #article-index {border-radius: 7px;;max-width: 250px;max-height:290px;border: 1px solid #DEDFE1;position:fixed;line-height: 23px;background: #ffffff;left: 0px;}
 #article-index strong{font-size: 16px;padding-left: 15px;border-bottom:1px dashed #DDDDDD;display:block;}
-#index-ul{height: auto;overflow-y: auto;max-height: 250px;font-size: 15px;margin-left: -27px}
+#index-ul{height: auto;overflow-y: auto;max-height: 250px;font-size: 15px;margin-left: -27px;padding-right:20px}
 /*二级标题*/
 .index-ul-li{margin-left: 15px;}
 #article-index-move{cursor: move;padding: 5px;border-bottom: 1px dotted;}
@@ -883,7 +863,48 @@ cite.fn{padding-left:39px}
 .btn-primary a {color: #ffffff;}
 
 
+/*文字说明*/
+.wp-caption {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    display: block!important;
+    padding-top:10px;
+    max-width: 100%;
+    margin-bottom:15px;
+}
+.wp-caption img {
+    display: block;
+    margin: 0 auto;
+}
+.wp-caption p {
+    line-height: 30px;
+    text-indent: 0;
+    font-size: 15px;
+}
 
+.kratos-post-content h2{
+    border-bottom: 1px solid #bbb;
+    padding-bottom: .3em;
+}
+
+.kratos-post-content a:hover{border-bottom: 1px solid #0366d6!important;}
+.tag_clouds a:hover{padding:8px 15px!important;}
+
+
+/*代码高亮*/
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#F0F0F0}
+.hljs,.hljs-subst{color:#444}
+.hljs-comment{color:#888888}
+.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name{font-weight:bold;color:#1990b8}
+.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion{color:#880000}
+.hljs-title,.hljs-section{color:#c92c2c;font-weight:bold}
+.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo{color:#BC6060}
+.hljs-literal{color:#78A960}
+.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition{color:#397300}
+.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:bold}
 
 @media(min-width:1200px){.affix,.affix-bottom{width:360px}
 }
@@ -907,7 +928,7 @@ cite.fn{padding-left:39px}
 .widget_kratos_ad h4{margin:10px 20px 5px}
 .widget_kratos_ad img{max-width:100%;height:auto}
 .widget_kratos_tags .widget-title::after{height:2px!important}
-.widget_kratos_tags .tag_clouds a{display:inline-block;margin:3px 4px;padding:4px 12px;border:1px solid #f0f0f0;color:#666;text-transform:uppercase;line-height:19px;background:rgba(251,251,251,.7)}
+.widget_kratos_tags .tag_clouds a{display:inline-block;margin:3px 4px;padding:4px 12px;border:1px solid #f0f0f0;color:#ffffff;text-transform:uppercase;line-height:19px;background:#66C191}
 .widget_kratos_poststab{padding:7px 30px 15px 30px}
 .widget_kratos_poststab .nav{padding-left:0;margin-bottom:0;list-style:none}
 .widget_kratos_poststab .nav-tabs>li{float:left}
@@ -1163,3 +1184,5 @@ cite.fn{padding-left:39px}
     #kratos-header,#respond,.cd-tool,.comments-area .avatar,.kratos-start{display:none}
     .comments-area .comment-awaiting-moderation,.comments-area .comment-meta,.comments-area .fn{margin-left:0}
 }
+
+

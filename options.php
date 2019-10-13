@@ -169,7 +169,7 @@ function optionsframework_options(){
         'type'=>'textarea');
     $options[] = array(
         'name'=>'特色图片(仅针对新式布局)',
-        'desc'=>'选择你喜欢的默认特色图片(留空使用随机图片20张)',
+        'desc'=>'选择你喜欢的默认特色图片(留空使用随机图片)',
         'id'=>'default_image',
         'type'=>'upload');
     $options[] = array(
@@ -225,7 +225,7 @@ function optionsframework_options(){
         'class'=>'mini',
         'options'=>array(
             'pic'=>'图片',
-            'color'=>'纯色','xiaoyou'));
+            'color'=>'纯色'));
     $options[] = array(
         'name'=>'以下为图片Header的设置',
         'desc'=>'只有顶部显示模式为图片才有效。');
@@ -257,7 +257,8 @@ function optionsframework_options(){
         'class'=>'mini',
         'options'=>array(
             'top'=>'顶部',
-            'side'=>'侧栏','xiaoyou'));
+            'side'=>'侧栏')
+    );
     $options[] = array(
         'name'=>'以下为纯色Header设置',
         'desc'=>'只有顶部显示模式为纯色才有效。');
@@ -275,7 +276,7 @@ function optionsframework_options(){
         'type'=>'text');
     $options[] = array(
         'name'=>'图片Logo',
-        'desc'=>'高40px，宽最大200px，不设置将显示文字Logo',
+        'desc'=>'高40px，宽最大200px，不设置将显示文字Logo(只在顶部模式为纯色时正常显示)',
         'id'=>'banner_logo',
         'type'=>'upload');
     $options[] = array(
@@ -700,7 +701,7 @@ function optionsframework_options(){
         'name'=>'开启音乐播放器插件',
         'desc'=>'将会开启Qplayer音乐播放器',
         'id'=>'openmusicplug',
-        'std'=>'1',
+        'std'=>'0',
         'type'=>'checkbox');
     $options[] = array(
         'name'=>'显示文章目录模块',
@@ -718,13 +719,13 @@ function optionsframework_options(){
         'name'=>'开启文章订阅功能',
         'desc'=>'开启后将会在用户个人资料页显示订阅选项',
         'id'=>'openpassage',
-        'std'=>'1',
+        'std'=>'0',
         'type'=>'checkbox');
     $options[] = array(
         'name'=>'显示RSS订阅',
         'desc'=>'将会在底部显示RSS订阅按钮',
         'id'=>'show_rss',
-        'std'=>'1',
+        'std'=>'0',
         'type'=>'checkbox');
     $options[] = array(
         'name'=>'编辑器增强',
@@ -751,7 +752,7 @@ function optionsframework_options(){
         'std'=>'1',
         'type'=>'checkbox');
     $options[] = array(
-        'name'=>'个人头像',
+        'name'=>'侧边栏个人头像',
         'desc'=>'将在手机端侧边栏展示',
         'id'=>'phone_sideer_image',
         'std'=>'http://cdn.xiaoyou66.com/theme/admin_avatar-96x96.jpg',
@@ -788,9 +789,9 @@ function optionsframework_options(){
         'type'=>'textarea');
     $options[] = array(
         'name'=>'首页指定目录过滤',
-        'desc'=>'可以过滤某个目录的内容格式为"-5,-6"负号加上id号用英文逗号分割开',
+        'desc'=>'可以过滤某个目录的内容。格式为"-5,-6" (负号加上id号用英文逗号分割开)',
         'id'=>'filter',
-        'std'=>'-5,-6',
+        'std'=>'',
         'type'=>'text');
     $options[] = array(
         'name'=>'离开标签页显示的标题',
@@ -886,7 +887,7 @@ function optionsframework_options(){
         'std'=>'爱心箱',
         'type'=>'text');
     $options[] = array(
-        'name'=>'推广链接链接地址',
+        'name'=>'推广链接地址',
         'desc'=>'这里填跳转地址',
         'id'=>'bibo_pushlink',
         'std'=>'https://xiaoyou66.com/%e7%88%b1%e5%bf%83%e7%ae%b1',

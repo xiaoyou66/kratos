@@ -201,7 +201,7 @@ class kratos_widget_about extends WP_Widget {
         <?php }else{ ?>
         <div class="photo-wrapper clearfix">
             <div class="photo-wrapper-tip text-center">
-                <a href="<?php echo wp_login_url($redirect); ?>" rel="nofollow"><img  class="about-photo" src="<?php if(!empty($imgurl)) echo $imgurl; else echo bloginfo('template_url')."/static/images/photo.jpg"; ?>" alt=""/></a>
+                <a href="<?php echo wp_login_url($redirect); ?>" rel="nofollow"><img title="点击头像即可登录" class="about-photo" src="<?php if(!empty($imgurl)) echo $imgurl; else echo bloginfo('template_url')."/static/images/photo.jpg"; ?>" alt=""/></a>
             </div>
         </div>
         <div class="textwidget">
@@ -405,9 +405,18 @@ class kratos_widget_comments extends WP_Widget {
         $output .= '<div class="recentcomments">';
         if(is_array($comments)&&$comments){
             foreach($comments as $comment){
+//                echo '<script>console.log('.$comment.')</script>';
+//                echo '<pre>';
+//                echo var_dump($comment);
+//                echo '<pre>';
+                $comment_ID=$comment->comment_ID;
+                $photo=get_comment_meta($comment_ID,'photo',true);
                 $output .= '<li class="comment-listitem">';
                 $output .= '<div class="comment-user">';
-                $output .= '<span class="comment-avatar">'.get_avatar($comment,50,null).'</span>';
+                if($photo=="无照片" || $photo=="")
+                    $output .= '<span class="comment-avatar">'.get_avatar($comment,50,null).'</span>';
+                else
+                    $output .= '<span class="comment-avatar">'.'<img alt="" src="'.$photo.'" class="avatar avatar-50 photo" height="50" width="50">'.'</span>';
                 $output .= '<div class="comment-author" title="'.$comment->comment_author.'">'.$comment->comment_author.'</div>';
                 $output .= '<span class="comment-date">'.timeago($comment->comment_date_gmt).'</span>';
                 $output .= '</div>';

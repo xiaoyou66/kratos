@@ -21,8 +21,8 @@
                     <br></h3>
             </div>
             <div class="contactme">
-                <a href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
-                <a class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
+                <a target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
+                <a target="_blank" class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
             </div>
         </section>
         <div class="touxiang">
@@ -31,8 +31,8 @@
             <span class="renzheng" style="background-image:url(<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/images/icon2.png);"></span>
         </div>
         <div class="banner-item width">
-            <a class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
-            <a href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
+            <a target="_blank" class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
+            <a target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
     </header>
     <div id="kratos-blog-post">
     <div id="container" class="container">
@@ -47,15 +47,23 @@
         {if($position='left') $position='right'; else $position='left';}
         echo '.waifu {' . $position . ':' . $value . 'px;}';
     ?></style>
-    <script src="<?php echo  bloginfo('template_url').'/static/js/prism.js';?>"></script>
-    <div id="primary" class="list">
+        <script src="<?php echo  bloginfo('template_url').'/static/js/prism.js';?>"></script>
+<!--        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>-->
+        <div id="primary" class="list">
         <?php get_template_part('/inc/single-templates/single',get_post_format()); ?>
     </div>
         <?php if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
         <script src="<?php echo  bloginfo('template_url').'/static/js/weixinAudio.js';?>"></script>
         <!--音乐播放器-->
+        <?php if(kratos_option('animal_load')){?>
+            <script src = "<?php echo  bloginfo('template_url').'/static/js/wow.min.js';?>" ></script >
+        <?php }?>
         <script type="text/javascript">
-            $('.weixinAudio').weixinAudio({});
+            $('.weixinAudio').weixinAudio({
+            });
+            //    动画脚本
+            new WOW().init();
+            hljs.initHighlightingOnLoad();
         </script>
         <!-- 文章目录移动-->
         <script>
@@ -107,7 +115,8 @@
                 else $position='left';
             }
             echo '.waifu {' . $position . ':' . $value . 'px;}';
-            ?></style>
+        ?></style>
+        <!-- 引入js文件-->
         <script src="<?php echo  bloginfo('template_url').'/static/js/prism.js';?>"></script>
         <div class="row">
         <?php get_template_part('/inc/single-templates/single',get_post_format()); ?>
@@ -123,6 +132,7 @@
             });
             //    动画脚本
             new WOW().init();
+            hljs.initHighlightingOnLoad();
         </script>
 <!-- 文章目录移动-->
     <script>

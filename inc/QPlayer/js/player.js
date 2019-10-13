@@ -8,7 +8,6 @@
 		autoShowTimer,
 		isFirstPlay = localStorage.qplayer == undefined? true: false,
 		isShuffle = localStorage.qplayer == undefined? $('#randomstatus').attr('class') : localStorage.qplayer === 'true'? true: false;
-    	//console.log($('#randomstatus').attr('class')+":"+isShuffle);
     	//(看一下是否开始随机播放)
 		if (isShuffle) {
                 $("#player .cover").attr("title","点击关闭随机播放");
@@ -66,7 +65,6 @@
 	} 
 
 	var play = function(){
-
 		audio.play();
 		audio.volume=volume;
 		if (isRotate) {
@@ -117,7 +115,6 @@
 		} else {
 			track = i;
 		}
-
 		isInitMarquee = true;
 		$('audio').remove();
 		loadMusic(track,1);
@@ -159,13 +156,14 @@
 	}
 
 	// Fire when track loaded completely
-	var afterLoad = function(){
-		if (autoplay == true) play();
-	}
+	// var afterLoad = function(){
+	// 	if (autoplay == true) play();
+	// }
 
 	// Load track
 	var loadMusic = function(i,isplay){
 		var item = playlist[i];
+		var music_addr="";
 		while (item.mp3 == "") {
 	        showNotification('歌曲地址为空，已自动跳过');
 			if (isShuffle) {
@@ -184,22 +182,20 @@
             type:'get',
 			refer:'//api.xiaoyou66.com',
             success:function(res){
-                item.mp3=res;
-                //console.log(res);
+                music_addr=res;
             }
         });
         /*等待ajax请求完毕*/
         $.when(myajax).done(function () {
-            var newaudio = $('<audio>').html('<source src="'+item.mp3+'"><source src="'+item.ogg+'">').appendTo('#player');
+            var newaudio = $('<audio>').html('<source src="'+music_addr+'"><source src="'+item.ogg+'">').appendTo('#player');
             $('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
             $('.musicTag').html('<strong>'+item.title+'</strong><span> - </span><span class="artist">'+item.artist+'</span>');
             $('#playlist li').removeClass('playing').eq(i).addClass('playing');
             audio = newaudio[0];
             audio.addEventListener('progress', beforeLoad, false);
             audio.addEventListener('durationchange', beforeLoad, false);
-            audio.addEventListener('canplay', afterLoad, false);
             audio.addEventListener('ended', ended, false);
-            if(isplay || autoplay)
+            if(isplay)
             {
                 play();
             }
@@ -207,8 +203,11 @@
 
 	}
 
-	loadMusic(currentTrack,0);
-
+	//判断是否自动播放
+    if (autoplay == true)
+		loadMusic(currentTrack,1);
+	else
+        loadMusic(currentTrack,0);
 
 	$('.playback').on('click', function(){
 		if ($(this).hasClass('playing')){

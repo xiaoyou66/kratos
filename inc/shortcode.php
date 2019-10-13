@@ -129,7 +129,7 @@ add_shortcode('highlight','highlight');
 
 
 function block($atts,$content=null,$code=""){
-    $return = '<pre><code>';
+    $return = '<pre class="hl"><code class="">';
     //处理预格式化的内容
     $replace=array('<pre>','</pre>','<code>','</code>');
     $content=str_replace($replace,'',$content);

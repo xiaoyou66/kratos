@@ -56,8 +56,10 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <!-- 允许访问站外资源 -->
-    <meta name="referrer" content="no-referrer">
+    <!--仅同源网站发送请求-->
+    <meta name="referrer" content="same-origin">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
@@ -105,13 +107,14 @@ if($_COOKIE['goto_bibo']==1){
                         wp_nav_menu($defaults); ?>
                     </div>
                 </div>
-                <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/.css';?>"/>
+                <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/prism.css';?>"/>
                 <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/inc/live2d/waifu.css';?>"/>
                 <?php if(kratos_option('animal_load')){?>
                     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/animate.min.css';?>"/>
                 <?php }?>
             </header>
         </div>
+
 <?php }else{ ?>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -132,11 +135,12 @@ if($_COOKIE['goto_bibo']==1){
     <meta name="twitter:description" content="<?php kratos_description(); ?>">
     <meta name="twitter:card" content="summary">
     <!-- 允许访问站外资源 -->
-    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="same-origin">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/static/css/bootstrap.min.css';?>"/>
-      <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/style/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <title><?php wp_title('-',true,'right'); ?></title>
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <style><?php
@@ -147,7 +151,7 @@ if($_COOKIE['goto_bibo']==1){
             if(kratos_option('mobi_mode')=='side') echo '@media(max-width:768px){#kratos-header-section{display:none}nav#offcanvas-menu{top:0;padding-top:190px;}.kratos-cover .desc.desc2{margin-top:-55px}}';
         }
 //        背景图片
-        if(kratos_option('background_mode')=='image') echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.9)}.kratos-hentry,.navigation div,.comments-area .comment-list li,#kratos-widget-area .widget,.comment-respond{background-color:rgba(255,255,255,.9)!important}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}.theme-bg{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
+        if(kratos_option('background_mode')=='image') echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.9)}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}.theme-bg{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
         if(kratos_option('openphoneimg')) echo'@media(max-width:768px){.theme-bg{background-image:url('.kratos_option('phone_img').');background-position: center center;top:0;}}';
         if(kratos_option('add_css')) echo kratos_option('add_css');
         ?>

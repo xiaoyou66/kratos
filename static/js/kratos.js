@@ -99,7 +99,8 @@
         }
         var $clone = $('#kratos-menu-wrap').clone();
         $clone.attr({
-            'id':'offcanvas-menu'
+            'id':'offcanvas-menu',
+            'class':' '
         });
         $clone.find('> ul').attr({
             'class':'ul-me',
@@ -115,7 +116,7 @@
                 $('.nav-toggle').addClass('toon');
                 $('#offcanvas-menu').css('left','0px');
                 body.style.left="240px";
-                body.style.position="fixed";
+                // body.style.position="fixed";
                 sider.style.visibility="visible";
             }
         });

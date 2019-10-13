@@ -34,13 +34,9 @@ function get_netease_music($id, $type = 'song'){
         "Referer: https://music.163.com/",
         "cookie:player1.0"
     ));
-    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);//这个很关键就是把获取到的数据以文件流的方式返回，而不是直接输出
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
     $cexecute = curl_exec($ch);
     curl_close($ch);
-    //echo $cexecute;
-    if($type=='song')
-        echo $cexecute;
-
     if ( $cexecute ) {
         $result = json_decode($cexecute, true);
         if ( $result['code'] == 200 && $result[$key] ){
@@ -61,7 +57,7 @@ function get_netease_music($id, $type = 'song'){
                         'title' => $data['name'],
                         'artist' => $data['artists'][0]['name'],
                         'location' => "https://music.163.com/song/media/outer/url?id=".$data['id'].".mp3",
-                        'pic' =>str_replace("http","https",$data['album']['blurPicUrl']) .'?param=106x106'
+                        'pic' =>str_replace("http://","https://",$data['album']['blurPicUrl']) .'?param=106x106'
                 );
             }
             //修复一次添加多个id的乱序问题
@@ -90,7 +86,6 @@ function parse($id, $type) {
     $result="\n";
     foreach ($resultList as $key => $value) {
         $musicList = get_netease_music($value,$type);
-        //var_dump($musicList);
         foreach($musicList as $x=>$x_value) {
             $result .= "{";
             foreach ($x_value as $key => $value) {

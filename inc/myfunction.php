@@ -57,9 +57,15 @@ function article_index($content) {
                     document.querySelector("#title-'.$j.'").scrollIntoView(true);
                 };';
         }
-        $content = "<div class='wow shake' id=\"article-index\"><div id=\"article-index-move\">文章目录<a id=\"category-close\">[x]</a></div>
+        if($_COOKIE['goto_bibo']==1){
+            $content = "<div id=\"article-index\"><div id=\"article-index-move\">文章目录<a id=\"category-close\">[x]</a></div>
 <ol id=\"index-ul\">" . $ul_li . "</ol>
 </div>".'<script type="text/javascript">'.$js.'</script>'.$content;
+        }else{
+            $content = "<div class='wow shake' id=\"article-index\"><div id=\"article-index-move\">文章目录<a id=\"category-close\">[x]</a></div>
+<ol id=\"index-ul\">" . $ul_li . "</ol>
+</div>".'<script type="text/javascript">'.$js.'</script>'.$content;
+        }
     }
     return $content;
 }
@@ -68,17 +74,16 @@ if(kratos_option('opencontent')) add_filter( 'the_content', 'article_index');
 //随机显示头像
 function local_random_avatar( $avatar, $id_or_email, $size, $default, $alt) {
 //    var_dump($avatar);
-    $comment_ID=get_comment_ID();
+    $comment_ID=$id_or_email->comment_ID;
     $photo=get_comment_meta($comment_ID,'photo',true);
     $hang=get_comment_meta($comment_ID,'hang',true);
     $uid=get_comment_meta($comment_ID,'uid',true);
     $level=get_comment_meta($comment_ID,'level',true);
-//    if ($id_or_email->user_id ==0) {
-
     if($uid) {
         $avatar ='<div class="entry-header pull-left"><a bilibili="" href="//space.bilibili.com/'.$uid.'/dynamic" target="_blank" class="user-head c-pointer" style="background-image: url('.$photo.'); border-radius: 50%;" data-userinfo-popup-inited="true"><div data-v-4077d7b8="" class="user-decorator" style="background-image: url('.$hang.');"></div></a><a href="//www.bilibili.com/blackboard/help.html#会员等级相关" target="_blank" lvl="'.$level.'" class="h-level m-level"></a></div>';
     }
     else{
+        /*下面是显示本地的随机头像和自定义头像*/
         if(kratos_option('random_avatar'))
         {
             $images=explode("\r\n",kratos_option('random_avatar'));
@@ -134,7 +139,7 @@ function send_email($new,$old,$post)
     if($new=="publish" && ($old=="auto-draft" || $old=="draft") && $post->post_title!="")
     {
         $to=explode(",",esc_attr(get_option('email_list')));
-        $subject = '你关注的博主有新文章发布啦！φ(>ω<*) ';
+        $subject = '你关注的博主有新文章发布啦！φ(>ω<*)--'.$post->post_title;
         $permalink = get_permalink($post->ID);
         $message='
                     <style>.qmbox img.wp-smiley{width:auto!important;height:auto!important;max-height:8em!important;margin-top:-4px;display:inline}
@@ -144,7 +149,7 @@ function send_email($new,$old,$post)
                     <div style="zoom:1;padding:25px 40px;background:#518bcb; border-bottom:1px solid #467ec3;">
                         <h1 style="color:#fff;font-size:25px;line-height:30px;margin:0"><a href="'.home_url().'" style="text-decoration:none;color:#FFF">'.get_bloginfo('name').'</a></h1>
                         <img style="position: relative;left: 423px;top:25px;" src="">
-                        <h3 style="position: relative;color:#FFF;left: 263px;bottom: -25px;">(〃\'▽\'〃)你关注的博主有文章更新啦( • ̀ω•́ )✧--'.$post->post_title.'</h3>
+                        <h3 style="position: relative;color:#FFF;left: 263px;bottom: -25px;">(〃\'▽\'〃)你关注的博主有文章更新啦( • ̀ω•́ )✧--</h3>
                     </div>
                     <div style="padding:35px 40px 30px">
                         <h2 style="font-size:18px;margin:5px 0">文章标题:'.$post->post_title.'</h2>
@@ -368,8 +373,8 @@ add_action('wp_insert_comment','wp_insert_weibo',10,2);
 function wp_insert_weibo($comment_ID,$commmentdata) {
     $uid= isset($_POST['uid']) ? $_POST['uid'] : false;
 //    $nickname= isset($_REQUEST['nickname']) ? $_REQUEST['nickname'] : "无名";
-    $bilibiliphoto= isset($_REQUEST['photo']) ? $_REQUEST['photo'] : "无照片";
-    $avatarshang= isset($_REQUEST['hang']) ? $_REQUEST['hang'] : "无挂件";
+    $bilibiliphoto= isset($_REQUEST['photo']) ? $_REQUEST['photo'] : "";
+    $avatarshang= isset($_REQUEST['hang']) ? $_REQUEST['hang'] : "";
     $level= isset($_REQUEST['level']) ? $_REQUEST['level'] : "0";
     update_comment_meta($comment_ID,'uid',$uid);
 //    update_comment_meta($comment_ID,'nickname',$nickname);
@@ -407,6 +412,29 @@ function output_my_comments_columns( $column_name, $comment_id ){
             break;
     }
 }
+
+//彩色标签云
+function colorCloud($text) {
+    $text = preg_replace_callback('|<a (.+?)>|i', 'colorCloudCallback', $text);
+    $text=preg_replace('/<a /','<a ',$text);
+    return $text;
+}
+function colorCloudCallback($matches) {
+    $text = $matches[1];
+//这里定义我们背景色的范围，如果不想设置背景色的输出范围我们可以使用
+//$color = dechex(rand(0,16777215));从所有颜色中随机出一个
+    $a = array('8D7EEA','F99FB2','AEE05B','E8D368','F75D78','55DCAB','F75DB1','ABABAF','7EA8EA');
+    $co = array_rand($a,2);
+    $color = $a[$co[0]];
+//随机颜色代码结束，下面开始吧颜色赋值给每个标签生成背景色
+    $pattern = '/style=(\'|\")(.*)(\'|\")/i';
+    $text = preg_replace($pattern, "style=\"background:#{$color};\"", $text);
+    return "<a $text>";
+}
+//把php代码挂载到wp_tag_cloud钩子上
+add_filter('wp_tag_cloud', 'colorCloud', 1);
+
+
 
 
 

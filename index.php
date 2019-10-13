@@ -22,8 +22,8 @@
                         <br></h3>
                 </div>
                 <div class="contactme">
-                    <a href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
-                    <a class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
+                    <a  target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
+                    <a  target="_blank" class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
                 </div>
             </section>
             <div class="touxiang">
@@ -32,8 +32,8 @@
                 <span class="renzheng" style="background-image:url(<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/images/icon2.png);"></span>
             </div>
             <div class="banner-item width">
-                <a class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
-                <a href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
+                <a target="_blank" class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
+                <a target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
         </header>
         <div id="kratos-blog-post">
         <div id="container" class="container">
@@ -84,6 +84,7 @@
                         <div class="sns readmore">
                             <a href="<?php echo kratos_option('bibo_more');?>">查看更多&nbsp;&gt;</a></div>
                     </div>
+                    <?php if(kratos_option('bibo_post')){?>}
                     <div class="alteration">
                         <div class="widget">
                             <h3 class="widget-title">
@@ -96,7 +97,9 @@
                                 <!-- 评论结束 -->
                             </div>
                         </div>
-                        <?php if(kratos_option('bibo_post')){?>
+                    </div>
+                    <?php }?>
+                    <?php if(kratos_option('bibo_post')){?>
                             <div class="widget">
                                 <h3 class="widget-title">
                                     <i class="icon icon louie-smile"></i>友情链接(随机10个)</h3>
@@ -130,7 +133,6 @@
                             </div>
                         <?php }?>
                     </div>
-                </div>
             </aside>
     <div id="loop" class="right">
             <!-- 实现看板娘的灵活切换-->
@@ -192,9 +194,6 @@
             </script>
     </div>
      </section>
-    </div>
-    </div>
-</div>
     </div>
     </div>
  <?php }else{ ?>

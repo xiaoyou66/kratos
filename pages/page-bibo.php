@@ -30,8 +30,8 @@ $theid=$_REQUEST['id'];
                         <br></h3>
                 </div>
                 <div class="contactme">
-                    <a href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
-                    <a class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
+                    <a target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>"><div class="weixin">关注</div></a>
+                    <a target="_blank" class="qq" href="https://message.bilibili.com/#whisper/mid<?php echo $bilibilUid?>">发私信</a>
                 </div>
             </section>
             <div class="touxiang">
@@ -40,8 +40,8 @@ $theid=$_REQUEST['id'];
                 <span class="renzheng" style="background-image:url(<?php echo  bloginfo('template_url').'/pages/';?>bilibililive/images/icon2.png);"></span>
             </div>
             <div class="banner-item width">
-                <a class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
-                <a href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
+                <a target="_blank" class="active" href="https://space.bilibili.com/<?php echo $bilibilUid?>">我的主页</a>
+                <a target="_blank" href="https://space.bilibili.com/<?php echo $bilibilUid?>/album">我的相册</a></div>
         </header>
     </div>
     <div id="kratos-blog-post">
