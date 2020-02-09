@@ -332,7 +332,7 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .btn.btn-primary{background:#7266ba;color:#fff;border:none!important;border:2px solid transparent!important}
 .btn.btn-primary:active,.btn.btn-primary:focus,.btn.btn-primary:hover{box-shadow:none;background:#51aded;color:#fff!important}
 .carousel{margin-bottom:20px;box-shadow:0 1px 2px rgba(0,0,0,.1)}
-.carousel,.carousel-inner{position:relative}
+.carousel,.carousel-inner{position:relative;margin-top: 16px}
 .carousel-inner{overflow:hidden;width:100%}
 .carousel-inner>.item{position:relative;display:none;-webkit-transition:.6s ease-in-out left;transition:.6s ease-in-out left}
 .carousel-inner>.item>a>img,.carousel-inner>.item>img{display:block;height:auto;width:100%;line-height:1}
@@ -361,9 +361,9 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
 
-.input-group{display:table;border-collapse:separate}
+.input-group{display:table;border-collapse:separate;margin-top: 8px;width: 100%}
 .input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
-.input-group-addon:first-child{border-right:0}
+.input-group-addon:first-child{border-right:0;width: 40px;}
 .layui-layer,.layui-layer-shade{position:fixed;pointer-events:auto}
 .layui-layer-shade{top:0;left:0;width:100%;height:100%}
 .layui-layer{top:150px;left:0;margin:0;padding:0;background-color:#fff;-webkit-background-clip:content;border-radius:2px;box-shadow:1px 1px 50px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}
@@ -638,7 +638,7 @@ user agent stylesheet h2{display:block;font-size:1.5em;margin-block-start:.83em;
 .comments-area .comment-awaiting-moderation,.comments-area .comment-meta,.comments-area .fn{margin-left:63px}
 .comments-area .fn a{color:#343a40}
 .comments-area .fn a:hover{color:#1d2124}
-.comments-area .comment-list .bypostauthor>div>div>.fn:after{margin-left:-73px;padding:1.5px 4px;border-radius:2px;background:#00a4ff;color:#fff;content:"作者";font-size:11px;top:-1px;position:relative}
+.comments-area .comment-list .bypostauthor>div>div>.fn:before{margin-left:-36px;margin-right: 15px;padding:1.5px 4px;border-radius:2px;background:#00a4ff;color:#fff;content:"作者";font-size:11px;top:-1px;position:relative}
 .comments-area .says{display:none}
 .comments-area .comment-awaiting-moderation{font-size:15px}
 .comments-area .comment-meta{margin-bottom:5px;color:#777;font-size:13px;}
@@ -889,7 +889,7 @@ cite.fn{padding-left:39px}
 }
 
 .kratos-post-content a:hover{border-bottom: 1px solid #0366d6!important;}
-.tag_clouds a:hover{padding:8px 15px!important;}
+.tag_clouds a:hover{background: #474C50!important;}
 
 
 /*代码高亮*/
@@ -905,6 +905,15 @@ cite.fn{padding-left:39px}
 .hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}
 .hljs-emphasis{font-style:italic}
 .hljs-strong{font-weight:bold}
+
+
+/*轮播图修复*/
+#slide {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
 
 @media(min-width:1200px){.affix,.affix-bottom{width:360px}
 }

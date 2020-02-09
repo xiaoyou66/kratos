@@ -116,11 +116,12 @@
 			track = i;
 		}
 		isInitMarquee = true;
+		audio.pause();
 		$('audio').remove();
 		loadMusic(track,1);
 	}
 
-	// Shuffle
+	// 随机播放
 	var shufflePlay = function(i){
 		if (i === 1) {
 		//下一首
@@ -180,26 +181,27 @@
         myajax=$.ajax({
             url:"//api.xiaoyou66.com/theme/music/?src="+item.mp3,
             type:'get',
+			async: false,
 			refer:'//api.xiaoyou66.com',
             success:function(res){
                 music_addr=res;
             }
         });
         /*等待ajax请求完毕*/
-        $.when(myajax).done(function () {
-            var newaudio = $('<audio>').html('<source src="'+music_addr+'"><source src="'+item.ogg+'">').appendTo('#player');
-            $('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
-            $('.musicTag').html('<strong>'+item.title+'</strong><span> - </span><span class="artist">'+item.artist+'</span>');
-            $('#playlist li').removeClass('playing').eq(i).addClass('playing');
-            audio = newaudio[0];
-            audio.addEventListener('progress', beforeLoad, false);
-            audio.addEventListener('durationchange', beforeLoad, false);
-            audio.addEventListener('ended', ended, false);
-            if(isplay)
-            {
-                play();
-            }
-        });
+        // $.when(myajax).done(function () {
+		var newaudio = $('<audio>').html('<source src="'+music_addr+'"><source src="'+item.ogg+'">').appendTo('#player');
+		$('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
+		$('.musicTag').html('<strong>'+item.title+'</strong><span> - </span><span class="artist">'+item.artist+'</span>');
+		$('#playlist li').removeClass('playing').eq(i).addClass('playing');
+		audio = newaudio[0];
+		audio.addEventListener('progress', beforeLoad, false);
+		audio.addEventListener('durationchange', beforeLoad, false);
+		audio.addEventListener('ended', ended, false);
+		if(isplay)
+		{
+			play();
+		}
+        // });
 
 	}
 
@@ -232,7 +234,8 @@
 			switchTrack(++currentTrack);
 		}
 	});
-	
+
+	//标签列表点击事件
 	$('#playlist li').each(function(i){
 		$(this).on('click', function(){
 			if (isShuffle) {
@@ -245,6 +248,7 @@
 			} else {
 			    currentTrack = i;
 			}
+			audio.pause();
 			switchTrack(i);
 		});
 	});

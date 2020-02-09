@@ -13,7 +13,7 @@ input{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optim
 @media(max-width:782px){.login .password-input-wrapper .button.button-secondary{right:0}}
 @media(max-width:470px){#login{right:0;left:0}}
 #login h1{position:relative;margin-bottom:20px}
-#login h1 a{background-size:200px 50px;background-position:top center;background-repeat:no-repeat;width:200px;margin:auto;height:50px;text-indent:-9999px;overflow:hidden;position:absolute;bottom:0;left:0;right:0;display:block}
+#login h1 a{visibility: hidden}
 #login .description,#nav,#reg_passmail{color:#FFF}
 #login label{color:#FFF;font-size:14px}
 #login form{padding:24px;font-weight:400;background:rgba(255,255,255,.2);border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:#000 0 0 10px -1px}

@@ -466,6 +466,7 @@ function createtime(){
     if(String(snum).length==1){snum = '0'+snum;}
     document.getElementById('span_dt_dt').innerHTML = dnum+'天'+hnum+'小时'+mnum+'分'+snum+'秒';
 }
+
 setInterval('createtime()',250);
 //copy
 if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}

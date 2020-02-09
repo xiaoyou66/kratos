@@ -2,11 +2,6 @@
 
 
 define('KRATOS_VERSION','1.0');
-require(get_template_directory().'/theme-updates/theme-update-checker.php'); //支持主题更新
-$example_update_checker=new ThemeUpdateChecker(
-    'kratos',
-    'http://xiaoyou66.com/theme.json'
-);
 
 require_once(get_template_directory().'/inc/core.php');
 require_once(get_template_directory().'/inc/shortcode.php');

@@ -2,8 +2,38 @@
 /**
 template name: 友情链接模板
 */
+
 get_header(); ?>
-<?php if($_COOKIE['goto_bibo']==1){
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<?php
+//这边接收post数据然后判断
+if(!empty($_REQUEST)) {
+    $webname=array_key_exists("webname",$_REQUEST)?$_REQUEST['webname']:"";
+    $web=array_key_exists("web",$_REQUEST)?$_REQUEST['web']:"";
+    $introduce=array_key_exists("introduce",$_REQUEST)?$_REQUEST['introduce']:"无";
+    $avater=array_key_exists("avater",$_REQUEST)?$_REQUEST['avater']:"无";
+    $mail=array_key_exists("mail",$_REQUEST)?$_REQUEST['mail']:"";
+    if(!$webname) echo "<script type='text/javascript'>alert('名字不能为空！')</script>";
+    else if(!$web) echo "<script type='text/javascript'>alert('网址不能为空！')</script>";
+    else if(!$mail) echo "<script type='text/javascript'>alert('邮件地址不能为空！')</script>";
+    else{
+//        获取到了需要的数据
+        //获取所有的申请
+        $application=esc_attr(get_option('application_list'));
+        //欲添加的数据
+        $add=$webname."!!]".$web."!!]".$introduce."!!]".$avater."!!]".$mail;
+        update_option('application_list',$application.$add."]!!");
+        echo "<script type='text/javascript'>alert('提交申请成功，请等待站长审核!审核通过后会发送邮件通知你!');window.history.back(-1); </script>";
+        //发送邮件
+        $to=get_bloginfo('admin_email');
+        $subject = '有新的友链申请!';
+        $message='名字:'.$webname.'<br/>网站地址:'.$web.'<br/>介绍:'.$introduce.'<br/>头像链接:'.$avater.'<br/>邮箱:'.$mail;
+        $headers = 'Content-type: text/html';
+        wp_mail($to,$subject,$message,$headers);
+    }
+}
+
+if($_COOKIE['goto_bibo']==1){
     include dirname(__FILE__)."/bilibililive/BilibiliLive.php";
     $bilibilUid=kratos_option('bilibili_uid');
     $bilibililive=new BilibiliLive($bilibilUid);?>
@@ -71,11 +101,48 @@ get_header(); ?>
                                 } ?>
                                 </ul>
                                 <hr/>
+                                <!-- 按钮触发模态框 -->
+                                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" style="border-radius: 4px;margin-bottom: 15px">点击申请</button>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" style="margin-top: 30%;margin-right: 45%;">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4>友链申请</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action=" " method="post" class="bs-example bs-example-form" role="form" style="text-align: center;">
+                                                    <div class="input-group" >
+                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                        <input type="text" name="webname" class="form-control" placeholder="名字">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                                        <input type="text" name="web" class="form-control" placeholder="网站地址">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+                                                        <input type="text" name="introduce" class="form-control" placeholder="个人介绍">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
+                                                        <input type="text" name="avater" class="form-control" placeholder="头像链接"></div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
+                                                        <input type="text" name="mail" class="form-control" placeholder="你的邮箱(添加后会通过邮箱通知你)">
+                                                    </div>
+                                                    <button type="submit" name="friend"  class="btn btn-info" style="border-radius: 10px;margin-top: 10px;">提交申请</button>
+                                                </form>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
                             </div>
                             <?php the_content(); ?>
                         </div>
                     </div>
-                    <?php comments_template(); ?>
+                    <?php if ( comments_open() ) comments_template(); ?>
                 </article>
             <?php } ?>
             </section>

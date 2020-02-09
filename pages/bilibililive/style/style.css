@@ -167,6 +167,7 @@ pre code {
 .post h2{
     border-bottom: 1px solid #bbb;
     padding-bottom: .3em;
+    margin-left: 187px;
 }
 .post #index-ul{
     margin-top: 0px;
@@ -2258,7 +2259,7 @@ li.item {
 
     /*手机*/
     /*顶部*/
-    .item{width:24.795%!important}
+    .items .item{width:24.795%!important}
     div#wrapper {background: #ffffff!important;}
     .big-title {
         top: 111px;

@@ -1,50 +1,67 @@
-<h1>Kratos</h1>
+# kratos
+一款二次元wordpress主题
 
-> 一款可爱的二次元主题
-> 
-<br/>
+主题更新的地方
+本次主题相比上次有了很大的变化，下面只说几个改动大的，其他细微的地方请大家自己探索。
 
-<img src="https://xiaoyou66.com/wp-content/uploads/2019/10/20191013113909.png" alt="KRATOS"/>
+1.后台添加了可以设置的界面
 
-<p align="center">
-<a href="https://xiaoyou66.com"><img alt="Author" src="https://img.shields.io/badge/Author-xiaoyou-red.svg?style=flat-square"/></a>
-<img alt="License" src="https://img.shields.io/github/license/xb2016/kratos-pjax.svg?style=flat-square"/>
-</p>
+![](https://img.xiaoyou66.com/images/2019/07/19/UmFz.png)
 
+上次修改比较仓促，这次把以前需要改动源码的地方都转移到设置里面，尽量不麻烦大家修改源码。至于其中一些设置我会在后面详细说明。
 
-## 主题介绍
-本主题并非我个人原创，只是在  [原作者](https://github.com/xb2016/kratos-pjax)的主题上进行的魔改，不过现在我已经快把整个主题所有部分的代码都换掉了。
-这里引用主题的介绍:
-> Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为小游(xiaoyou66.com)的二次开发版本。
+2.修改了文章背景图片
 
-## 主题使用
-主题现在已经有视频教程和帮助文档，下面是地址
-> 搭建博客教程：
-[【互动视频】(小白向)教你从服务器购买到个人博客搭建](https://www.bilibili.com/video/av67033126)
+![](https://img.xiaoyou66.com/images/2019/07/19/U9x3.png)
 
-> 主题使用教程:
-> [个人主题的使用介绍](https://www.bilibili.com/video/av69975328)
+文章背景图片全部换成非常清晰的图片，同时网页背景和主页的背景都改成了我现在的背景，如果需要修改文章背景的可以看后面我的详细介绍。
 
-> 帮助文档地址：
-> [kratos帮助文档](http://help.xiaoyou66.com/)
-
-## 其他问题
-有问题欢迎到我的群里面讨论（群号:752497052）
-### 提问前必看
-> 有问题请先自己查阅帮助文档或者查看视频教程，如果你问的是我已经写过的回答，我将一概不理会。希望可以养成良好的问问题的习惯，而不是一有问题就求助别人。我事情很多，没有那么多时间来回答你的问题，希望可以谅解。
-## 赞助作者
-如果觉得主题不错可以给我赞助，有了支持我才有前进下去的动力。
-###  微信二维码
-![](https://xiaoyou66.com/wp-content/uploads/2019/03/mm_facetoface_collect_qrcode_1553935372531.png)
-### 支付宝
-![](https://xiaoyou66.com/wp-content/uploads/2019/03/1553935348345.png)
+3.评论表情更新
 
 
+![](https://img.xiaoyou66.com/images/2019/07/19/UZT4.png)
+
+本次更新添加了知乎表情和哔哩哔哩表情，同时删除了QQ表情，后面我也会讲一下怎么添加表情。
+
+4.头像随机显示
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UUKT.png)
+
+
+对于没有头像的用户将会随机显示一个动漫头像，目前有59张动漫头像可以随机显示。
+
+5.主题集成了音乐播放器
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UwmE.png)
+
+
+无需安装插件，安装主题即可自带音乐播放器，同时改插件被我修改，目前可以完美的支持网易云音乐解析，这里可以添加自己的歌单，同时默认开始pjax加载，切换界面时音乐可以继续播放，只要不刷新音乐播放器就不会重置。
+
+6.添加了N个看板娘模型
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UxrK.png)
+
+添加了初音未来.雪，初音未来，33娘全身板，茵蒂克丝，尤（少女终末旅行），凉风青叶（new game），小埋，蕾姆，紫罗兰永恒花园女主，樱花庄（加了一几个角色），德莉沙等人物（因为人物过多所以需要自建api服务器，后面会教大家怎么自建）
+
+7.文章编辑页面按钮精简
+
+![](https://img.xiaoyou66.com/images/2019/07/19/U3eR.png)
+
+
+去掉很多对我来说没用的按钮，添加了代码高亮按钮和本地音乐播放器按钮，这里推荐大家配合TinyMCE Advanced食用
+
+使用该插件后效果如下：
+
+
+![](https://img.xiaoyou66.com/images/2019/07/19/Ubso.png)
 
 
 
+8.添加了文章目录模块
+
+![](https://img.xiaoyou66.com/images/2019/07/19/UDvi.png)
 
 
-
+如果你的文章有H2-H4的标签均会显示目录，同时文章目录模块可以拖动，这里推荐大家使用H2作为主目录，H3作为主目录的分支。
 
 

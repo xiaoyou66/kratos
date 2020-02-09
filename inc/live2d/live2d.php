@@ -4,6 +4,7 @@ Plugin Name: live2d看板娘设置
 Description: 用于设置看板娘
 */
 
+
 define('FILE_PATH', dirname(__FILE__));
 
 //获取js文件内容
@@ -19,7 +20,6 @@ function getjs()
     {
         return "好像出了一点问题，无法获取到js的内容，请检查PHP是否有对该文件的读写权限！";
     }
-
 }
 
 //保存js文件内容
@@ -46,8 +46,6 @@ function downloadimg($url,$imgpath)
     unzip($imgpath.'1.zip',$imgpath);//解压
     unlink($imgpath.'1.zip');//删除
 }
-
-
 
 //看板娘的设置界面
 function live2d_option_page() {
@@ -121,7 +119,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['donman']) {
                 //批量删除图片
-                downloadimg('http://cdn.xiaoyou66.com/image/thumb.zip',$imgpath)
+                downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/thumb.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -129,7 +127,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['bilibili']) {
-                downloadimg('http://cdn.xiaoyou66.com/image/bilibili.zip',$imgpath);
+                downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/bilibili.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载哔哩哔哩图片资源,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -138,9 +136,6 @@ function live2d_option_page() {
             }
             //live2d的设置
             $blogpath=$_SERVER['DOCUMENT_ROOT'] ;
-
-
-
         }
         /*下载头像*/
         if($_POST['downloadavatar']) {
@@ -156,7 +151,7 @@ function live2d_option_page() {
             //删除目录下所有图片
             if($_POST['man']) {
                 //批量删除图片
-                downloadimg('http://cdn.xiaoyou66.com/image/avatarman.zip',$imgpath)
+                downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/avatarman.zip',$imgpath)
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫男生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -164,7 +159,7 @@ function live2d_option_page() {
                 <?php
             }
             if($_POST['woman']) {
-                downloadimg('http://cdn.xiaoyou66.com/image/avatarwoman.zip',$imgpath);
+                downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/avatarwoman.zip',$imgpath);
                 ?>
                 <div id="message" class="updated">
                     <p><strong>已下载动漫女生头像,不保证绝对下载成功，请自行到主页刷新来进行查看</strong></p>
@@ -173,7 +168,7 @@ function live2d_option_page() {
             }
         }
         if($_POST['downlive2d']) {
-            downloadimg('http://cdn.xiaoyou66.com/image/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
+            downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/live2d.zip',$_SERVER['DOCUMENT_ROOT'].'/');
             ?>
             <div id="message" class="updated">
                 <p><strong>已下载live2d资源，不保证绝对成功，请自行检查</strong></p>
@@ -185,7 +180,7 @@ function live2d_option_page() {
         {
             $smilepath=dirname(dirname(dirname(__FILE__))).'/static/images/smilies/';
             $owo=dirname(dirname(__FILE__))."/OwO.json";
-            if(!file_exists($smilepath."tieba/")) downloadimg('http://cdn.xiaoyou66.com/image/smile.zip', $smilepath);
+            if(!file_exists($smilepath."tieba/")) downloadimg('https://cdn.jsdelivr.net/gh/xiaoyou66/Kratos-@3.0/smile.zip', $smilepath);
             $url="";
             if($_POST['tieba']) $url.="1";
             if($_POST['face'])  $url?$url.=",2":$url.="2";
@@ -200,6 +195,46 @@ function live2d_option_page() {
             </div>
             <?php
         }
+        /*友链审核处理*/
+        /*通过申请*/
+        if($_POST['pass']){
+            global $wpdb;
+            //获取数据库前缀
+            global $table_prefix;
+            $data=[];
+            $data['link_name']=$_POST['name'];
+            $data['link_url']=$_POST['web'];
+            $data['link_description']=$_POST['introduce'];
+            $data['link_image']=$_POST['avater'];
+//    $wpdb->insert($table_name, array('album' => "$_POST['album']", 'artist' => "$_POST['artist']"));
+            //向数据库中插入友链数据
+            $wpdb->insert($table_prefix.'links',$data);
+            //删除这个内容
+            $delete=$_POST['aselect']."]!!";
+            update_option('application_list',str_replace($delete,"",esc_attr(get_option('application_list'))));
+            //发送邮件通知申请者
+            $to=$_POST['mail'];
+            $subject = '友链申请通过通知!';
+            $message='你好，你的友链申请已通过！<br>--------<br>本邮件由系统自动发出，如果你不知道怎么回事，可以忽略';
+            $headers = 'Content-type: text/html';
+            wp_mail($to,$subject,$message,$headers);
+            ?>
+            <div id="message" class="updated">
+                <p><strong>添加成功</strong></p>
+            </div>
+            <?php
+        }
+        /*删除申请*/
+        if($_POST['adelete']) {
+            //先获取到想删除的内容
+            $delete=$_POST['aselect']."]!!";
+            update_option('application_list',str_replace($delete,"",esc_attr(get_option('application_list'))));
+            ?>
+            <div id="message" class="updated">
+                <p><strong>已删除该申请</strong></p>
+            </div>
+            <?php
+        }
 
     }
     ?>
@@ -207,6 +242,7 @@ function live2d_option_page() {
         .title{margin-bottom: 5px}
         .savejs{margin: 0px;}
     </style>
+<script type='text/javascript' src='https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js?ver=2.1.4'></script>
 <div style="overflow-y: scroll">
     <h1>主题其他设置</h1><br>
     <div>
@@ -216,6 +252,54 @@ function live2d_option_page() {
             </div>
             <input class="savejs" type="submit" name="savejs" value="保存js文件" />
         </form>
+    </div>
+    <div>
+        <form action="" method="post" id="email-options-form">
+            <?php wp_nonce_field('kratos_admin_options-update'); ?>
+            <div><div class="title"><h4>友链申请处理</h4></div>先下拉选择一个申请者，然后可以编辑申请者的内容</div>
+            <p>申请者列表
+                <select name="aselect" id="aselect">
+                    <?php
+                        //先获取到所有的申请者
+                        $application=esc_attr(get_option('application_list'));
+                        $applications=explode("]!!",$application);
+                        foreach ($applications as $key)
+                            echo "<option value='$key'>".explode("!!]",$key)[0]."</option>"
+                    ?>
+                </select>
+            </p>
+            <p>
+                名称:<input type="text" id="name" name="name"/><br>
+                网址:<input type="text" id="web" name="web"/><br>
+                介绍:<input type="text" id="introduce" name="introduce"/><br>
+                头像:<input type="text" id="avater" name="avater"/><br>
+                邮箱:<input type="text" id="mail" name="mail"/><br>
+            </p>
+            <p>
+                <input class="savejs" type="submit" name="pass" value="通过" />
+                <input class="savejs" type="submit" name="adelete" value="删除该申请" />
+            </p>
+        </form>
+        <script language="javascript" type="text/javascript">
+            $(document).ready(function(){
+                var data=$(this).find("option").first().val();
+                datas=data.split('!!]');
+                $("#name").val(datas[0]);
+                $("#web").val(datas[1]);
+                $("#introduce").val(datas[2]);
+                $("#avater").val(datas[3]);
+                $("#mail").val(datas[4]);
+                $('#aselect').change(function(){
+                    var data=$(this).children('option:selected').val();
+                    datas=data.split('!!]');
+                    $("#name").val(datas[0]);
+                    $("#web").val(datas[1]);
+                    $("#introduce").val(datas[2]);
+                    $("#avater").val(datas[3]);
+                    $("#mail").val(datas[4]);
+                })
+            })
+        </script>
     </div>
     <div>
         <form action="" method="post" id="email-options-form">

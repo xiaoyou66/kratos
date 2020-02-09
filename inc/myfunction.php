@@ -436,6 +436,22 @@ add_filter('wp_tag_cloud', 'colorCloud', 1);
 
 
 
+//开启页面评论功能
+function open_comments_for_pages( $status, $post_type, $comment_type ) {
+    if ( 'page' === $post_type ) {
+        $status = 'open';
+    }
+    return $status;
+}
+add_filter('get_default_comment_status', 'open_comments_for_pages', 10, 3 );
 
+
+
+//注册jQuery插件，避免某些插件无法使用
+function wpjam_add_scripts() {
+    wp_register_script('jquery','',array(),'1.1', true);
+    wp_enqueue_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'wpjam_add_scripts' );
 
 ?>
